@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content ="width=device-width, inital-scale=1">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'account/style.css' %}">
+        
+        <script type="text/javascript" src="static/home_page/landing_page.js"></script> 
+
+        <title>ENVI_SIM</title>
+    
+
+
+    </head>
+   
+    <div id="whole-page">
+
+       <div id="header">
+         <img src="{% static 'home_page/website_logo.JPG' %} " height="80">
+         <a class = "demo" href="#news">Book a demo </a>
+         <a  class="active" href="{% url 'login' %}">Login</a>
+       </div> 
+  
+      <div id="content">
+
+        <div class='container2'>
+            <img class= "left" src="{% static 'home_page/eBus.png' %} " style="height:450px;padding-top:50px">
+
+            <div class="right"> 
+
+                <form>  
+                    <div class="container">   
+                         
+                        <label for="test" style="font-size:x-large">Username</label>
+                        <span><input name="test" id="test" type="text" /></span>
+                        <label for="test" style="font-size:x-large">Password</label>
+                        <span><input name="test" id="test" type="text" /></span>
+                        
+                         <button type="submit" style="font-size:x-large">Login</button>  
+                         <button type="button" style="font-size:x-large"> sign up</button>    
+
+
+                    </div>   
+                </form>     
+
+
+
+
+
+
+
+            </div>
+         
+        </div>
+
+   
+
+       </div>
+
+
+
+    </div> 
+
+
+</body>
+</html>

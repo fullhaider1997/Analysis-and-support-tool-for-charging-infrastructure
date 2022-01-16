@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from home_page.views import home_page_view
+from account.views import login
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("envi-sim", home_page_view),
+    path("envi-sim/login",login, name="login")
 ]

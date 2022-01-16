@@ -1,0 +1,148 @@
+
+#whole-page{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+/*The nagivation bar*/
+#header {
+    height: 90px;
+    background-color: white;
+    
+  }
+
+  .active {
+   background-color: #9F9DFB;
+   width: 100px;
+   margin-top: 20px;
+   height: 30px;
+   text-align: center;
+   padding: 10px 30px;
+   text-decoration: none;
+   font-size: 17px;
+   border-radius: 12px;
+   float: right;
+   color: black;
+   font:bold;
+   margin-right: 70px;
+   margin-left: 10px;
+  }
+
+/* Stylying for login button and demo button*/   
+
+
+.demo {
+  width: 100px;
+  margin-top: 20px;
+  height: 30px;
+ 
+
+  
+  border-radius: 12px;
+  float: right;
+  color: black;
+  font:bold;
+  margin-right: 70px;
+  margin-left: 10px;
+  background-color: #91E0DF;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+  /* Hovering button*/
+  #header a:hover {
+    background-color: rgb(165, 202, 185);
+    color: black;
+  }
+  
+  
+ /* The body of landing-page*/
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+ 
+
+
+#content{
+    background: linear-gradient(#9F9DFB, #C9F8A5);    
+ 
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    width: 100%;
+    
+    
+}
+
+
+
+.left {float:left;width:550px; }
+.right {float:left;margin-top:100px;width:700px; font-size: xx-large;font-weight: 700;}
+
+.rightbuttom{float:left; padding-top: 50px;}
+
+
+
+
+
+/* Login styling */
+
+
+
+
+
+form {   
+   
+  width: 500px;
+}   
+label {
+  padding-top: 7px;
+  padding-right: 30px;
+  float: left;
+  padding-left: 50px;
+}
+
+span {
+  display: block;
+  overflow: hidden;
+  padding: 0 4px 0 6px
+}
+input {
+  
+  width: 150px; padding-left: 50px;
+  height: 25px;
+}
+  
+
+.container {   
+  padding: 25px;   
+  
+  background: rgba(255, 255, 255, 0.10);
+}   
+
+button {
+  color:black;
+  background-color: #91E0DF;
+  display: block;
+  border: none;
+  width: 400px;
+  margin: 30px;
+  padding: 7px 35px;
+  font: 300 150% langdon;
+  border-radius: 12px;
+  cursor: pointer;
+} 
