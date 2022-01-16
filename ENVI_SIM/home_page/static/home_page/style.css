@@ -1,0 +1,84 @@
+
+#whole-page{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+/*The nagivation bar*/
+#header {
+    height: 90px;
+    background-color: white;
+    
+  }
+
+
+
+/* Stylying for login button and demo button*/   
+  #header a {
+    width: 100px;
+    margin-top: 20px;
+    height: 30px;
+   
+
+    
+    border-radius: 12px;
+    float: right;
+    color: black;
+    font:bold;
+    margin-right: 70px;
+    margin-left: 10px;
+    background-color: #91E0DF;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Hovering button*/
+  #header a:hover {
+    background-color: rgb(165, 202, 185);
+    color: black;
+  }
+  
+  
+ /* The body of landing-page*/
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+ 
+
+
+ 
+
+#content{
+    background: linear-gradient(#9F9DFB, #C9F8A5);    
+ 
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    width: 100%;
+    
+    
+}
+.container2 {
+	
+	height:auto;
+	padding: 0%;
+    float:left;
+}
+
+
+.left {float:left;width:550px; }
+.right {float:left;margin-top:100px;width:700px; font-size: xx-large;font-weight: 700;}
+
+.rightbuttom{float:left; padding-top: 50px;}
+.featurelist{float:left;margin-top:40px;width:700px; font-size:medium ;font-weight: 700;}
+
+li{
+
+
+}
