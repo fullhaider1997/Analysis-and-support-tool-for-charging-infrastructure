@@ -32,6 +32,10 @@
 /* Stylying for login button and demo button*/   
 
 
+
+
+
+
 .demo {
   width: 100px;
   margin-top: 20px;
@@ -52,19 +56,6 @@
   font-size: 17px;
 }
 
-
-
-
-
-
-
-
-
-  /* Hovering button*/
-  #header a:hover {
-    background-color: rgb(165, 202, 185);
-    color: black;
-  }
   
   
  /* The body of landing-page*/
@@ -123,26 +114,53 @@ span {
 }
 input {
   
-  width: 150px; padding-left: 50px;
+  width: 190px; padding-left: 50px;
   height: 25px;
 }
   
 
 .container {   
   padding: 25px;   
+  height: 230px;
   
   background: rgba(255, 255, 255, 0.10);
 }   
 
-button {
-  color:black;
-  background-color: #91E0DF;
-  display: block;
-  border: none;
-  width: 400px;
-  margin: 30px;
-  padding: 7px 35px;
-  font: 300 150% langdon;
+#login_sign_up_buttons a{
+  width: 350px;
+  margin-top: 15px;
+  height: 20px;
+ 
+
+  
   border-radius: 12px;
-  cursor: pointer;
-} 
+  float: right;
+  color: black;
+  font:bold;
+  margin-right: 30px;
+ 
+  background-color: #91E0DF;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 17px;
+ 
+}
+
+#forgot_password a{
+  font-style: normal;
+  padding: 10px 10px 10px 10px;
+  margin-left: 140px;
+  font-size: 15px;
+}
+
+/* The styling for the username and password input fields */
+
+input[type="text"], textarea {
+
+  background-color : #C4C4C4; 
+  text-decoration: none;
+  border: none;
+
+}
+

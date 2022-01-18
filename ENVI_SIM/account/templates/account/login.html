@@ -2,10 +2,11 @@
 <html>
 <body>
     <head>
-        <meta charset="utf-8">
+        
+        <meta charset="UTF-8">
         <meta name="viewport" content ="width=device-width, inital-scale=1">
         {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'account/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'account/style_login.css' %}">
         
         <script type="text/javascript" src="static/home_page/landing_page.js"></script> 
 
@@ -33,14 +34,19 @@
                 <form>  
                     <div class="container">   
                          
-                        <label for="test" style="font-size:x-large">Username</label>
+                        <label style="font-size:x-large">Username</label>
                         <span><input name="test" id="test" type="text" /></span>
-                        <label for="test" style="font-size:x-large">Password</label>
+                        <label style="font-size:x-large">Password</label>
                         <span><input name="test" id="test" type="text" /></span>
-                        
-                         <button type="submit" style="font-size:x-large">Login</button>  
-                         <button type="button" style="font-size:x-large"> sign up</button>    
 
+                         <div id="forgot_password"> 
+                               <a>forget password ?</a>
+                         </div>
+
+                        <div id="login_sign_up_buttons">
+                           <a >Login</a>  
+                           <a  href ="{% url 'sign_up' %}"> sign up</a>    
+                        </div>
 
                     </div>   
                 </form>     
