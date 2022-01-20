@@ -31,13 +31,14 @@
 
             <div class="right"> 
 
-                <form>  
+                <form action="" method="POST">
+                    {% csrf_token %}  
                     <div class="container">   
                          
                         <label style="font-size:x-large">Username</label>
-                        <span><input name="test" id="test" type="text" /></span>
+                        <span><input name="username" type="text" /></span>
                         <label style="font-size:x-large">Password</label>
-                        <span><input name="test" id="test" type="text" /></span>
+                        <span><input name="password" type="text" /></span>
 
                          <div id="forgot_password"> 
                                <a>forget password ?</a>
@@ -45,7 +46,7 @@
 
                         <div id="login_sign_up_buttons">
                            <a >Login</a>  
-                           <a  href ="{% url 'sign_up' %}"> sign up</a>    
+                           <a  href ="{% url 'sign_up' %}"> Sign up</a>    
                         </div>
 
                     </div>   
