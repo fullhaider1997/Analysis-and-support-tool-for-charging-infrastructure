@@ -1,7 +1,9 @@
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+import logging
 # Create your views here.
 
 
@@ -10,42 +12,36 @@ def logout_user(request):
   
 
 def login_user(request):
+
     if request.method == "POST":
-        username = request.POST["username"]
-        password = request.POST["password"]
+         logger = logging.getLogger("mylogger")
+         logger.info("Whatever to log")
+         username = request.POST.get('username')
+         password = request.POST.get('password')
+         user = authenticate(request, username=username,password=password)
 
-        user = authenticate(request, 
-                            username=username,
-                            password=password)
-
-        if user is not None:
+         if user is not None:
             login(request, user)
-            return redirect("home")
-            # Redirect to a success page.
-       
-        else:
+            return render (request,"fleet_report/fleet_report.html")
 
-            messages.success(request,("There was  an error logging, try again !"))
+         else:
+            messages.success(request, ("There was an Error login in, Try again"))
             return redirect("login")
-            # Return an 'invalid login' error message.
-        
 
+    else:
+        return render(request,"account/login.html" )
 
-    return render (request,"account/login.html")
+      
+    
 
 
 def sign_up(request):
-     if request.method == "POST":
-        form = UserCreationForm(request.POST)
-
-     if form.is_valid():
-         form.save()
-         username = form.clean_data["username"]
-         password = form.clean_data["password"]
-
-         user = authenticate( username=username, password=password)
+    form = UserCreationForm()
+    
+   
+ 
+    return render (request,"account/registration.html", {"form":form})
 
 
-
-
-     return render (request,"account/registration.html", {'form': form})
+def haider(request):
+    return render (request, "account/haider.html")

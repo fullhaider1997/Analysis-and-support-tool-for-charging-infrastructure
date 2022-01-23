@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home_page',
-    'account'
+    'account',
+    "fleet_report"
 ]
 
 MIDDLEWARE = [
@@ -81,6 +82,13 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+
+
+
+
+
 
 
 # Password validation
@@ -130,3 +138,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static') ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+LOGIN_REDIRECT_URL = "/fleet_report/"

@@ -28,25 +28,31 @@
 
         <div class='container2'>
             <img class= "left" src="{% static 'home_page/eBus.png' %} " style="height:450px;padding-top:50px">
-
+            
             <div class="right"> 
+              
 
                 <form action="" method="POST">
                     {% csrf_token %}  
+                {% if messages %}
+                    {% for message in messages %}
+                     {{ message }}
+                     {% endfor %}
+                {% endif %}
+                
                     <div class="container">   
-                         
-                        <label style="font-size:x-large">Username</label>
-                        <span><input name="username" type="text" /></span>
-                        <label style="font-size:x-large">Password</label>
-                        <span><input name="password" type="text" /></span>
+                        
+                        {{ form.as_p }}
+
+                         <input type="submit" value="Submit">
 
                          <div id="forgot_password"> 
                                <a>forget password ?</a>
                          </div>
 
                         <div id="login_sign_up_buttons">
-                           <a >Login</a>  
-                           <a  href ="{% url 'sign_up' %}"> Sign up</a>    
+                           <a ><input type="submit" value="Submit"></a>  
+                           <a> Sign up</a>    
                         </div>
 
                     </div>   

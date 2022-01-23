@@ -1,12 +1,13 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include 
 
 
-from account.views import login
+from account.views import login, haider
 
 
 urlpatterns = [
-
-   path("/account", view=login)
+   path('haider/', haider),
+  
+  
 
 ]
