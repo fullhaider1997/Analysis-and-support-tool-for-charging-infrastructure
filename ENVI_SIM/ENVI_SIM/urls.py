@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path,include
 
 
-from account.views import login_user,sign_up
-
+from account.views import login_user,register_user
+from home_page.views import home_page_view
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", home_page_view ,name="home"),
     path("",include("home_page.urls") ),
     path("account/", include("account.urls")),
     path("account/",include("django.contrib.auth.urls")),

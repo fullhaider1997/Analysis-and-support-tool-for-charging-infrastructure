@@ -4,25 +4,29 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 import logging
+from account.forms import FleetManagmentOperatorForm
 # Create your views here.
 
 
 def logout_user(request):
-    pass
+    logout(request)
+    messages.success(request, ("You were logged out"))
+    return redirect("home")
   
 
 def login_user(request):
 
     if request.method == "POST":
-         logger = logging.getLogger("mylogger")
-         logger.info("Whatever to log")
+         
          username = request.POST.get('username')
          password = request.POST.get('password')
          user = authenticate(request, username=username,password=password)
 
          if user is not None:
-            login(request, user)
-            return render (request,"fleet_report/fleet_report.html")
+            if user.is_active:
+                login(request, user)
+                messages.success(request, ("You sucessfully logged in"))
+                return redirect("main page")
 
          else:
             messages.success(request, ("There was an Error login in, Try again"))
@@ -35,12 +39,25 @@ def login_user(request):
     
 
 
-def sign_up(request):
+def register_user(request):
     form = UserCreationForm()
-    
-   
- 
-    return render (request,"account/registration.html", {"form":form})
+
+    if request.method =="POST":
+        form = FleetManagmentOperatorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data["username"]
+            password = form.cleaned_data["password1"]
+            user = authenticate(username=username,password=password)
+            login(request,user)
+            messages.success(request, ("Registration is sucessful"))
+            return redirect("main page")
+    else:
+         form = FleetManagmentOperatorForm()
+
+        
+
+    return render (request,"registration/registration.html", {"form":form})
 
 
 def haider(request):

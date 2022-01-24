@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <body>
     <head>
@@ -7,9 +8,9 @@
         <meta name="viewport" content ="width=device-width, inital-scale=1">
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'account/style_registration.css' %}">
-        
+     
         <script type="text/javascript" src="static/home_page/landing_page.js"></script> 
-
+        
         <title>ENVI_SIM</title>
     
 
@@ -26,46 +27,38 @@
   
       <div id="content">
 
-        <div class='container'>
+        <div class="container">
+
+            
            
-          
+          {% if form.errors %}
+          <p> There was an error with your form:  </p>
+          {% endif %}
 
                 <div id="title_container">
                    <a>Registration</a>
                 <div>
 
-              <form method="POST" action="">
+                  
+              <form  method="POST">
                
-                {% csrf_token %}
-
-                <label for="email" ><b>First Name</b></label>
-                 {{form.first_name}}
-
-                <label for="email" ><b>Last Name</b></label>
-                 {{form.last_name}}
-
-                 <label for="email" ><b>Work Email</b></label>
-                 {{form.email}}
-
-                 <label for="psw" ><b>Password</b></label>
-                 {{form.password1}}
-
-                 <label for="psw-repeat" ><b>Repeat Password</b></label>
-                 {{form.password2}}
- 
+               
+               
+                {% csrf_token %} 
+                 {{ form.as_p }}
             
                 
             
                 <div class="clearfix">
                   <button type="button" class="cancelbtn">Cancel</button>
-                  <button type="submit" class="signupbtn">Sign Up</button>
+                  <button type="submit" class="signupbtn" >Sign Up</button>
                 </div>
-
+              
             </form>
 
          
         </div>
-
+    
    
 
        </div>

@@ -3,6 +3,7 @@
     flex-flow: column;
     height: 100%;
 }
+html { height: 100% }
 
 /*The nagivation bar*/
 #header {
@@ -69,11 +70,9 @@
 
 #content{
     background: linear-gradient(#9F9DFB, #C9F8A5);    
- 
-    position: absolute;
-    top: 100px;
-    bottom: 0;
-    width: 100%;
+    height: 700px;
+
+    
     
     
 }
@@ -108,7 +107,7 @@
   
   margin-top: 20px;
   margin-left: 450px;
-  padding: 50px;
+  padding: 20px 20px 5px 20px;
 
   height: 500px;
   width: 400px;
@@ -121,7 +120,7 @@
 
   color:black;
   font-size: 30px;
-  bottom: 30px;
+  bottom: 5px;
 
   position: relative;
   left: 140px;
@@ -144,7 +143,7 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: rgb(221, 221, 221, 0.20);
+  background-color: rgb(221, 221, 221, 0.90);
   outline: none;
 }
 
@@ -185,4 +184,8 @@ button:hover {
   border: none;
   background: #f1f1f1;
 
+}
+
+.special{
+  opacity: 0.1;
 }

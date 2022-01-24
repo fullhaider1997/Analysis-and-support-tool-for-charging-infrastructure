@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'account/style_login.css' %}">
         
         <script type="text/javascript" src="static/home_page/landing_page.js"></script> 
-
+      
         <title>ENVI_SIM</title>
     
 
@@ -32,7 +32,8 @@
             <div class="right"> 
               
 
-                <form action="" method="POST">
+                <form action="{% url 'main page' %}" method="POST">
+                   
                     {% csrf_token %}  
                 {% if messages %}
                     {% for message in messages %}
@@ -40,19 +41,34 @@
                      {% endfor %}
                 {% endif %}
                 
-                    <div class="container">   
+                    <div class="container">
                         
-                        {{ form.as_p }}
+                        
+                        {% for field in form %}
+                        <div>
+                            {{ field.errors }}
 
-                         <input type="submit" value="Submit">
+                           
+                            <label style="font-size:large; padding: 10px 10px 10px 10px">  {{ field.label_tag }}</label>
+                            
+                            <div style="padding: 10px 10px 10px 10px">{{ field }}</div>
+                            {% if field.help_text %}
+                            <p class="help">{{ field.help_text|safe }}</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+
+
 
                          <div id="forgot_password"> 
                                <a>forget password ?</a>
                          </div>
 
                         <div id="login_sign_up_buttons">
-                           <a ><input type="submit" value="Submit"></a>  
-                           <a> Sign up</a>    
+                           <a href="{% url 'register_user' %}"type="submit" value="Submit"> Sign up</a>   
+                           <input type="submit" value="Submit">  
+                          
+
                         </div>
 
                     </div>   
