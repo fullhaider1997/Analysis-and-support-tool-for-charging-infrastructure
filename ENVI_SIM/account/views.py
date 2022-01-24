@@ -26,7 +26,7 @@ def login_user(request):
             if user.is_active:
                 login(request, user)
                 messages.success(request, ("You sucessfully logged in"))
-                return redirect("main page")
+                return redirect("google_map_view")
 
          else:
             messages.success(request, ("There was an Error login in, Try again"))
@@ -51,7 +51,7 @@ def register_user(request):
             user = authenticate(username=username,password=password)
             login(request,user)
             messages.success(request, ("Registration is sucessful"))
-            return redirect("main page")
+            return redirect("envi-sim/google_map")
     else:
          form = FleetManagmentOperatorForm()
 

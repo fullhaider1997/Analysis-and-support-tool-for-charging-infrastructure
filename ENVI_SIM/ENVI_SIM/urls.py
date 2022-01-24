@@ -19,16 +19,15 @@ from django.urls import path,include
 
 from account.views import login_user,register_user
 from home_page.views import home_page_view
+from google_map.views import google_map_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home_page_view ,name="home"),
     path("",include("home_page.urls") ),
     path("account/", include("account.urls")),
     path("account/",include("django.contrib.auth.urls")),
-
-    
+    path("envi-sim/google_map",google_map_view),
     path("fleet_report/", include("fleet_report.urls"))
-    
-    
-    
 ]
+
+
