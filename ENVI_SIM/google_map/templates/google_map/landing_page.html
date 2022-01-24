@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ENVI_SIM</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'google_map\style.css'%}">
+
+    <script type="text/javascript" src="{% static 'google_map\landing_page.js'%}"></script> 
+
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="item-a" id="header">
+        <img src="{% static 'google_map/website_logo.JPG' %} " height="60">
+        <button type="button" class="btn btn-light">Home</button>
+        <button type="button" class="btn btn-light">About</button>
+        <button type="button" class="btn btn-light">Account</button>
+        <button type="button" class="btn btn-light">Support</button>
+        <a href="#news">Help</a>
+        <a href="{% url 'login' %}">Logout</a>
+      </div> 
+      <div class="item-b"> </div>
+      <div class="item-c"> </div>
+
+      
+
+    </div>
+
+
+    
+   
+
+
+
+
+    
+    <div class="grid-container">
+      <div class="grid-child purple">
+
+          <div id="content">
+              <div class= "left" id = "map"></div>
+          </div>
+          
+          
+      
+          <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+          <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6CVlrLRSPK_4nqiomKPFjP1pokWGGh7s&callback=initMap&v=weekly"
+            async
+          ></script>
+  
+  
+      </div>
+  
+      <div class="grid-child green">
+        <table class="demo">
+          <caption>Fleet Report</caption>
+          <thead>
+          <tr>
+            <th>Fleet Report</th>
+            <th>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</th>
+            <th>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</th>
+            <th>Export Data</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>&nbsp;Route</td>
+            <td>&nbsp;Buses</td>
+            <td>&nbsp;Bus Stations</td>
+            <td>&nbsp;Charging Stations</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tbody>
+        </table>
+      </div>
+    
+  </div>
+  </body>
+</html>
