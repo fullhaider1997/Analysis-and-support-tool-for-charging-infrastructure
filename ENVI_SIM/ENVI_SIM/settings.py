@@ -139,5 +139,5 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static') ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
-LOGIN_REDIRECT_URL = "/fleet_report/"
+LOGIN_REDIRECT_URL = "/fleet_report/main_page"
 

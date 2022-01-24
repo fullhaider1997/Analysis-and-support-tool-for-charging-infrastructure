@@ -32,14 +32,10 @@
             <div class="right"> 
               
 
-                <form action="{% url 'main page' %}" method="POST">
+                <form action="" method="POST">
                    
                     {% csrf_token %}  
-                {% if messages %}
-                    {% for message in messages %}
-                     {{ message }}
-                     {% endfor %}
-                {% endif %}
+             
                 
                     <div class="container">
                         
