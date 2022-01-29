@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ENVI_SIM</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'google_map\map_style.css'%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="{% static 'google_map\map_page.js'%}"></script> 
+
+   
+    
+
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="item-a" id="header">
+        <img src="{% static 'google_map/website_logo.JPG' %} " height="60">
+        <button type="button" class="btn btn-light">Home</button>
+        <button type="button" class="btn btn-light">About</button>
+        <button type="button" class="btn btn-light">Account</button>
+        <button type="button" class="btn btn-light">Support</button>
+        <a href="#news">Help</a>
+        <a href="{% url 'login' %}">Logout</a>
+      </div> 
+      <div class="item-b"> </div>
+      <div class="item-c"> </div>
+
+
+
+    </div>
+
+
+ 
+    <div class="split left">
+     
+        
+       
+          <div id = "map">
+
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+      <script scrolling="no"
+      
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6CVlrLRSPK_4nqiomKPFjP1pokWGGh7s&callback=initMap&v=weekly" async
+      ></script>
+
+
+    </div>
+      
+
+
+
+        
+      </div>
+    </div>
+    
+    <div class="split right">
+  
+        <div class="red"> 
+
+          <div class="Report-title">
+             Thunder Bay
+          </div>
+        </div>
+
+        <div class="blue">
+
+          <div class="topnav">
+          <a class="active" href="#home">Fleet Report</a>
+          <a href="#about" style="float:right;">Export</a>
+        </div> 
+
+
+        </div>
+        <div class="green">
+           
+          
+            <div class="topnav-option">
+              <a class="btn-r" data-active="active" data-switch="#Routes">Routes</a>
+              <a class="btn-r" data-switch="#Buses">Bus</a>
+              <a class="btn-r" data-switch="#Buses-stations">Bus stations</a>
+              <a class="btn-r" data-switch="#Charging-stations">Charging Poles</a>
+            </div> 
+         
+
+
+        </div>
+   
+          <div id="Report-content">
+
+            <div id="Routes" class="container">
+              <div id="data-table">
+                <table id="html-data-table">
+                    <tr>
+                        <th>Routes</th>
+                        <th>Name</th>
+                        <th>Stops</th>
+                        <th>Trips times</th>
+                        <th>Distance</th>
+                        <th>Avg Serv. Speed</th>
+                        <th>Avg ECR</th>
+                        <th>Total EC</th>
+                    </tr>
+                    <tr>
+                        <td>Line 1</td>
+                        <td> Haider</td>
+                        <td> 30 min</td>
+                        <td> 66 </td>
+                        <td> 30 km</td>
+                        <td> 30 km/h</td>
+                        <td>1.5 kwh/km</td>
+                        <td>100 kwh</td>
+                    </tr>
+                </table>    
+            </div>   
+             </div>
+     
+         <!-- Hidden blocks that you show when requested. -->
+            <div id="Buses" class="container" style="display: none;">
+               Buses info
+            </div>
+     
+            <div id="Buses-stations" class="container" style="display: none;">
+              <h1>Bus stations</h1>
+           </div>
+
+           <div id="Charging-stations" class="container" style="display: none;">
+               <h1>Charging stations</h1>
+           </div>
+
+
+              
+            </div>
+        
+      
+    </div>
+      
+
+
+   
+      
+
+    
+
+    
+  </div>
+  </body>
+
+  
+  <script type="text/javascript" src="{% static 'google_map\map_page.js'%}"></script> 
+</html> 

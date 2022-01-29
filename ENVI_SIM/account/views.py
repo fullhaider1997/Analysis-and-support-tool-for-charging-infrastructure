@@ -51,7 +51,7 @@ def register_user(request):
             user = authenticate(username=username,password=password)
             login(request,user)
             messages.success(request, ("Registration is sucessful"))
-            return redirect("envi-sim/google_map")
+            return redirect("/envi-sim/google_map")
     else:
          form = FleetManagmentOperatorForm()
 
