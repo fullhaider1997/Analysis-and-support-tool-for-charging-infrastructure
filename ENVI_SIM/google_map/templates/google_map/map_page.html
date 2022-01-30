@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'google_map\map_style.css'%}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="{% static 'google_map\map_page.js'%}"></script> 
+   
 
    
     
@@ -42,7 +42,6 @@
 
       <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
       <script scrolling="no"
-      
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6CVlrLRSPK_4nqiomKPFjP1pokWGGh7s&callback=initMap&v=weekly" async
       ></script>
 
@@ -96,7 +95,10 @@
                     <tr>
                         <th>Routes</th>
                         <th>Name</th>
-                        <th>Stops</th>
+                        <th> # Stops</th>
+                        <th id="start_location"> Start_loc </th>
+                        <th> Stop_loc</th>
+
                         <th>Trips times</th>
                         <th>Distance</th>
                         <th>Avg Serv. Speed</th>
@@ -106,13 +108,22 @@
                     <tr>
                         <td>Line 1</td>
                         <td> Haider</td>
-                        <td> 30 min</td>
+                        <td> 59</td>
+                        <td>302 Cowan St, Thunder Bay </td>
+                        <td> 500 Donald Street East, Thunder Bay</td>
                         <td> 66 </td>
                         <td> 30 km</td>
                         <td> 30 km/h</td>
                         <td>1.5 kwh/km</td>
                         <td>100 kwh</td>
                     </tr>
+
+                  
+
+
+
+
+
                 </table>    
             </div>   
              </div>
@@ -150,4 +161,5 @@
 
   
   <script type="text/javascript" src="{% static 'google_map\map_page.js'%}"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html> 
