@@ -1,0 +1,143 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+
+       #whole-page{
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+    }
+
+    /*The nagivation bar*/
+    #header {
+        height:100 px;
+        background-color: white;
+
+      }
+      .btn {
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #212529;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem 0.75;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .btn-light{
+        color: #000;
+        background-color: #f8f9fa;
+        border-color: #f8f9fa;
+      }
+
+      #map {
+        height: 100%;
+       border-style: solid;
+       
+       overflow: hidden;
+      }
+
+      
+    
+
+
+    /* Stylying for login button and demo button*/   
+      #header a {
+        width: 100px;
+        margin-top: 10px;
+        height: 20px;
+        font-weight: 600;
+
+
+        border-radius: 12px;
+        float: right;
+        color: black;
+        font:bold;
+        margin-right: 20px;
+        margin-left: 10px;
+        background-color: #91E0DF;
+        text-align: center;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+
+      /* Hovering button*/
+      #header a:hover {
+        background-color: rgb(165, 202, 185);
+        color: black;
+      }
+
+    
+     
+
+     /* The body of landing-page*/
+
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+         
+
+    }
+
+
+    
+#menu{
+    margin:10px;
+    
+}
+
+#sidebar{
+    width: 0px;
+    height: 100vh;
+
+    background-color: gray;
+    position: fixed;
+    top: inherit;
+    left: inherit;
+    z-index: 2 ;
+    overflow: hidden;
+}
+
+.sidebar-item{
+
+    text-decoration: none;
+    color:#000;
+    font-style: bold;
+    display:flex;
+    padding: 1em;
+    cursor: pointer;
+    align-items:center;
+
+}
+.sidebar-item > div {
+    padding:  0 1em;
+}
+
+.sidebar-item:hover{
+
+    background-color: #91E0DF;
+}
+
+#overlay{
+    width: 100vh;
+    height: 100vh;
+    background-color: rgba(112, 20, 20, 0.7);
+   
+    
+    z-index: 1;
+    display: none;
+}

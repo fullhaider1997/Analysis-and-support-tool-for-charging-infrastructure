@@ -19,23 +19,20 @@ function initMap() {
   
   
   const onChangeHandler = function () {
-    var row=[]
+  
     // calculateAndDisplayRoute(directionsService, directionsRenderer);
-    test()
+   
 
      $('#html-data-table tr').click( function(){
       
-
+        console.log("I am clicking")
        calculateAndDisplayRoute(directionsService, directionsRenderer,this.rowIndex);
       })
 
   
   };
 
-  const test = function(){
-    console.log("on click is working")
-  }
-
+ 
   
   
 
@@ -102,19 +99,6 @@ function renderDataInTheTable( Data) {
 
 renderDataInTheTable( Data)
 
-$('[data-switch]').on('click', function (e) {
-  console.log("I am clicking the button 1")
-  var $page = $('#Report-content'),
-      blockToShow = e.currentTarget.getAttribute('data-switch');
-    
-  console.log($page)
-  console.log("I am clicking the button 1")
-  // Hide all children.
-  $page.children().hide();
-
-  // And show the requested component.
-  $page.children(blockToShow).show();
-});
 
 
 
@@ -145,6 +129,7 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer, rowInde
 
    console.log(document.getElementById("html-data-table").rows[rowIndex].cells[3].textContent)
    console.log(document.getElementById("html-data-table").rows[rowIndex].cells[4].textContent)
+   console.log("I am calcing the route...")
 
   directionsService
     .route({

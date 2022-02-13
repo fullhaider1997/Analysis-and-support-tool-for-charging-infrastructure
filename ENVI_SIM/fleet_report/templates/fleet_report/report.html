@@ -6,11 +6,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content ="width=device-width, inital-scale=1">
         {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'fleet_report/report.css' %}">
+       
         
         <script type="text/javascript" src="static/home_page/landing_page.js"></script> 
-        
-
+      
+       
+        <link rel="stylesheet" type="text/css" href="{% static 'fleet_report/report.css' %}">
         <title>ENVI_SIM</title>
     
 
@@ -23,24 +24,35 @@
          <img src="{% static 'home_page/website_logo.JPG' %} " height="80">
          <a class = "demo" href="#news">Help </a>
 
+         <a  class="active_logout" href="{% url 'login' %}">Account</a>
+         
          {% if user.is_authenticated %}
-         <a  class="active"  href="{% url 'logout' %}">logout</a>
+         <a  class="active_logout"  href="{% url 'logout' %}">logout</a>
             {% else %}
          <a  class="active" href="{% url 'login' %}">Login</a>
          {% endif %}
 
-       </div> 
-    
-      
+         </div> 
 
-  
-     
-   
+         
 
+         <div class="split right">
+         <div class="centered">
+           <h2>Thunder Bay</h2>
+           
+         </div>
        </div>
 
 
-    </div> 
+    <div class="split left">
+       <div class="centered">
+         <h2>Jane Flex</h2>
+          <p>Some text.</p>
+       </div>
+    </div>
+  
+
+  </div>
 
 
 </body>

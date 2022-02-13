@@ -1,0 +1,79 @@
+   
+   
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ENVI_SIM</title>
+    {% csrf_token %}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    {% load static %}
+
+  
+
+   
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="item-a" id="header">
+        <img src="{% static 'google_map/website_logo.JPG' %} " height="60">
+        <button type="button" class="btn btn-light">Home</button>
+        <button type="button" class="btn btn-light">About</button>
+        <button type="button" class="btn btn-light">Account</button>
+        <button type="button" class="btn btn-light">Support</button>
+        <a href="#news">Help</a>
+        <a href="{% url 'login' %}">Logout</a>
+      </div> 
+
+      <div>
+       
+
+
+         
+            <img src="https://img.icons8.com/material/24/000000/menu--v5.png"/ id="menu">
+
+               
+          <div id ="sidebar">
+
+              <a  class="sidebar-item" id ="Routes" > 
+                <img  style="width:20px;height:20px;" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-route-interface-kiranshastry-solid-kiranshastry.png"/>
+                <div>Routes</div>
+              </a>
+
+              <a  class="sidebar-item" id ="Charging-stations"> 
+                <img  style="width:20px;height:20px;" src="https://img.icons8.com/ios/50/000000/charge-battery--v2.png"/> 
+                <div>Charging stations</div>
+              </a>
+             
+              <a class="sidebar-item" id ="Report">
+                <img style="width:20px;height:20px;" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-report-project-planing-flatart-icons-outline-flatarticons-1.png"/>
+                <div>Report</div>
+             </a>
+
+          </div>
+
+         
+
+             <div id="switchscreen" style="float:right">
+              hello
+             </div>
+         
+
+        
+      
+    </div>
+
+    
+
+      
+
+    
+  </div>
+  </body>
+
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'menu\menu.css'%}">
+  <script type="text/javascript" src="{% static 'menu\menu.js'%}"></script> 
+</html> 

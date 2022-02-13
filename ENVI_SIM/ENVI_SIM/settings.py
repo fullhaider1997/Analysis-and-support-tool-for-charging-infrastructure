@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'home_page',
     'account',
     "fleet_report",
-    "google_map"
+    "google_map",
+    "menu"
 ]
 
 MIDDLEWARE = [
@@ -144,5 +145,5 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static') ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 
-LOGIN_REDIRECT_URL = "envi-sim/google_map"
+LOGIN_REDIRECT_URL = "envi-sim/menu"
 
