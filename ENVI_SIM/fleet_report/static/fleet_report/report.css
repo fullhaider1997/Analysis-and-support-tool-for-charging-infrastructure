@@ -187,3 +187,11 @@ input[type=submit] {
   text-decoration: none;
   font-size: 15px;
 }
+
+#Fleet_report{
+  background-color: rgb(146, 90, 90);
+  height: 615px;
+  width: 2000px;
+ 
+  
+}

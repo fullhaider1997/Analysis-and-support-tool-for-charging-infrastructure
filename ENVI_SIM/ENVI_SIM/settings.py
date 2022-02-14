@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'account',
     "fleet_report",
     "google_map",
-    "menu"
+    "menu",
+    "BusDashBoard"
 ]
 
 MIDDLEWARE = [

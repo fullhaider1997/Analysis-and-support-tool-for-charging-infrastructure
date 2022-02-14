@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class RoutesConfig(AppConfig):
+class BusdashboardConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'routes'
+    name = 'BusDashBoard'

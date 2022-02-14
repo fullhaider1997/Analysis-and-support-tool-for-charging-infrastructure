@@ -30,19 +30,22 @@
 
 
          
-            <img src="https://img.icons8.com/material/24/000000/menu--v5.png"/ id="menu">
+           
 
-               
+        <img src="https://img.icons8.com/material/24/000000/menu--v5.png"/ id="menu">
+
           <div id ="sidebar">
+           
+
 
               <a  class="sidebar-item" id ="Routes" > 
                 <img  style="width:20px;height:20px;" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-route-interface-kiranshastry-solid-kiranshastry.png"/>
                 <div>Routes</div>
               </a>
 
-              <a  class="sidebar-item" id ="Charging-stations"> 
+              <a  class="sidebar-item" id ="Bus_Dashboard"> 
                 <img  style="width:20px;height:20px;" src="https://img.icons8.com/ios/50/000000/charge-battery--v2.png"/> 
-                <div>Charging stations</div>
+                <div>Bus Dashboard</div>
               </a>
              
               <a class="sidebar-item" id ="Report">
@@ -73,7 +76,12 @@
 
   
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="{% static 'menu\menu.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'fleet_report/report.css' %}">
   <script type="text/javascript" src="{% static 'menu\menu.js'%}"></script> 
+  <script type="text/javascript" src="{% static 'fleet_report\report.js'%}"></script>
+  <script type="text/javascript" src="{% static 'BusDashBoard\DashBoard.js'%}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'BusDashBoard/DashBoard.css' %}">
+
 </html> 

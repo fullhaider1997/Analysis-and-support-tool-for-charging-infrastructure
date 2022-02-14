@@ -97,6 +97,8 @@
     
 #menu{
     margin:10px;
+    z-index: 2;
+    
     
 }
 
@@ -108,7 +110,7 @@
     position: fixed;
     top: inherit;
     left: inherit;
-    z-index: 2 ;
+    z-index: 1 ;
     overflow: hidden;
 }
 
@@ -140,4 +142,8 @@
     
     z-index: 1;
     display: none;
+}
+
+#Fleet_report{
+  color: red;
 }

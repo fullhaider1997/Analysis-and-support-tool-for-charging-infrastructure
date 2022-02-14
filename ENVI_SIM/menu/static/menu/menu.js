@@ -45,30 +45,46 @@ $("#sidebar a").click(function() {
    
     var id = $(this).attr("id");
 
+    if("Routes"== id.toString()){
 
-    if("Routes".toString(id)){
-
-        console.log(id);
+      console.log("I am clicking Routes")
+       // console.log(id);
         var strMessage1 = document.getElementById("switchscreen");
        // strMessage1.innerHTML=  'test.html';
         //document.getElementById("switch-screen").innerHTML ='';
         
-     //  $("#switchscreen").htmlSheet("menu/test.html")
-       strMessage1.innerHTML = "Routes"
+      //  $("#switchscreen").load("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/menu/templates/menu/test.html")
+
+     //   $( "#switchscreen" ).load("/ENVI_SIM/menu/templates/menu/test.html", function() {
+      //    alert( "Load was performed." );
+      //  });
+    
+
+
+       $("#switchscreen").html(Routes);
 
      
     
     }
-    else if("Charging-stations".toString(id)){
+    if("Bus_Dashboard" == id.toString()){
 
-      $("#switch-screen").load("<div> Charging stations </div>")
+      console.log("I am clicking dashboard")
+      $("#switchscreen").html(DashBoard);
+
+
     console.log(id)
     }
-    else if ("Report".toString(id)){
 
-       $("#switch-screen").load("<div> Report</div>")
-       console.log(id)
+    if ("Report" == id.toString()){
+
+      console.log("I am clicking Report")
+      $("#switchscreen").html(DashBoard);
+
+
+      
     }
+
+
 
 });
 
