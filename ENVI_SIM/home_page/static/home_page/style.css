@@ -51,12 +51,11 @@
 }
  
 
-
  
 
 #content{
     background: linear-gradient(#9F9DFB, #C9F8A5);    
- 
+    height: auto;
     position: absolute;
     top: 100px;
     bottom: 0;

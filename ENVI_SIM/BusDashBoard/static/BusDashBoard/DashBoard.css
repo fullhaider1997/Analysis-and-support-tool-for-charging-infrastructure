@@ -2,10 +2,71 @@
 
 
 
- #Dash_Board{
-    background-color: rgb(135, 144, 226);
-    height: 615px;
+ #back_ground{
+    background-color: #91E0DF;
+    height: 580px;
     width: 2000px;
+    
+  
    
     
   }
+  #dash_board{
+
+    background-color: #C4C4C4;
+    height: 480px;
+    width: 70%;
+    top: 25%;
+    left: 15%;
+    position: absolute;
+    border-radius: 10px;
+  
+  }
+
+
+ 
+  li {
+    float: left;
+  }
+  
+  .item {
+    display: block;
+    padding: 1em;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+   
+    background-color: #ffffff;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+  
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: wheat;
+}
+.item-active {
+  background-color: #C4C4C4;
+}
+
+#screen_1{
+
+  text-align: center;
+}
+#screen_2{
+  text-align: center;
+}

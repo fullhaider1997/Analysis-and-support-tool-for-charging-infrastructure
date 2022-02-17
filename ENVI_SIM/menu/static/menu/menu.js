@@ -15,7 +15,10 @@ function openMenu(){
 
     menuOpen = true
   
-    sidebar.style.width="200px"
+    sidebar.style.width="210px"
+    sidebar.style.borderStyle="solid";
+    sidebar.style.borderWidth="2.5px";
+    sidebar.style.display = "block";
 }
 
 function closeMenu(){
@@ -23,6 +26,10 @@ function closeMenu(){
     menuOpen = false
    
     sidebar.style.width="0px"
+    sidebar.style.border.width="0px";
+    sidebar.style.border.radius="0px";
+    sidebar.style.borderStyle="none";
+    sidebar.style.display = "none";
 }
 
 
@@ -48,18 +55,9 @@ $("#sidebar a").click(function() {
     if("Routes"== id.toString()){
 
       console.log("I am clicking Routes")
-       // console.log(id);
-        var strMessage1 = document.getElementById("switchscreen");
-       // strMessage1.innerHTML=  'test.html';
-        //document.getElementById("switch-screen").innerHTML ='';
-        
-      //  $("#switchscreen").load("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/menu/templates/menu/test.html")
-
-     //   $( "#switchscreen" ).load("/ENVI_SIM/menu/templates/menu/test.html", function() {
-      //    alert( "Load was performed." );
-      //  });
-    
-
+       
+      var strMessage1 = document.getElementById("switchscreen");
+      
 
        $("#switchscreen").html(Routes);
 
