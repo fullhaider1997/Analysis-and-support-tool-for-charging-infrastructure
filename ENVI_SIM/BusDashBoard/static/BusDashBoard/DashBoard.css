@@ -20,6 +20,9 @@
     left: 15%;
     position: absolute;
     border-radius: 10px;
+
+
+
   
   }
 
@@ -36,6 +39,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: black;
+    
    
     background-color: #ffffff;
   }
@@ -45,6 +49,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+   
     
   }
   
@@ -52,8 +57,9 @@ li a {
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1em;
   text-decoration: none;
+ 
 }
 
 li a:hover {
@@ -61,6 +67,11 @@ li a:hover {
 }
 .item-active {
   background-color: #C4C4C4;
+ 
+}
+
+.w{
+  width: 100px;
 }
 
 #screen_1{
@@ -70,3 +81,121 @@ li a:hover {
 #screen_2{
   text-align: center;
 }
+
+#Elec_bus_title{
+
+ color: black;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 55px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+position: absolute;
+display: flex;
+height: 60px;
+width: 382px;
+left: 400px;
+top: 50px;
+border-radius: nullpx;
+
+
+
+
+}
+
+
+/*The stylying for drop down bus style*/
+
+#dropdown_list{
+ 
+  padding-top: 50px;
+  padding-left: 10px;
+}
+
+#dropdown_button {
+  padding-top: 100px;
+  border-radius: 10px;
+  background-color: #0979ad;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  font-family: montserrat;
+  border: 1px solid #ffffff;
+}
+
+.buses {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.buses li {
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+  list-style: none;
+  background-color: rgb(47, 47, 47);
+  font-family: montserrat;
+  border: 1px solid white;
+}
+
+.buses li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+}
+
+
+
+/*The Dashboard of Electrical bus */
+
+
+ /* Split the screen in half */
+ .split {
+
+  position: fixed;
+  height: 300px;
+  width: 300px;
+ 
+  
+  
+}
+
+/* Control the left side */
+.left {
+  position: relative;
+
+}
+
+/* Control the right side */
+.right {
+  position: relative;
+  
+  left:400px;
+  bottom: 100px;
+}
+
+
+#my_input{
+
+   background: #CCE0FF;
+   
+
+
+  
+  
+   
+}
+#title_input{
+
+
+}
+

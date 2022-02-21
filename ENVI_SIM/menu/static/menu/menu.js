@@ -1,3 +1,4 @@
+
 console.log("helloss")
 
 const menu = document.getElementById("menu")
@@ -67,6 +68,7 @@ $("#sidebar a").click(function() {
     if("Bus_Dashboard" == id.toString()){
 
       console.log("I am clicking dashboard")
+   
       $("#switchscreen").html(DashBoard);
 
 
@@ -77,8 +79,6 @@ $("#sidebar a").click(function() {
 
       console.log("I am clicking Report")
       $("#switchscreen").html(DashBoard);
-
-
       
     }
 

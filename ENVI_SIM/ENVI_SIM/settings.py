@@ -147,4 +147,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 
 LOGIN_REDIRECT_URL = "envi-sim/menu"
+settings_dir = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))
 
