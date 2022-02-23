@@ -52,15 +52,15 @@ menu.addEventListener("click", function(){
 $("#sidebar a").click(function() {
    
     var id = $(this).attr("id");
+    console.log(id)
 
     if("Routes"== id.toString()){
 
       console.log("I am clicking Routes")
        
-      var strMessage1 = document.getElementById("switchscreen");
       
 
-       $("#switchscreen").html(Routes);
+       $("#switchscreen").html(Routes_n_map);
 
      
     
@@ -77,8 +77,15 @@ $("#sidebar a").click(function() {
 
     if ("Report" == id.toString()){
 
-      console.log("I am clicking Report")
-      $("#switchscreen").html(DashBoard);
+     
+      $("#switchscreen").html(fleet_report);
+      
+    }
+
+    if("Optimization" == id.toString()){
+     
+      console.log("I am clicking optimization config")
+      $("#switchscreen").html(optimization_config);
       
     }
 

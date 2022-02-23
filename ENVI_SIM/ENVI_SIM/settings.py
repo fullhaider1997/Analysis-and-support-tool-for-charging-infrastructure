@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     "fleet_report",
     "google_map",
     "menu",
-    "BusDashBoard"
+    "BusDashBoard",
+    "optimization_config"
 ]
 
 MIDDLEWARE = [

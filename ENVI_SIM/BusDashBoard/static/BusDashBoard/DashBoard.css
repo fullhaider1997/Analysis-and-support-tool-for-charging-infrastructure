@@ -13,7 +13,7 @@
   }
   #dash_board{
 
-    background-color: #C4C4C4;
+    background-color: #ffffff;
     height: 480px;
     width: 70%;
     top: 25%;
@@ -21,9 +21,6 @@
     position: absolute;
     border-radius: 10px;
 
-
-
-  
   }
 
 
@@ -36,42 +33,59 @@
     display: block;
     padding: 1em;
     border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    
+  
+
+    width: 46.99%;
+   
    
     background-color: #ffffff;
   }
 
-  ul {
+  
+  .item-active {
+    display: block;
+    padding: 1em;
+    
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+
+    width: 46.8%;
+   
+   
+    background-color: #91E0DF;
+  }
+
+
+
+  #bus_menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    
    
     
   }
   
-li a {
+
+ div.item a {
+
   display: block;
-  color: black;
+ 
+  
+ 
   text-align: center;
-  padding: 1em;
+  
   text-decoration: none;
- 
+  
 }
 
-li a:hover {
-  background-color: wheat;
-}
-.item-active {
-  background-color: #C4C4C4;
- 
-}
-
-.w{
-  width: 100px;
+.title_button{
+  position: relative;
+  text-align: center;
+  left: 200px;
+  
 }
 
 #screen_1{
@@ -98,8 +112,23 @@ left: 400px;
 top: 50px;
 border-radius: nullpx;
 
+}
 
-
+#Fuel_bus_title{
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 55px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  display: flex;
+  height: 60px;
+  width: 382px;
+  left: 400px;
+  top: 50px;
+  border-radius: nullpx;
+  
 
 }
 
@@ -109,7 +138,7 @@ border-radius: nullpx;
 #dropdown_list{
  
   padding-top: 50px;
-  padding-left: 10px;
+  padding-left: 45px;
 }
 
 #dropdown_button {
@@ -184,18 +213,67 @@ border-radius: nullpx;
 }
 
 
-#my_input{
+li .my_input{
 
    background: #CCE0FF;
-   
-
-
+   display: inline-block;
+   border-radius: 10px;
+   width: 100px;
+   padding-right: 50px;
   
+
   
    
 }
+
 #title_input{
+   color:black;
+   padding-bottom: 2px;
+}
 
+
+ul li {
+  display: inline-block;
+}
+
+#Bus-icon{
+ 
+  position: relative;
+  width: 300px;
+  height: 200px;
 
 }
 
+#Save-button-eletrical-dashboard{
+
+  background-color: #91E0DF; /* Green */
+  
+  color: black;
+  border-color: #468382;
+  padding: 15px 32px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-size: 16px;
+  padding-left: 200px;
+}
+
+#Save-button-eletrical-dashboard-location{
+  padding-top: 200px;
+}
+
+/*The Dashboar of liquid-fuel bus */
+
+#liquid-fuel-input{
+  padding-top: 100px;
+}
+
+#Fuel-Bus-icon{
+  padding-top: 100px;
+  
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
