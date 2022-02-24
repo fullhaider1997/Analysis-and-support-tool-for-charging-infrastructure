@@ -117,14 +117,6 @@ $("#bus_menu li").click(function() {
             }
         }  
 
-
-     
-
-
-
-       
-
-
     </script>
 
 `
@@ -231,23 +223,23 @@ Electrical_bus_board = `
         <ul>
         <li>
             <label id="title_input">Battery Capacity</label>
-            <input class = "my_input" type="text" readonly>
+            <input class = "my_input-d" type="text" readonly>
         </li>
          <li>
             <label id="title_input">Max Passengers</label>
-            <input class = "my_input" type="text" readonly>
+            <input class = "my_input-d" type="text" readonly>
         </li>
          <li>
             <label id="title_input">Max speed</label>
-            <input class = "my_input" type="text" readonly>
+            <input class = "my_input-d" type="text" readonly>
         </li>
          <li>
             <label id="title_input">Weight</label>
-            <input class = "my_input" type="text" readonly>
+            <input class = "my_input-d" type="text" readonly>
         </li>
         <li>
             <label id="title_input">Time to charge</label>
-            <input class = "my_input" type="text" readonly>
+            <input class = "my_input-d" type="text" readonly>
         </li>
         
        </ul>
@@ -291,7 +283,7 @@ $("#buses_id li").click(function() {
     var id = $(this).attr("id");
     console.log(id)
 
-    var input = document.getElementsByClassName('my_input')
+    var input = document.getElementsByClassName('my_input-d')
     console.log(input)
 
     if(id.toString() == "BYD K9") {

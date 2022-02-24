@@ -5,7 +5,7 @@
        #whole-page{
         display: flex;
         flex-flow: column;
-        height: 100%;
+        
     }
 
     /*The nagivation bar*/
@@ -96,26 +96,28 @@
 
     
 #menu{
-    margin:10px;
+    padding:20px;
     z-index: 2;
-    
     
 }
 
 #sidebar{
     
+   margin-top: 10px;
+   margin-right: 1px;
     width: 0px;
-    height: 100vh;
-    border-radius: 10px;
+    
+  
+    border-radius: 5px;
     border-style: solid;
     border-width: 2.5px;
     border-color: rgb(255, 255, 255);
+    height: 450px;
   
 
     background-color: #91E0DF;
-    position: fixed;
-    top: inherit;
-    left: inherit;
+    position: absolute;
+   
     z-index: 1 ;
     overflow: hidden;
 }
@@ -124,10 +126,14 @@
 
     text-decoration: none;
     color:rgb(255, 255, 255);
+    font-size: large;
     font-style: bold;
     display:flex;
     padding: 1em;
-    margin-top: 10px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
@@ -161,4 +167,20 @@
 
 #Fleet_report{
   color: red;
+}
+
+.split {
+
+  position: fixed;
+  height: 300px;
+  width: 300px;
+ 
+  
+  
+}
+
+/* Control the left side */
+.left {
+  position: relative;
+
 }

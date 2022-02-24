@@ -119,12 +119,9 @@ span {
   overflow: hidden;
   padding: 0 4px 0 6px
 }
-input {
-  
-  width: 190px; padding-left: 50px;
-  height: 25px;
-}
-  
+
+
+
 
 
 
@@ -159,34 +156,7 @@ input {
 
 /* The styling for the username and password input fields */
 
-input[type="text"], textarea {
 
-  background-color : #C4C4C4; 
-  text-decoration: none;
-  border: none;
-
-}
-
-input[type=submit] {
-  width: 390px;
-  margin-top: 15px;
-  height: 35px;
-  border: none;
-
-  
-  border-radius: 12px;
-  float: right;
-  color: black;
-  
-  margin-right: 30px;
- 
-  background-color: #91E0DF;
-  text-align: center;
-  padding: 5px 20px;
-  font-style: bold;
-  text-decoration: none;
-  font-size: 15px;
-}
 
 #Fleet_report{
   background-color: rgb(146, 90, 90);
@@ -199,9 +169,7 @@ input[type=submit] {
 
 /*Buttons to switch dashboard*/
 
-li {
-  float: left;
-}
+
 
 .item-s {
   display: block;
