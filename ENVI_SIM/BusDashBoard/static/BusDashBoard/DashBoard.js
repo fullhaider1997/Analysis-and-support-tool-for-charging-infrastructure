@@ -69,8 +69,6 @@ $("#bus_menu li").click(function() {
      fuel_buses.classList.add("item-active")
 
      
-
-
    }
 
   else if ("liquid-fuel-buses" == id.toString())

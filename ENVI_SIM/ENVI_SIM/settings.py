@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     "google_map",
     "menu",
     "BusDashBoard",
-    "optimization_config"
+    "optimization_config",
+    "energy_consumption_study",
 ]
 
 MIDDLEWARE = [

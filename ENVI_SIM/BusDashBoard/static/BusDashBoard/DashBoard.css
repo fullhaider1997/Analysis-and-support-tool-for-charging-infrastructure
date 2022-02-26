@@ -214,25 +214,18 @@ border-radius: nullpx;
 
 li .my_input-d{
 
-background-color: rgb(212, 212, 212);
-display:inline-block;
+ color: #CCE0FF;
 
- 
-  
-}
-
-
-
-#title_input{
-  color:rgb(0, 0, 0);
-  padding-bottom: 2px;
-
-  float:top;
 }
 
 
 ul li {
  display: inline-block;
+}
+
+ul li > * {
+
+  width: 50%;
 }
 
 #Bus-icon{

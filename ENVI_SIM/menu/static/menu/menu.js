@@ -16,7 +16,7 @@ function openMenu(){
 
     menuOpen = true
   
-    sidebar.style.width="210px"
+    sidebar.style.width="270px"
     sidebar.style.borderStyle="solid";
     sidebar.style.borderWidth="2.5px";
     sidebar.style.display = "block";
@@ -87,6 +87,10 @@ $("#sidebar a").click(function() {
       console.log("I am clicking optimization config")
       $("#switchscreen").html(optimization_config);
       
+    }
+    if("Energy Consumption Study" == id.toString()){
+
+      $("#switchscreen").html(energy_board);
     }
 
 

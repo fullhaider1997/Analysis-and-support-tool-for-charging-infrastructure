@@ -112,7 +112,7 @@
     border-style: solid;
     border-width: 2.5px;
     border-color: rgb(255, 255, 255);
-    height: 450px;
+    height: 510px;
   
 
     background-color: #91E0DF;
@@ -126,10 +126,9 @@
 
     text-decoration: none;
     color:rgb(255, 255, 255);
-    font-size: large;
     font-style: bold;
     display:flex;
-    padding: 1em;
+    padding: 0.5em;
 
     margin-top: 15px;
     margin-bottom: 15px;
