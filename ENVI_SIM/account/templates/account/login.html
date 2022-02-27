@@ -21,7 +21,7 @@
        <div id="header">
          <img src="{% static 'home_page/website_logo.JPG' %} " height="80">
          <a class = "demo" href="#news">Book a demo </a>
-         <a  class="active" href="{% url 'login' %}">Login</a>
+         <a  class="demo" href="{% url 'login' %}">Login</a>
        </div> 
   
       <div id="content">
@@ -34,12 +34,12 @@
 
                 <form action="" method="POST">
                    
-                    {% csrf_token %}  
+                    
              
                 
-                    <div class="container">
+                    <div fullclass="container">
                         
-                        
+                       
                         {% for field in form %}
                         <div>
                             {{ field.errors }}

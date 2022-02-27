@@ -8,7 +8,6 @@ const overlay = document.getElementById("overlay")
 
 
 
-
 let menuOpen = false;
 
 
@@ -58,8 +57,6 @@ $("#sidebar a").click(function() {
 
       console.log("I am clicking Routes")
        
-      
-
        $("#switchscreen").html(Routes_n_map);
 
      
@@ -91,6 +88,13 @@ $("#sidebar a").click(function() {
     if("Energy Consumption Study" == id.toString()){
 
       $("#switchscreen").html(energy_board);
+    }
+    if("Export" == id.toString()){
+      console.log("I am clicking export")
+      $("#switchscreen").load("export");
+      
+      
+
     }
 
 

@@ -1,10 +1,13 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate,login,logout
+from account.forms import LoginForm
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 import logging
 from account.forms import FleetManagmentOperatorForm
+
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 
@@ -13,7 +16,7 @@ def logout_user(request):
     messages.success(request, ("You were logged out"))
     return redirect("home")
   
-
+@csrf_exempt
 def login_user(request):
 
     if request.method == "POST":
@@ -26,14 +29,17 @@ def login_user(request):
             if user.is_active:
                 login(request, user)
                 messages.success(request, ("You sucessfully logged in"))
-                return redirect("envi-sim/menu")
+                return redirect("main")
 
          else:
             messages.success(request, ("There was an Error login in, Try again"))
             return redirect("login")
 
     else:
-        return render(request,"account/login.html" )
+       
+        login_form = LoginForm()
+
+        return render(request,"account/login.html",{'form':login_form} )
 
       
     

@@ -21,14 +21,14 @@ from account.views import login_user,register_user
 from home_page.views import home_page_view
 from google_map.views import google_map_view
 from menu.views import menu,test
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", home_page_view ,name="home"),
+    path("home", home_page_view ,name="home"),
+    path("/main" , menu, name="main"),
     path("",include("home_page.urls") ),
-    path("account/", include("account.urls")),
-    path("account/",include("django.contrib.auth.urls")),
-  
-    path("account/login/envi-sim/menu",menu),
+    path("account/",include("account.urls")),
+    path("export/", include("export.urls")),
     
     path("fleet_report/", include("fleet_report.urls"))
 ]
