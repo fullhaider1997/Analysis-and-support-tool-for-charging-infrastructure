@@ -103,8 +103,9 @@
 
 #sidebar{
     
-   margin-top: 10px;
-   margin-right: 1px;
+    margin-top: 10px;
+    margin-right: 1px;
+    left: 10px;
     width: 0px;
     
   
@@ -112,7 +113,7 @@
     border-style: solid;
     border-width: 2.5px;
     border-color: rgb(255, 255, 255);
-    height: 510px;
+    height: 545px;
   
 
     background-color: #91E0DF;
@@ -129,6 +130,8 @@
     font-style: bold;
     display:flex;
     padding: 0.5em;
+    font-family:sans-serif;
+    
 
     margin-top: 15px;
     margin-bottom: 15px;

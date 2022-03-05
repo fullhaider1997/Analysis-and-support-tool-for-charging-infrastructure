@@ -1,3 +1,4 @@
+/*
 energy_board = 
 `
 <div id="back_ground">
@@ -79,21 +80,21 @@ $("#energy_menu li").click(function() {
   });
 </script>
 `
+*/
+function show_list() {
+  var courses = document.getElementById("buses_id");
 
+  
+  if (courses.style.display == "block") {
+      courses.style.display = "none";
+  } else {
+      courses.style.display = "block";
+  }
+}
 
-graph_res = 
-`
-<div id="graph_title">
-   
-</div>
+window.onclick = function (event) {
+  if (!event.target.matches('#dropdown_button')) {
+      document.getElementById('buses_id').style.display = "none";
+  }
+}  
 
-`
-
-report_res = 
-
-` 
-<div id="report_title">
-    
-</div>
-
-`

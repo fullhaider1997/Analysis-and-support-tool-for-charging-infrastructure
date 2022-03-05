@@ -20,7 +20,7 @@
     height: 490px;
     width: 1100px;
     top: 5%;
-    left: 35%;
+    left: 40%;
     
     
     
@@ -39,6 +39,7 @@
     border-radius: 5px;
     width: 46.99%;
     background-color: #ffffff;
+    font-family:sans-serif;
   }
 
   
@@ -55,7 +56,6 @@
    
     background-color: #91E0DF;
   }
-
 
 
   #bus_menu {
@@ -201,6 +201,8 @@ border-radius: nullpx;
 /* Control the left side */
 .left {
   position: absolute;
+  left: -90px;
+  margin-top: 30px;
 
 }
 
@@ -214,23 +216,42 @@ border-radius: nullpx;
 
 li .my_input-d{
 
- color: #CCE0FF;
+ color: #000000;
 
 }
 
+input[type=text] {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: #CCE0FF;
+  border-style:solid;
+  text-align: center; 
+ 
+
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+  padding-bottom: 1px;
+  
+}​
 
 ul li {
  display: inline-block;
+
+}
+ul {
+  list-style-type: none;
 }
 
-ul li > * {
-
-  width: 50%;
-}
 
 #Bus-icon{
 
  position: absolute;
+ top: 50px;
  width: 300px;
  height: 200px;
  left:300px;

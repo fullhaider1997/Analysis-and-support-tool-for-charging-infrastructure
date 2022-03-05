@@ -24,13 +24,12 @@ from menu.views import menu,test
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("home", home_page_view ,name="home"),
-    path("/main" , menu, name="main"),
+    path("", home_page_view ,name="home"),
+    path("main/" ,include("menu.urls")),
     path("",include("home_page.urls") ),
     path("account/",include("account.urls")),
-    path("export/", include("export.urls")),
+
     
-    path("fleet_report/", include("fleet_report.urls"))
 ]
 
 

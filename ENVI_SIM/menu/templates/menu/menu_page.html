@@ -38,50 +38,49 @@
            
             <a  class="sidebar-item" id ="Bus_Dashboard"> 
               <img  style="width:20px;height:20px;" src="https://img.icons8.com/ios/100/000000/bus.png"/> 
-              <div>Bus Dashboard</div>
+              <div id="Bus_Dashboard_title">Bus Dashboard</div>
             </a>
            
 
               <a  class="sidebar-item" id ="Routes" > 
                 <img  style="width:20px;height:20px;" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-route-interface-kiranshastry-solid-kiranshastry.png"/>
-                <div>Routes</div>
+                <div id="Routes_title">Routes</div>
               </a>
 
-             
              
 
              <a class="sidebar-item" id ="Energy Consumption Study">
               <img style="width:20px;height:20px;" src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-energy-nature-ecology-those-icons-fill-those-icons.png"/>
-              <div>Energy Consumption Study</div>
+              <div id="Energy_Consumption_Study_title">Energy Consumption Study</div>
+             </a>
+
+           <a class="sidebar-item" id ="Environmental Impact Study">
+            <img style="width:20px;height:20px;" src="https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/64/000000/external-save-the-world-climate-change-kmg-design-detailed-outline-kmg-design-1.png"/>
+            <div id="Environmental_Impact_Study_title">Environmental Impact Study</div>
            </a>
 
-           <a class="sidebar-item" id ="Environmental cost Study">
-            <img style="width:20px;height:20px;" src="https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/64/000000/external-save-the-world-climate-change-kmg-design-detailed-outline-kmg-design-1.png"/>
-            <div>Environmental cost study</div>
-         </a>
+            <a class="sidebar-item" id ="Financial Impact Study">
+              <img style="width:20px;height:20px;" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-report-project-planing-flatart-icons-outline-flatarticons-1.png"/>
+               <div id="Financial_Impact_Study_title">Financial Impact Study</div>
+           </a>
+           <a class="sidebar-item" id ="Schedule Impact Study">
+             <img style="width:20px;height:20px;" src="https://img.icons8.com/ios/50/000000/view-shedule.png"/>
+             <div id="Schedule_Impact_Study_title">Schedule Impact Study</div>
+          </a>
 
-         <a class="sidebar-item" id ="Operational cost study">
-          <img style="width:20px;height:20px;" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-report-project-planing-flatart-icons-outline-flatarticons-1.png"/>
-          <div>Operational cost study</div>
-       </a>
-       <a class="sidebar-item" id ="Schedule impact study">
-        <img style="width:20px;height:20px;" src="https://img.icons8.com/ios/50/000000/view-shedule.png"/>
-        <div>Schedule impact study</div>
-      </a>
-
-             <a class="sidebar-item" id ="Charging-poles">
+             <a class="sidebar-item" id ="Charging Stations">
               <img style="width:20px;height:20px;" img src="https://img.icons8.com/external-wanicon-lineal-wanicon/64/000000/external-charging-car-service-wanicon-lineal-wanicon.png"/>
-              <div>Charging stations</div>
+              <div id="Charging_Stations_title">Charging Stations</div>
            </a>
 
            <a class="sidebar-item" id ="Scheduling">
             <img style="width:20px;height:20px;" src="https://img.icons8.com/external-parzival-1997-detailed-outline-parzival-1997/64/000000/external-optimization-artificial-intelligence-and-machine-learning-parzival-1997-detailed-outline-parzival-1997.png"/>
-            <div>Scheduling</div>
+            <div id="Scheduling_title">Scheduling</div>
          </a>
 
          <a class="sidebar-item" id ="Export">
           <img style="width:20px;height:20px;" src="https://img.icons8.com/ios-glyphs/30/000000/database-export.png"/>
-          <div>Export</div>
+          <div id="Export_title">Export</div>
        </a>
 
 
@@ -116,9 +115,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'menu\menu.css'%}">
   
   <script type="text/javascript" src="{% static 'menu\menu.js'%}"></script> 
-  <script type="text/javascript" src="{% static 'fleet_report/report.js'%}"></script> 
-  <script type="text/javascript" src="{% static 'energy_consumption_study/energy_board.js'%}"></script> 
-  <script type="text/javascript" src="{% static 'energy_consumption_study/energy_board_style.js'%}"></script> 
+  <script type="text/javascript" src="{% static 'fleet_report/report.js'%}"></script>   
   <script type="text/javascript" src="{% static 'google_map/map_n_routes.js'%}"></script>
   <script type="text/javascript" src="{% static 'BusDashBoard/DashBoard.js'%}"></script>
   <script type="text/javascript" src="{% static 'optimization_config/optimization_config.js'%}"></script>
