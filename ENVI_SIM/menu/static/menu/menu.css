@@ -148,6 +148,9 @@
 .sidebar-item > div {
     padding:  0 1em;
 }
+.sidebar-item-active > div {
+  padding:  0 1em;
+}
 
 .sidebar-item:hover{
 
@@ -156,6 +159,31 @@
     color:#91E0DF;
     border-radius: 10px;
 }
+
+.sidebar-item-active{
+
+  background-color: #ffffff;
+  border-style: solid;
+  color:#91E0DF;
+  border-radius: 10px;
+  font-style: bold;
+  display:flex;
+  padding: 0.5em;
+  font-family:sans-serif;
+  
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  align-items:center;
+}
+
 
 #overlay{
     width: 100vh;

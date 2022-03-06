@@ -84,11 +84,44 @@ menu.addEventListener("click", function(){
 
 })
 
+function select(id){
+
+  console.log("Hello select")
+  var item_route = document.getElementById("Routes");
+  var item_bus = document.getElementById("Bus_Dashboard");
+  var item_energy = document.getElementById("Energy Consumption Study");
+  var item_enviorment = document.getElementById("Environmental Impact Study");
+  var item_financial = document.getElementById("Financial Impact Study");
+  var item_schedule = document.getElementById("Schedule Impact Study");
+  var item_charging = document.getElementById("Charging Stations");
+  var item_scheduling = document.getElementById("Scheduling");
+  var item_export = document.getElementById("Export");
+
+  list = [item_route,item_bus,item_energy,item_enviorment,item_financial,item_schedule,item_charging,
+    item_scheduling,item_export  ]
+
+   
+
+    for (var i = 0; i < list.length; i++) {
+       list[i].classList.add("sidebar-item")
+       list[i].classList.remove("sidebar-item-active")
+     }
+
+  var item = document.getElementById(id);
+  item.classList.add("sidebar-item-active")
+  item.classList.remove("sidebar-item")
+  
+
+}
+
 
 
 $("#sidebar a").click(function() {
    
     var id = $(this).attr("id");
+    var item = document.getElementById(id);
+   
+    console.log(item)
     console.log(id)
 
     if("Routes"== id.toString()){
@@ -96,45 +129,66 @@ $("#sidebar a").click(function() {
        console.log("I am clicking Routes")      
        $("#switchscreen").html(Routes_n_map);
 
+
+     select(id)
+
+
     }else if("Bus_Dashboard" == id.toString()){
 
        console.log("I am clicking dashboard")
-       //$("#switchscreen").html(DashBoard);
+      
        $("#switchscreen").load("bus");
+
+       
+       select(id)
+   
+
 
     } else if("Scheduling" == id.toString()){
      
       console.log("I am clicking Scheduling ")
      // $("#switchscreen").html(optimization_config);
       $("#switchscreen").load("scheduling");
+
+      select(id)
+
       
     } else if("Energy Consumption Study" == id.toString()){
 
       $("#switchscreen").load("energy_consumption_study");
 
+      select(id)
+
     }else if("Environmental Impact Study" == id.toString()){
 
       $("#switchscreen").load("environmental_impact_study");
       console.log("I am clicking enviormental")
+      select(id)
 
     }else if("Financial Impact Study" == id.toString()){
       console.log("I am clicking financial...")
       $("#switchscreen").load("financial_impact_study");
 
+      select(id)
 
     }else if("Schedule Impact Study" == id.toString()){
 
       $("#switchscreen").load("schedule_impact_study");
        console.log("I am clicking schedule")
 
+       select(id)
+
     }else if("Export" == id.toString()){
       
       $("#switchscreen").load("export");
+
+      select(id)
       
     }else if ("Charging Stations" == id.toString()){
 
       $("#switchscreen").load("charging_stations");
       console.log("I am clicking charging station")
+      select(id)
     }
 
 
