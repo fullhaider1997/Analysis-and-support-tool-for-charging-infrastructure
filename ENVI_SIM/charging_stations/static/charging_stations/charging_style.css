@@ -1,0 +1,101 @@
+
+ #back_ground{
+    background-color: #91E0DF;
+    position: relative;
+    height: 570px;
+    width: 2000px;
+    margin: 0%;
+    padding: 0%;
+   
+  }
+
+  
+  #dash_board{
+
+    background-color: hsl(0, 39%, 51%);
+    position: relative;
+    height: 490px;
+    width: 1100px;
+    top: 5%;
+    left: 40%;
+    
+    
+    
+    border-radius: 10px;
+
+  }
+
+  .title-c{
+    position: absolute;
+    left: 450px;
+
+    
+  }
+
+  .split-c {
+    height: 75%;
+    position: absolute;
+    overflow-x: hidden;
+    padding-top: 20px;
+    top:60px;
+  }
+  /* Control the left side */
+.left-c {
+  right:30px;
+  background-color: rgb(172, 166, 166);
+  width: 30%;
+   
+  }
+  
+  /* Control the right side */
+.right-c {
+    left:20px;
+    background-color: None;
+    width: 60%;
+  }
+
+
+  #charging-station-map {
+    
+    height: 350px;
+
+   
+}
+
+
+
+#dropdown_list_charger{
+ 
+    padding-left: 65px;
+  }
+  
+#dropdown_button {
+    padding-top: 100px;
+    border-radius: 10px;
+    background-color: #0979ad;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    font-family: montserrat;
+    border: 1px solid #ffffff;
+  }
+  
+  .chargers {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    
+    z-index: 1;
+  }
+  
+  select {
+    width: 200px;
+  }
+  
+  select[multiple] {
+    padding:5px;
+  }

@@ -1,9 +1,13 @@
 
-console.log("helloss")
+//openMenu()
+//$("#switchscreen").load("bus");
+//select("Bus_Dashboard")
+
 
 const menu = document.getElementById("menu")
 const sidebar = document.getElementById("sidebar")
 const overlay = document.getElementById("overlay")
+
 
 
 
@@ -49,12 +53,6 @@ function closeMenu(){
   document.getElementById("Charging_Stations_title").innerHTML = ""
   document.getElementById("Scheduling_title").innerHTML = ""
   document.getElementById("Export_title").innerHTML = ""
-
-  Export_title
-
-  Scheduling_title
-
-
   
   // document.getElementById("Bus_Dashboard_title").innerHTML = ""
   // document.getElementById("Bus_Dashboard_title").innerHTML = ""
@@ -128,9 +126,7 @@ $("#sidebar a").click(function() {
 
        console.log("I am clicking Routes")      
        $("#switchscreen").html(Routes_n_map);
-
-
-     select(id)
+        select(id)
 
 
     }else if("Bus_Dashboard" == id.toString()){
