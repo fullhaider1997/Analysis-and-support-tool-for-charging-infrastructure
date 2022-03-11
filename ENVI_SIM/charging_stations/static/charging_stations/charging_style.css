@@ -1,0 +1,153 @@
+
+ #back_ground{
+    background-color: #91E0DF;
+    position: relative;
+    height: 570px;
+    width: 2000px;
+    margin: 0%;
+    padding: 0%;
+   
+  }
+
+  
+  #dash_board{
+
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    height: 490px;
+    width: 1100px;
+    top: 5%;
+    left: 40%;
+    
+    
+    
+    border-radius: 10px;
+
+  }
+
+.title-c{
+    position: absolute;
+    font-size: 20px;
+line-height: 55px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    left: 450px;    
+}
+
+.split-c {
+    height: 75%;
+    position: absolute;
+    overflow-x: hidden;
+    padding-top: 20px;
+    top:60px;
+}
+
+  /* Control the left side */
+.left-c {
+  
+  right:40px;
+
+
+  width: 35%;
+   
+  }
+  
+  /* Control the right side */
+.right-c {
+  top:100px;
+    padding-top: 20px;
+    left:840px;
+    background-color: None;
+    width: 30%;
+  }
+
+
+  #charging-station-map {
+    
+    height: 350px;
+    
+
+   
+}
+
+
+
+
+#list-btns{
+  padding-top: 10px;
+ 
+}
+
+.location_id{
+  width: 115px;
+}
+#type_id{
+  width: 115px;
+}
+#num_id{
+  width: 50px;
+}
+#dropdown_button_charger {
+
+  border-radius: 10px;
+  background-color: #839aff;
+  color: white;
+ 
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  font-family: montserrat;
+  border: 1px solid #ffffff;
+}
+
+.charger {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 10px;
+  z-index: 1;
+}
+
+.charger li {
+  color: black;
+  
+  text-decoration: none;
+  display: block;
+  list-style: none;
+  background-color: rgb(128, 245, 173);
+  font-family: montserrat;
+  border: 1px solid white;
+  width: 100px;
+  height: 30px;
+  font-size: 10px;
+}
+
+
+.charger li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: block;
+  padding: 10px;
+}
+
+.select select {
+  background-color: #a9d5f8;
+  border: none;
+  
+  font-size: 13px;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  
+ 
+}
+.num{
+  background-color: #a9d5f8;
+  border: none;
+
+  height: 15px;
+  outline: none;
+  overflow:hidden;
+  
+}

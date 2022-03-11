@@ -1,0 +1,90 @@
+<div id="back_ground">
+  {% load static %}
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+    <div id="dash_board">
+     <li id="Energy graph" class="item"><a class="title-c">Charging Stations </a></li>
+   
+  
+ 
+     
+     <div class="split-c left-c">
+
+      <div class="left-screen">
+      
+      
+        <img id="add-charger"style="height:20px;"src="https://img.icons8.com/color/48/000000/add--v1.png"/></img>
+        
+        <div id="list-btns">
+
+          <div class="select">
+            <select class="location_id" style="float:left">
+              <option value="waterfront terminal" selected="selected"><a >Location</a></option>
+                <option value="waterfront terminal"><a >waterfront terminal</a></option>
+                <option value="city hall terminal"><a >city hall terminal</a></option>
+            </select>
+            
+          </div>
+           
+         <div class="select"> 
+            <select id="type_id" style="float:left">
+              <option value="waterfront terminal" selected="selected"><a >Type</a></option>
+              <option value="waterfront terminal"><a>Proterra Charging System</a></option>
+              <option value="city hall terminal"><a >R3 charging</a></option>
+            </select>
+          </div>
+
+          <input id="num_id" class="num"type="number" min="1" step="1" max="40" style="float:left"/>
+          <input id ="num_id" class="num" style="float:left; " readonly>
+          <img id="remove-1" src="https://img.icons8.com/fluency/48/000000/minus.png" style="float:left; height:20px;"/>
+
+      </div>
+       
+      <div class="select"id="append" style="float:left"></div>
+
+
+
+
+
+
+
+
+      
+
+      
+    
+     </div>
+
+  
+       </div>
+      </div>
+   
+
+    <div class="split-c right-c">
+        <div class="right-screen">
+          <div id='charging-station-map'></div> 
+
+
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7CIJd0Sk2ysCH_30GQnEHn9s2Jyu5rio&callback=initMap"></script>
+
+          
+        
+          </div>
+        </div>
+      </div>
+     
+     
+         
+   
+    
+    
+  
+    <link rel="stylesheet" type="text/css" href="{% static 'charging_stations/charging_style.css' %}"></link>
+    <script type="text/javascript" src="{% static 'charging_stations/charging_stations.js' %}"></script>
+
+   
+    
+    
+ </div>

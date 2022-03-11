@@ -47,8 +47,12 @@ INSTALLED_APPS = [
     "BusDashBoard",
     "optimization_config",
     "energy_consumption_study",
-    "export",
-    "routes"
+    "schedule_impact_study",
+    "environmental_impact_study",
+    "financial_impact_study",
+    'charging_stations',
+    "scheduling",
+    "export"
 ]
 
 MIDDLEWARE = [
