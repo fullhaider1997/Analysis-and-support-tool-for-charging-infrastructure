@@ -1,3 +1,4 @@
+
 .title_button-e{
 
     font-style: sans-serif;;
@@ -7,3 +8,68 @@
     left: 430px;
     
     }
+    
+    
+    .routes {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(170, 0, 0, 0.2);
+        z-index: 1;
+      }
+      
+      .routes li {
+        color: black;
+        padding: 5px;
+        border-radius: 10px;
+        text-decoration: none;
+        display: block;
+        list-style: none;
+        background-color: #CCE0FF;
+        font-family: montserrat;
+        border: 1px solid white;
+        cursor: pointer;
+      }
+    
+      .routes li:hover {
+        color: black;
+        padding: 5px;
+        border-radius: 10px;
+        text-decoration: none;
+        display: block;
+        list-style: none;
+        background-color: #C9F8A5;
+        font-family: montserrat;
+        border: 1px solid white;
+        cursor: pointer;
+      }
+      
+      
+     #back_ground{
+      background-color: #91E0DF;
+      position: relative;
+      height: 570px;
+      width: 2000px;
+      margin: 0%;
+      padding: 0%;
+     
+    }
+    
+    
+    #dash_board{
+    
+      background-color: #ffffff;
+      position: relative;
+      height: 490px;
+      width: 1100px;
+      top: 5%;
+      left: 40%;
+      
+      
+      
+      border-radius: 10px;
+    
+    }
+    
+    

@@ -20,7 +20,7 @@ from django.urls import path,include
 from account.views import login_user,register_user
 from home_page.views import home_page_view
 from google_map.views import google_map_view
-from menu.views import menu,test
+from menu.views import menu,hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +28,7 @@ urlpatterns = [
     path("main/" ,include("menu.urls")),
     path("",include("home_page.urls") ),
     path("account/",include("account.urls")),
+    path("hello/", hello ,name="hello"),
 
     
 ]

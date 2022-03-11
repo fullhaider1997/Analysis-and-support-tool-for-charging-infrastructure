@@ -4,10 +4,11 @@ from django.urls import path,include
 
 from export.views import exportDashBoard
 from BusDashBoard.views import fuelDashBoard,eletricalDashBoard
-from menu.views import menu
+from menu.views import menu,hello
 
 urlpatterns = [   
     path("", menu ,name="main"),
+  
     path("export/", include("export.urls")),
     path("energy_consumption_study/", include("energy_consumption_study.urls")),
    
@@ -20,6 +21,7 @@ urlpatterns = [
     path("bus/", include("BusDashBoard.urls")),
     path("Electrical/",eletricalDashBoard),
     path("Fuel/",fuelDashBoard)
+    
     
 
 ]

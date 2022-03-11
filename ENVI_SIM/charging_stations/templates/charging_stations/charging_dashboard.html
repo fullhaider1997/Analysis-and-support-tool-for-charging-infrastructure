@@ -1,11 +1,8 @@
 <div id="back_ground">
+  {% load static %}
 
-   <head>
-     <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
-  </head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    {% load static %}
 
     <div id="dash_board">
      <li id="Energy graph" class="item"><a class="title-c">Charging Stations </a></li>
@@ -16,43 +13,78 @@
      <div class="split-c left-c">
 
       <div class="left-screen">
-  
-        <div id="dropdown_list_charger">
-          <button id="dropdown_button" 
-              onclick="show_list()">
-              Charger station
-          </button>
+      
+      
+        <img id="add-charger"style="height:20px;"src="https://img.icons8.com/color/48/000000/add--v1.png"/></img>
+        
+        <div id="list-btns">
 
-          
-          <select id="chargers_id" class="chargers" multiple>
-            <option id="Waterfront Terminal" value ="Waterfront Terminal">Waterfront terminal</option>
-            <option id="City Hall terminal" value = "City Hall terminal">City Hall terminal</option>  
-            <option id="Memorial & Squire" value="Memorial & Squire">Memorial and Squire</option>   
-            <option id="Thunder Bay Kasper Bus Depot" value ="Thunder Bay Kasper Bus Depot">Thunder Bay Kasper Bus Depot</option>          
-          </select>
+          <div class="select">
+            <select class="location_id" style="float:left">
+              <option value="waterfront terminal" selected="selected"><a >Location</a></option>
+                <option value="waterfront terminal"><a >waterfront terminal</a></option>
+                <option value="city hall terminal"><a >city hall terminal</a></option>
+            </select>
+            
+          </div>
+           
+         <div class="select"> 
+            <select id="type_id" style="float:left">
+              <option value="waterfront terminal" selected="selected"><a >Type</a></option>
+              <option value="waterfront terminal"><a>Proterra Charging System</a></option>
+              <option value="city hall terminal"><a >R3 charging</a></option>
+            </select>
+          </div>
+
+          <input id="num_id" class="num"type="number" min="1" step="1" max="40" style="float:left"/>
+          <input id ="num_id" class="num" style="float:left; " readonly>
+          <img id="remove-1" src="https://img.icons8.com/fluency/48/000000/minus.png" style="float:left; height:20px;"/>
+
       </div>
-  
-     
+       
+      <div class="select"id="append" style="float:left"></div>
+
+
+
+
+
+
+
+
+      
+
+      
     
+     </div>
 
   
        </div>
       </div>
    
+
     <div class="split-c right-c">
         <div class="right-screen">
           <div id='charging-station-map'></div> 
-          <script async
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7CIJd0Sk2ysCH_30GQnEHn9s2Jyu5rio&callback=initMap&v=weekly">
-          </script>
+
+
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7CIJd0Sk2ysCH_30GQnEHn9s2Jyu5rio&callback=initMap"></script>
+
+          
         
-      
-        </div> 
-    </div>
-    
-    
+          </div>
+        </div>
+      </div>
+     
+     
+         
    
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link rel="stylesheet" type="text/css" href="{% static 'charging_stations/charging_style.css' %}">
-    <script type="text/javascript" src="{% static 'charging_stations/charging_stations.js'%}"></script>
+    
+    
+  
+    <link rel="stylesheet" type="text/css" href="{% static 'charging_stations/charging_style.css' %}"></link>
+    <script type="text/javascript" src="{% static 'charging_stations/charging_stations.js' %}"></script>
+
+   
+    
+    
  </div>
