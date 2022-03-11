@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     "BusDashBoard",
     "optimization_config",
     "energy_consumption_study",
-    "export"
+    "export",
+    "routes"
 ]
 
 MIDDLEWARE = [

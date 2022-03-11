@@ -5,12 +5,7 @@ const menu = document.getElementById("menu")
 const sidebar = document.getElementById("sidebar")
 const overlay = document.getElementById("overlay")
 
-
-
-
 let menuOpen = false;
-
-
 function openMenu(){
 
     menuOpen = true
@@ -31,9 +26,6 @@ function closeMenu(){
     sidebar.style.borderStyle="none";
     sidebar.style.display = "none";
 }
-
-
-
 
 menu.addEventListener("click", function(){
 
@@ -57,8 +49,10 @@ $("#sidebar a").click(function() {
 
       console.log("I am clicking Routes")
        
-       $("#switchscreen").html(Routes_n_map);
-
+       //$("#switchscreen").load("export");
+       //$("#switchscreen").load("routes");
+      //window.location.pathname = "routes";
+      window.location.pathname = "routes";
      
     
     }

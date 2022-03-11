@@ -21,16 +21,18 @@ from account.views import login_user,register_user
 from home_page.views import home_page_view
 from google_map.views import google_map_view
 from menu.views import menu,test
+from routes.views import routeOne,default_map
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("home", home_page_view ,name="home"),
-    path("/main" , menu, name="main"),
+    path("main" , menu, name="main"),
     path("",include("home_page.urls") ),
     path("account/",include("account.urls")),
     path("export/", include("export.urls")),
-    
+    path("routes/", include("routes.urls")),
     path("fleet_report/", include("fleet_report.urls"))
+   
 ]
 
 
