@@ -265,8 +265,9 @@ function createSystemMap(id, geojson) {
         //$("#switchscreen").load("routeOne");
         //window.location.pathname = "routes/routeOne";
 
-        if ("r2" == id.toString()){
+        if ("r1" == id.toString()){
           window.location.pathname = "routeOne";
+          //$("#switchscreen").load("routeOne");
         }
     });
     });

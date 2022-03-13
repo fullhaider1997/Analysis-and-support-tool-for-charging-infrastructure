@@ -115,8 +115,9 @@ $("#sidebar a").click(function() {
     if("Routes"== id.toString()){
 
        console.log("I am clicking Routes")      
-       $("#switchscreen").html(Routes_n_map);
-        select(id)
+       //$("#switchscreen").load("routes");
+       window.location.pathname = "routes"; 
+      //select(id)
 
 
     }else if("Bus_Dashboard" == id.toString()){

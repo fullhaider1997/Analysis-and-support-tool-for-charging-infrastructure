@@ -29,6 +29,8 @@ urlpatterns = [
     path("",include("home_page.urls") ),
     path("account/",include("account.urls")),
     path("hello/", hello ,name="hello"),
+    path("routes/",include("routes.urls"))
+
 
     
 ]
