@@ -7,7 +7,7 @@ from scheduling.views import schedulingDashboard
 
 
 urlpatterns = [   
-    path("", schedulingDashboard, name="financial_impact_study"),
+    path("", schedulingDashboard, name="scheduling"),
     
     
 ]

@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     "financial_impact_study",
     'charging_stations',
     "scheduling",
-    "export"
+    "export",
+    
 ]
 
 MIDDLEWARE = [
