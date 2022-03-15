@@ -74,7 +74,7 @@ function createSystemMap(id, geojson) {
     routes[feature.properties.route_id] = feature.properties;
   }
 
-  map.scrollZoom.disable();
+  map.scrollZoom.enable();
   map.addControl(new mapboxgl.NavigationControl());
 
   map.on('load', () => {

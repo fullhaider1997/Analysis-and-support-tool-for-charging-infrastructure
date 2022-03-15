@@ -115,8 +115,8 @@ $("#sidebar a").click(function() {
     if("Routes"== id.toString()){
 
        console.log("I am clicking Routes")      
-       //$("#switchscreen").load("routes");
-       window.location.pathname = "routes"; 
+       $("#switchscreen").load("routes");
+       //window.location.pathname = "routes"; 
       //select(id)
 
 

@@ -9,8 +9,8 @@ from . import views
 
 urlpatterns = [   
    
-    path("", views.routesDashBoard),
-    path("",views.default_map,name="default"),
-    path("/routeOne", views.routeOne, name= "routeOne"), 
+    path("", views.routesDashBoard, name="routesbase"),
+    path("/routeOne", views.routeOne, name= "routeOne")
+    #path("",views.default_map,name="default"),
 ]
 
