@@ -21,7 +21,5 @@ urlpatterns = [
     path("bus/", include("BusDashBoard.urls")),
     path("Electrical/",eletricalDashBoard),
     path("Fuel/",fuelDashBoard)
-    
-    
-
+    ,path("routes/",include("routes.urls")) 
 ]

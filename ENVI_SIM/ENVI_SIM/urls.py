@@ -30,6 +30,9 @@ urlpatterns = [
     path("main/" ,include("menu.urls")),
     path("",include("home_page.urls") ),
     path("account/",include("account.urls")),
+    path("hello/", hello ,name="hello"),
+    path("routes/",include("routes.urls"))
+
     path("retrieveCO2EmissionData/",retrieveCO2EmissionData, name="retrieveCO2EmissionData"),
     path("retrieveEnergyData/",retrieveEnergyData,name="retrieveEnergyData")
 

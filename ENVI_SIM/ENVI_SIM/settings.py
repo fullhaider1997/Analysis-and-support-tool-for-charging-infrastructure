@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'charging_stations',
     "scheduling",
     "export",
-    
+    "routes"
 ]
 
 MIDDLEWARE = [

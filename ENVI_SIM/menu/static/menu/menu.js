@@ -8,14 +8,7 @@ const menu = document.getElementById("menu")
 const sidebar = document.getElementById("sidebar")
 const overlay = document.getElementById("overlay")
 
-
-
-
-
-
 let menuOpen = false;
-
-
 function openMenu(){
 
    
@@ -67,9 +60,6 @@ function closeMenu(){
     //sidebar.style.borderStyle="none";
    // sidebar.style.display = "none";
 }
-
-
-
 
 menu.addEventListener("click", function(){
 
@@ -125,8 +115,9 @@ $("#sidebar a").click(function() {
     if("Routes"== id.toString()){
 
        console.log("I am clicking Routes")      
-       $("#switchscreen").html(Routes_n_map);
-        select(id)
+       $("#switchscreen").load("routes");
+       //window.location.pathname = "routes"; 
+      //select(id)
 
 
     }else if("Bus_Dashboard" == id.toString()){
