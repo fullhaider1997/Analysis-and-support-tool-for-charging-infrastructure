@@ -1,8 +1,11 @@
 
+//Initalizating the map
+
+//Plotly.newPlot('Enviormental_map', data=[] , layout = {height: 400,}) ;
 function show_list() {
+
     var courses = document.getElementById("routes_id");
   
-    
     if (courses.style.display == "block") {
         courses.style.display = "none";
     } else {
@@ -18,48 +21,34 @@ function show_list() {
   
   $("#routes_id li").click(function() {
   
-    console.log("Clicking on selection of routes")
+    console.log("Clicking on selection of routes:enviormental")
         
     var button = document.getElementById("dropdown_button")
     var id = $(this).attr("id");
     button.innerHTML = id;
+    console.log(id)
+
+    if(id == "Mainline 1"){
+      console.log("Clicking on Maineline 2")
+      ts1_0 = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/Fall/TS_1_0.csv")
+      ts1_1 = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/Fall/TS_1_1.csv")
+      ts1_2 = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/Fall/TS_1_2.csv")
+      ts1_3 = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/Fall/TS_1_3.csv")
+      ts1_4 = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/Fall/TS_1_4.csv")
+      console.log("Didn't reach the end of the line..")
+      //console.log(data)
+      Promise.all([ts1_0,ts1_1,ts1_2,ts1_3,ts1_4]).then(function(ts_all){
+         
+         plotTrips(ts_all)
+        
+        
+       });
+
+
+
+    }
   
   
   });
   
   
-  
-  var exp1 = "x";
-  var exp2 = "1.5*x";
-  var exp3 = "1.5*x + 7";
-  
-  // Generate values
-  
-  var x1Values = [];
-  var x2Values = [];
-  var x3Values = [];
-  var y1Values = [];
-  var y2Values = [];
-  var y3Values = [];
-  
-  for (var x = 0; x <= 10; x += 1) {
-    x1Values.push(x);
-    x2Values.push(x);
-    x3Values.push(x);
-    y1Values.push(eval(exp1));
-    y2Values.push(eval(exp2));
-    y3Values.push(eval(exp3));
-  }
-  
-  // Define Data
-  var data = [
-    {x: x1Values, y: y1Values, mode:"lines"},
-    {x: x2Values, y: y2Values, mode:"lines"},
-    {x: x3Values, y: y3Values, mode:"lines"}
-  ];
-  
-  // Define Layout
-  var layout = {title: "[y=" + exp1 + "] [y=" + exp2 + "] [y=" + exp3 + "]"};
-  
-  
-  Plotly.newPlot('plot', data,);
