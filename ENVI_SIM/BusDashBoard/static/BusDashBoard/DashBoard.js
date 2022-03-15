@@ -74,11 +74,39 @@ function show_list() {
             if (!event.target.matches('#dropdown_button')) {
                 document.getElementById('buses_id').style.display = "none";
             }
-        }  
+  }  
 
    
 
 
+var bus_info = {
+  
+   "BYD K9":{
+    Battery_capacity :"324 kWh",
+    Max_passengers: "37",
+    Max_speed: "100.584 km/h",
+    Weight: "43,431 lbs",
+    Charging_Time : "2-3 hrs"
+   },
+   "Volvo 7900 12m":{
+    Battery_capacity :"470 kWh",
+    Max_passengers: "38",
+    Max_speed: "50 kw/h",
+    Weight: "41,887.83 lbs",
+    Charging_Time : "2-3 hrs"
+   },
+   "Proterra ZX5":{
+
+    Battery_capacity :"220 kWh",
+    Max_passengers: "40",
+    Max_speed: "104.6 kw/h",
+    Weight: "26,649 lbs",
+    Charging_Time : "2.9 hrs"
+   }
+
+
+
+}
 
 
 
