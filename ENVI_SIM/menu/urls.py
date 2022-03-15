@@ -6,6 +6,7 @@ from export.views import exportDashBoard
 from BusDashBoard.views import fuelDashBoard,eletricalDashBoard
 from menu.views import menu,hello
 
+from routes.views import routeOne
 urlpatterns = [   
     path("", menu ,name="main"),
   
@@ -21,5 +22,7 @@ urlpatterns = [
     path("bus/", include("BusDashBoard.urls")),
     path("Electrical/",eletricalDashBoard),
     path("Fuel/",fuelDashBoard)
-    ,path("routes/",include("routes.urls")) 
+    ,path("routes/",include("routes.urls")),
+
+    path("routeOne/", routeOne, name= "routeOne")
 ]
