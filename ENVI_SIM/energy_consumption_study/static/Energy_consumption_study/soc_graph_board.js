@@ -1,6 +1,7 @@
 console.log("Energy consumption is started")
+
 var energy_consumption_s =[]
-var time_s =[]
+var time_s = []
 function show_list() {
   var courses = document.getElementById("routes_id");
 
@@ -214,3 +215,57 @@ console.log("data: " + data)
 
 
 
+function initSocGraph(){
+  sync_time = []
+  
+  for(var i =6; i<23; i++){
+    sync_time.push(i)
+  }
+   
+  var data = {
+  
+      x: [],
+    
+      y: [],
+      name: 'eBus ' + i,
+      type: 'scatter'
+    
+    
+    };
+  
+  
+  
+  
+  
+   
+  var layout = {
+  
+  height: 350,
+  
+  yaxis: {
+  
+  title: {
+  
+    text: 'SOC(%)',
+  
+  
+  },
+  xaxis: {
+      title: { 
+          text:'Time',
+          showgrid: true,
+          tick0: 6,
+          dtick: 0.10,
+          autotick: true,
+  
+         ticklen: 23,
+  
+  
+  }}
+  
+  }};
+  
+  
+  Plotly.newPlot('energy_plot', data,layout);
+
+}
