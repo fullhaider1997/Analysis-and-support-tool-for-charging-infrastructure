@@ -1,19 +1,21 @@
-.container{width:100%}
+
 @media (min-width:640px){.container{max-width:640px}}
 @media (min-width:768px){.container{max-width:768px}}
 @media (min-width:1024px){.container{max-width:1024px}}
 @media (min-width:1280px){.container{max-width:1280px}}
 @media (min-width:1536px){.container{max-width:1536px}}
 
-.mx-4{margin-left:1rem;margin-right:1rem}
+.mx-4{margin-left:1rem;margin-right:1rem;position: relative;
+  overflow-x: hidden; max-height:30em}
 
 .h-screen{height:100vh}
 .items-stretch{align-items:stretch}
 .mx-auto{margin-left:auto;margin-right:auto}
 .w-full{width:100%}
+.h-full{height:100%;}
 .ml-4{margin-left:1rem}
 
-.flex-none{flex:none}
+.flex-none{flex:none; max-width: 12em;}
 
 @media (min-width: 768px){}
 .md\:overflow-y-scroll {
@@ -23,6 +25,13 @@
 @media (min-width: 768px){.md\:flex {
     display: flex;
 }}
+
+@media (min-width: 768px){
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+}
 
 
 .text-2xl{font-size:1.5rem;line-height:2rem}
@@ -68,6 +77,7 @@
 
 .map {
     min-height: 350px;
+    overflow: hidden
   }
   
   .map .mapboxgl-popup-content .popup-title {
@@ -100,4 +110,5 @@
 
 .map {
     min-height: 540px;
+    overflow: hidden
 }
