@@ -1,14 +1,34 @@
+.energy_study_menu{
+  overflow: hidden;
+}
 
-.title_button-e{
-
-font-style: sans-serif;;
-text-align: center;
-font-size:large;
-position: absolute;
-left: 430px;
+.pressed{
+  float: left;
+  color: #000000;
+  width:333px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 
+.unpressed{
+  float: left;
+  color: #000000;
+  width:333.8px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #91E0DF;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+
+}
 
 .routes {
     display: none;
@@ -72,3 +92,63 @@ left: 430px;
 
 }
 
+
+li {
+  float: left;
+}
+
+.item-e {
+  display: block;
+  padding: 1em;
+  border-radius: 5px;
+  width: 300px;
+  background-color: #ffffff;
+  font-family:sans-serif;
+}
+
+
+.item-active-e {
+  display: block;
+  padding: 1em;
+  
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+
+  width: 300px;
+ 
+ 
+  background-color: #91E0DF;
+}
+
+
+#bus_menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+ 
+  
+}
+
+
+div.item a {
+
+display: block;
+
+
+
+text-align: center;
+
+text-decoration: none;
+
+}
+
+.title_button-e{
+position: relative;
+text-align: center;
+font-family:sans-serif;
+left: 120px;
+
+}

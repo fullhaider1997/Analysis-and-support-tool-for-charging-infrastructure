@@ -1,6 +1,7 @@
 console.log("Energy consumption is started")
+
 var energy_consumption_s =[]
-var time_s =[]
+var time_s = []
 function show_list() {
   var courses = document.getElementById("routes_id");
 
@@ -209,7 +210,6 @@ $("#routes_id li").click(function() {
   
 
 console.log("data: " + data)
-
 
 
 

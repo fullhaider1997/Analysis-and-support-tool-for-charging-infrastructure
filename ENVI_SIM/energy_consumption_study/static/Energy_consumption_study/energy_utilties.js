@@ -79,9 +79,11 @@ function plotEnergy(trips_data){
     console.log(soc)
 
     sync_time = []
-    for(var i = 6; i < 23; i++){
+
+    for(var i =6; i<23; i++){
         sync_time.push(i)
     }
+ 
     
      for(var i= 0; i < time.length; i++) {
        
@@ -102,12 +104,14 @@ function plotEnergy(trips_data){
    
        
      var layout = {
+     
+    height: 350,
     
      yaxis: {
     
       title: {
     
-        text: 'SOC',
+        text: 'SOC(%)',
     
     
       },
@@ -116,7 +120,6 @@ function plotEnergy(trips_data){
               text:'Time',
               showgrid: true,
               tick0: 6,
-
               dtick: 0.10,
               autotick: true,
 

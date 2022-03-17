@@ -1,15 +1,8 @@
-<div id="back_ground">
-    {% load static %}
-    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.1/papaparse.min.js"></script>
-    <script src="jquery-csv.js"></script>
-    <div id="dash_board">
-     <li id="Energy graph" class="item"><a class="title_button-e">Energy Consumption Graph </a></li>
-   
-    
 
-    <div id="switchscreenbus">  
+{% load static %}
+<div >
     
-    <div id="Content_switch_screen"> 
+   
 
         <div id="dropdown_list">
             <button id="dropdown_button" 
@@ -37,15 +30,13 @@
                 <li id="16 Line"><a >16 Line</a></li>
             </div>
         </div>
-   </div>
-  
-  </div>
+   
 
  <div id = "energy_plot" >  </div>
 
 
   <link rel="stylesheet" type="text/css" href="{% static 'energy_consumption_study/energy_board_style.css' %}">
-  <script type="text/javascript" src="{% static 'energy_consumption_study/energy_board.js'%}"></script>
+  <script type="text/javascript" src="{% static 'energy_consumption_study/soc_graph_board.js'%}"></script>
   <script type="text/javascript" src="{% static 'energy_consumption_study/energy_utilties.js'%}"></script>
  </div>
 
