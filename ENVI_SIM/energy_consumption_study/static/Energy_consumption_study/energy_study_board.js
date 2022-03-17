@@ -9,7 +9,6 @@ element.classList.remove("unpressed")
 element.classList.add("pressed")
 $("#Content_switch_screen").load("soc_study");
 
-initSocGraph()
 
 console.log("I am connected to energy_board_study.js")
 
