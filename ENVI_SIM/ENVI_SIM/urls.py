@@ -21,7 +21,7 @@ from account.views import login_user,register_user
 from home_page.views import home_page_view
 from google_map.views import google_map_view
 from menu.views import menu
-from energy_consumption_study.energy_api import retrieveEnergyData
+from energy_consumption_study.energy_api import retrieveEnergyData,retrieveSpeedData,retrieveTripID
 from environmental_impact_study.enviormental_api import retrieveCO2EmissionData
 
 urlpatterns = [
@@ -33,8 +33,10 @@ urlpatterns = [
     path("routes/",include("routes.urls")),
 
     path("retrieveCO2EmissionData/",retrieveCO2EmissionData, name="retrieveCO2EmissionData"),
-    path("retrieveEnergyData/",retrieveEnergyData,name="retrieveEnergyData")
-
+    path("retrieveEnergyData/",retrieveEnergyData,name="retrieveEnergyData"),
+    path("retrieveSpeedData/",retrieveSpeedData,name="retrieveSpeedData"),
+    path("retrieveTripID/",retrieveTripID, name="retrieveTripID"),
+    
     
 ]
 

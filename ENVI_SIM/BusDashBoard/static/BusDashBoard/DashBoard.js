@@ -58,7 +58,7 @@ $("#bus_menu li").click(function() {
 
 
 
-function show_list() {
+function show_list_bus() {
     
   var courses = document.getElementById("buses_id");
   

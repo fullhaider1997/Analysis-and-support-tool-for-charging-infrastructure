@@ -1,5 +1,6 @@
 console.log("Energy consumption is started")
 
+
 var energy_consumption_s =[]
 var time_s = []
 function show_list() {

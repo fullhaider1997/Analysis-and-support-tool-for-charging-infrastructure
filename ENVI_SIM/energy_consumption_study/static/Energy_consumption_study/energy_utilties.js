@@ -19,6 +19,37 @@ function retrieveEnergyData(path){
 }
 
 
+function retrieveSpeedData(path){
+    return fetch('/retrieveSpeedData/', {  headers: {'Content-Type': 'application/json'}, method: 'POST', body: JSON.stringify({"name": path})
+
+}).then(function (response) { // At this point, Flask has printed our JSON
+  return response.text();
+    }).then(function (text) {
+
+   return JSON.parse(text)
+
+   
+   }).then(data =>{
+  return data})
+}
+
+function retrieveTripID(path){
+    return fetch('//', {  headers: {'Content-Type': 'application/json'}, method: 'POST', body: JSON.stringify({"name": path})
+
+}).then(function (response) { // At this point, Flask has printed our JSON
+  return response.text();
+    }).then(function (text) {
+
+   return JSON.parse(text)
+
+   
+   }).then(data =>{
+  return data})
+}
+
+
+
+
 function plotEnergy(trips_data){
 
     
@@ -105,7 +136,7 @@ function plotEnergy(trips_data){
        
      var layout = {
      
-    height: 350,
+    height: 340,
     
      yaxis: {
     
