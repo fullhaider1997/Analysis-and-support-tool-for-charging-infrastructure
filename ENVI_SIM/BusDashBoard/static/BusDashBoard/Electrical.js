@@ -54,8 +54,7 @@ $("#buses_id li").click(function() {
       input[4].value = "2-3 hrs"
 
       
-      document.getElementById("Bus-icon").src = 
-      "https://www.electrive.com/wp-content/uploads/2018/08/byd-k9-electric-bus-elektrobus-usa-canada.png"
+      document.getElementById("Bus-icon").src = "C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIMBusDashBoard/static/BusDashBoard/byd-k9.png"
 
     } else if(id.toString() == "Volvo 7900")
     {
@@ -65,7 +64,7 @@ $("#buses_id li").click(function() {
       input[3].value = "41, 887.83 Ibs"
       input[4].value = "2-3 hrs"
 
-      document.getElementById("Bus-icon").src = "https://electriccarsreport.com/wp-content/uploads/2015/09/Volvo-7900-Electric.jpg"
+      document.getElementById("Bus-icon").src = "C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/BusDashBoard/static/BusDashBoard/Volvo-7900-Electric.jpg"
 
 
     } else if(id.toString() == "Proterra ZX5"){

@@ -12,7 +12,7 @@ function initMap() {
   }
   
         
-
+init_default_charging_locations()
 
 
 
@@ -127,9 +127,10 @@ $(document).on("click", ".location_id", function() {
            
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(coordinates["lat"],coordinates["lng"]),
-                title:"Hello World!",
+                title:"City hall",
                 icon: image
             });
+            
             
             marker.setMap(map);
 
@@ -143,7 +144,41 @@ $(document).on("click", ".location_id", function() {
 });
 
 
+function init_default_charging_locations(){
 
+    url = 'https://maps.googleapis.com/maps/api/geocode/json?address='+location+'&key=AIzaSyC7CIJd0Sk2ysCH_30GQnEHn9s2Jyu5rio'
+       
+    //data = fetch(url).then(data=>{return data.json()})
+     data = fetchAsync(url)
+     data.then(function(results){
+         
+         const image =
+         "https://img.icons8.com/color/50/000000/car-charger.png";
+     
+        
+         var marker = new google.maps.Marker({
+             position: new google.maps.LatLng(48.382540914587494,-89.24627431748044),
+             title:"City hall",
+             icon: image
+         });
+
+       
+         var marker1 = new google.maps.Marker({
+            position: new google.maps.LatLng(48.435959414014654,-89.21697904446354),
+            title:"Waterfront-terminal",
+            icon: image
+        });
+         
+         marker.setMap(map);
+         marker1.setMap(map)
+
+         map.setCenter(map );
+
+
+         })
+
+
+}
 
 
 

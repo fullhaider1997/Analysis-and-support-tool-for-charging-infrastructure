@@ -39,7 +39,7 @@
     border-radius: 5px;
     width: 46.99%;
     background-color: #ffffff;
-    font-family:sans-serif;
+    font-family: verdana;
   }
 
   
@@ -50,7 +50,7 @@
     border-radius: 5px;
     border-width: 1px;
     border-style: solid;
-
+    font-family: verdana;
     width: 46.8%;
    
    
@@ -99,11 +99,9 @@
 #Elec_bus_title{
 
  color: black;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
+
 line-height: 55px;
-font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-family: verdana;
 position: absolute;
 display: flex;
 height: 60px;
@@ -116,11 +114,9 @@ border-radius: nullpx;
 
 #Fuel_bus_title{
   color: black;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
+  
   line-height: 55px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: verdana;
   position: absolute;
   display: flex;
   height: 60px;
@@ -220,7 +216,7 @@ li .my_input-d{
 
 }
 
-input[type=text] {
+input.my_input-d {
   padding: 5px;
   margin: 5px;
   border-radius: 10px;

@@ -1,25 +1,22 @@
 {% load static %}
 <div>
 
-    <div id="Fuel_bus_title">
-      Fuel-Bus DashBoard
-    </div>
   
   
   <div class="split left">
   
   <ul id="liquid-fuel-input">
     <li>
-        <label id="title_input">Current model</label>
+        <label id="title_input">Model Name </label>
         <input class = "my_input" type="text" value="Orion Bus 07.501">
       </li>
   <li>
-    <label id="title_input">Disel Cost</label>
+    <label id="title_input">Manufacturer</label>
     <input class = "my_input" type="text">
   </li>
   <li>
-    <label id="title_input">Es. CO2 emission</label>
-    <input class = "my_input" type="text" value="0.707 per kwh">
+    <label id="title_input">Max Passengers Capacity</label>
+    <input class = "my_input" type="text" value="">
   </li>
   </ul>
   
@@ -36,4 +33,5 @@
   
   
   <script type="text/javascript" src="{% static 'BusDashBoard/fuel.js'%}"></script> 
+  <link rel="stylesheet" type="text/css" href="{% static 'BusDashBoard/DashBoard.css' %}">
   </div>
