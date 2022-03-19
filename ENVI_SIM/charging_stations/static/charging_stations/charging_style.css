@@ -73,18 +73,24 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 
 #list-btns{
-  padding-top: 10px;
+  padding-top: 0px;
+  padding: 0px;
+  
  
 }
 
 .location_id{
   width: 115px;
+  margin: 1px;
 }
 #type_id{
   width: 115px;
+  margin: 1px;
+  margin: 1px;
 }
 #num_id{
   width: 50px;
+  margin: 1px;
 }
 #dropdown_button_charger {
 

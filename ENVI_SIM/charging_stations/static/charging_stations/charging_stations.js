@@ -36,8 +36,8 @@ $("#add-charger").click(function (index){
     console.log("I am clicking add charger 1")
     
 
-    var array = ["Location","Waterfront terminal","City hall terminal"];
-    var array2 = ["Type","Proterra 1.5 MW Charging System", "R3"]
+    var array = ["Other locations",];
+    var array2 = ["Swap","Fast", "slow"]
     var buttonEl = document.getElementById("append");
 	var location_selector = document.createElement("select");
     var type_selector = document.createElement("select");

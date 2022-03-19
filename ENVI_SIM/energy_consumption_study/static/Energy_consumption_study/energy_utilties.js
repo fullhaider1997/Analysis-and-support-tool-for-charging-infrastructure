@@ -136,7 +136,9 @@ function plotEnergy(trips_data){
        
      var layout = {
      
-    height: 340,
+    height: 350,
+    
+    
     
      yaxis: {
     

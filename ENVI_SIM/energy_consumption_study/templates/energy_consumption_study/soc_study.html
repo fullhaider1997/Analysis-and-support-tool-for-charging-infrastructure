@@ -3,14 +3,28 @@
 <div >
     
    
+    <div id="dropdown_list_seasons" style="float:left">
+        <button id="dropdown_button_seasons" 
+            onclick="show_list_seasons()">
+            Select Season
+        </button>
 
-        <div id="dropdown_list">
-            <button id="dropdown_button" 
+        <div id="seasons_id" class="seasons" >
+            <li id="Summer"><a>Summer</a></li>
+            <li id="Spring"><a> Spring</a></li>
+            <li id="Fall"><a> Fall</a></li>
+            <li id="Winter"><a> Winter</a></li>
+            
+        </div>
+    </div>
+
+        <div  id="dropdown_list">
+            <button id="dropdown_button_routes" 
                 onclick="show_list()">
                 Select Transit lines
             </button>
   
-            <div id="routes_id" class="routes">
+            <div id="routes_id" class="routes" >
                 <li id="Mainline 1"><a>Mainline 1</a></li>
                 <li id="Line 2"><a>2 Line </a></li>
                 <li id="3C Line"><a> 3C Line</a></li>
@@ -30,9 +44,11 @@
                 <li id="16 Line"><a >16 Line</a></li>
             </div>
         </div>
+
+        
    
 
- <div id = "energy_plot" >  </div>
+ <div id = "energy_plot">  </div>
 
 
   <link rel="stylesheet" type="text/css" href="{% static 'energy_consumption_study/energy_board_style.css' %}">

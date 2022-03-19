@@ -15,19 +15,52 @@ function show_list() {
 }
 
 window.onclick = function (event) {
-  if (!event.target.matches('#dropdown_button')) {
+  if (!event.target.matches('#dropdown_button_routes')) {
       document.getElementById('routes_id').style.display = "none";
+
+  } else if(!event.target.matches('#dropdown_button_seasons')){
+    document.getElementById('seasons_id').style.display = "none";
   }
 }  
+
+
+
+function show_list_seasons() {
+  var courses = document.getElementById("seasons_id");
+
+  if (courses.style.display == "block") {
+      courses.style.display = "none";
+  } else {
+      courses.style.display = "block";
+  }
+}
+
+
+
+
+
+$("#seasons_id li").click(function() {
+
+  console.log("Clicking on selection of routes:seasons")
+      
+  var button = document.getElementById("dropdown_button_seasons")
+  var id = $(this).attr("id");
+  button.innerHTML = id;
+  console.log(id)
+
+});
+
 
 $("#routes_id li").click(function() {
 
   console.log("Clicking on selection of routes:energy")
       
-  var button = document.getElementById("dropdown_button")
+  var button = document.getElementById("dropdown_button_routes")
+  var button_seasons = document.getElementById("dropdown_button_seasons")
   var id = $(this).attr("id");
   button.innerHTML = id;
   console.log(id)
+  console.log()
 
   if(id == "Mainline 1"){
     console.log("Clicking on Maineline 2")
@@ -210,7 +243,7 @@ $("#routes_id li").click(function() {
 
   
 
-console.log("data: " + data)
+
 
 
 

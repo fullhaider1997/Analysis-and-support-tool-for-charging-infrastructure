@@ -34,5 +34,6 @@ class LoginForm(AuthenticationForm):
 
     def __init__(self, *args, **kwargs):
         super(LoginForm, self).__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs['style'] = "padding: 0 0 0 0; margin: 0 0 10px 0; height:50px"
-        self.fields['password'].widget.attrs['style'] = "padding: 0 0 0 0; margin: 0 0 10px 0; height:20px"
+        self.label_suffix = ""
+        self.fields['username'].widget.attrs['style'] = "padding: 0 0 0 0; margin: 0 0 5px 0; height:25px; background-color : #FFFFFF; "
+        self.fields['password'].widget.attrs['style'] = "padding: 0 0 0 0; margin: 0 0 0px 0; height:25px; background-color : #FFFFFF; "

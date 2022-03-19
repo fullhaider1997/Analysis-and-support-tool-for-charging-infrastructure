@@ -53,7 +53,14 @@
   text-align: center;
   padding: 10px 30px;
   text-decoration: none;
+
+  font-family: "Helvetica Neue", Helvetica, sans-serif; 
+  font-style: bold;
   font-size: 17px;
+  font-weight: 700;
+ 
+  
+ 
 }
 
   
@@ -64,6 +71,7 @@
     height: 100%;
     width: 100%;
     margin: 0;
+   
 }
  
 
@@ -146,16 +154,21 @@ input {
   text-align: center;
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 17px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px; 
+  
+  
  
 }
 
 #forgot_password a{
-  font-style: normal;
+  
   padding: 10px 10px 10px 10px;
   margin-left: 140px;
-  font-size: 15px;
+  
+ 
 }
+
 
 /* The styling for the username and password input fields */
 
@@ -164,7 +177,17 @@ input[type="text"], textarea {
   background-color : #C4C4C4; 
   text-decoration: none;
   border: none;
+  border-radius: 5px;
 
+}
+
+input[type="password"]
+{
+  background-color : #C4C4C4; 
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  
 }
 
 input[type=submit] {
@@ -172,7 +195,10 @@ input[type=submit] {
   margin-top: 15px;
   height: 35px;
   border: none;
-
+  font-family: "Helvetica Neue", Helvetica, sans-serif; 
+  font-style: bold;
+  font-size: 17px;
+  font-weight: 700;
   
   border-radius: 12px;
   float: right;
@@ -183,7 +209,19 @@ input[type=submit] {
   background-color: #91E0DF;
   text-align: center;
   padding: 5px 20px;
-  font-style: bold;
   text-decoration: none;
-  font-size: 15px;
+ 
 }
+
+#input_labels{
+  font-size:large;
+   margin: 10px 0px 10px -15px;
+   font-family: "Helvetica Neue", Helvetica, sans-serif; 
+  font-style: bold;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+a {
+  cursor:pointer;
+ }

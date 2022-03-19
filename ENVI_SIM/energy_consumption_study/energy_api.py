@@ -33,6 +33,7 @@ def retrieveSpeedData(request):
         print(post_data["name"])
         url = post_data["name"]
         print(url)
+        print()
         df = pd.read_csv(url,encoding= 'unicode_escape', on_bad_lines='skip')
         df = df[(df.route_id == "1")]
         df = df[["arrival_time","speed","trip_id"]]

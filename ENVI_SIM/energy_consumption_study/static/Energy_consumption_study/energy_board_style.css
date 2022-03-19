@@ -30,6 +30,12 @@
 
 }
 
+#energy_plot{
+ 
+ 
+}
+
+
 .routes {
     display: none;
     position: absolute;
@@ -65,7 +71,79 @@
     cursor: pointer;
   }
   
+  .seasons{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(170, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .seasons li{
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+    background-color: #CCE0FF;
+    font-family: montserrat;
+    border: 1px solid white;
+    cursor: pointer;
+
+
+  }
   
+
+  .seasons li:hover {
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+    background-color: #C9F8A5;
+    font-family: montserrat;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+
+  #dropdown_button_seasons {
+    padding-top: 100px;
+    border-radius: 10px;
+    background-color: #0979ad;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    font-family: montserrat;
+    border: 1px solid #ffffff;
+  }
+
+  #dropdown_button_routes {
+    padding-top: 100px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #0979ad;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    font-family: montserrat;
+    border: 1px solid #ffffff;
+  }
+  
+  
+  #dropdown_list_seasons{
+
+    padding-top: 50px;
+  padding-left: 45px;
+  }
  #back_ground{
   background-color: #91E0DF;
   position: relative;

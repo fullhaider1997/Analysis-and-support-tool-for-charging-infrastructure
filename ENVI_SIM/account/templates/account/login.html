@@ -20,7 +20,6 @@
 
        <div id="header">
          <img src="{% static 'home_page/website_logo.JPG' %} " height="80">
-         <a class = "demo" href="#news">Book a demo </a>
          <a  class="demo" href="{% url 'login' %}">Login</a>
        </div> 
   
@@ -43,7 +42,7 @@
                             {{ field.errors }}
 
                            
-                            <label style="font-size:large; padding: 10px 10px 10px 10px">  {{ field.label_tag }}</label>
+                            <label id="input_labels"style="">  {{ field.label_tag }}</label>
                             
                             <div style="padding: 10px 10px 10px 10px">{{ field }}</div>
                             {% if field.help_text %}
@@ -54,13 +53,11 @@
 
 
 
-                         <div id="forgot_password"> 
-                               <a>forget password ?</a>
-                         </div>
+                       
 
                         <div id="login_sign_up_buttons">
-                           <a href="{% url 'register_user' %}"type="submit" value="Submit"> Sign up</a>   
-                           <input type="submit" value="Submit">  
+                            <a href="{% url 'register_user' %}"type="submit" value="Submit" id="sign_up"> Sign up</a>   
+                            <input type="submit" value="Submit"> 
                           
 
                         </div>
