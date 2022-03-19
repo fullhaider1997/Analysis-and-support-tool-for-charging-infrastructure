@@ -25,7 +25,6 @@ function openMenu(){
     document.getElementById("Energy_Consumption_Study_title").innerHTML = "Energy Consumption Study"
     document.getElementById("Environmental_Impact_Study_title").innerHTML = "Environmental Impact Study"
     document.getElementById("Financial_Impact_Study_title").innerHTML = "Financial Impact Study";
-    document.getElementById("Schedule_Impact_Study_title").innerHTML = "Schedule Impact Study"
     document.getElementById("Charging_Stations_title").innerHTML = "Charging Stations"
     document.getElementById("Scheduling_title").innerHTML = "Scheduling"
     document.getElementById("Export_title").innerHTML = "Export"
@@ -42,7 +41,6 @@ function closeMenu(){
   document.getElementById("Bus_Dashboard_title").innerHTML = "";
   document.getElementById("Routes_title").innerHTML = "";
   document.getElementById("Financial_Impact_Study_title").innerHTML = "";
-  document.getElementById("Schedule_Impact_Study_title").innerHTML = ""
   document.getElementById("Charging_Stations_title").innerHTML = ""
   document.getElementById("Scheduling_title").innerHTML = ""
   document.getElementById("Export_title").innerHTML = ""
@@ -80,12 +78,11 @@ function select(id){
   var item_energy = document.getElementById("Energy Consumption Study");
   var item_enviorment = document.getElementById("Environmental Impact Study");
   var item_financial = document.getElementById("Financial Impact Study");
-  var item_schedule = document.getElementById("Schedule Impact Study");
   var item_charging = document.getElementById("Charging Stations");
   var item_scheduling = document.getElementById("Scheduling");
   var item_export = document.getElementById("Export");
 
-  list = [item_route,item_bus,item_energy,item_enviorment,item_financial,item_schedule,item_charging,
+  list = [item_route,item_bus,item_energy,item_enviorment,item_financial,item_charging,
     item_scheduling,item_export  ]
 
    
