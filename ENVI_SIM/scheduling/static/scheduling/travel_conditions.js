@@ -15,7 +15,13 @@ $("#BYD_K9_input").click(function(){
     console.log(proterra.value)
     console.log(volvo.value)
 
-    disel_buses_num.innerHTML = parseInt(num_byd_k9.value) +  parseInt(proterra.value) + parseInt(volvo.value)
+     if(parseInt(num_byd_k9.value) +  parseInt(proterra.value) + parseInt(volvo.value) >= 35){
+
+        disel_buses_num.innerHTML = 35
+     }else {
+
+        disel_buses_num.innerHTML = parseInt(num_byd_k9.value) +  parseInt(proterra.value) + parseInt(volvo.value)
+     }
     
 });
 
@@ -33,7 +39,13 @@ $("#Volvo_7900_input").click(function(){
     console.log(proterra.value)
     console.log(volvo.value)
 
-    disel_buses_num.innerHTML = parseInt(num_byd_k9.value) +  parseInt(volvo.value) + parseInt(proterra.value)
+    if(parseInt(num_byd_k9.value) +  parseInt(proterra.value) + parseInt(volvo.value) >= 35){
+
+        disel_buses_num.innerHTML = 35
+     }else {
+
+        disel_buses_num.innerHTML = parseInt(num_byd_k9.value) +  parseInt(proterra.value) + parseInt(volvo.value)
+     }
     
 });
 
@@ -51,6 +63,12 @@ $("#Proterra_ZX5_input").click(function(){
     console.log(proterra.value)
     console.log(volvo.value)
 
-    disel_buses_num.innerHTML = parseInt(proterra.value) +  parseInt(volvo.value) + parseInt(num_byd_k9.value)
+    if(parseInt(num_byd_k9.value) +  parseInt(proterra.value) + parseInt(volvo.value) >= 35){
+
+        disel_buses_num.innerHTML = 35
+     }else {
+
+        disel_buses_num.innerHTML = parseInt(num_byd_k9.value) +  parseInt(proterra.value) + parseInt(volvo.value)
+     }
     
 });

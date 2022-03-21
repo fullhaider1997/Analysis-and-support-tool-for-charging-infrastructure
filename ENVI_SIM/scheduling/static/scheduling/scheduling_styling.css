@@ -179,3 +179,20 @@ display: inline-block;
     border-radius: 0.625em;
     text-align: center; 
   }
+
+  #submit_paramter{
+
+    position: relative;
+    background-color: #91E0DF;;
+    top:10px;
+    text-align: center;
+    left: 500px;
+    cursor: pointer;
+    padding: 15px 32px;
+    border-radius: 6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    border: none;
+    display: inline-block;
+
+  }

@@ -79,7 +79,7 @@ function select(id){
   var item_enviorment = document.getElementById("Environmental Impact Study");
   var item_financial = document.getElementById("Financial Impact Study");
   var item_charging = document.getElementById("Charging Stations");
-  var item_scheduling = document.getElementById("Scheduling");
+  var item_scheduling = document.getElementById("Configuration Setting");
   var item_export = document.getElementById("Export");
 
   list = [item_route,item_bus,item_energy,item_enviorment,item_financial,item_charging,
@@ -161,12 +161,6 @@ $("#sidebar a").click(function() {
        console.log("I am clicking schedule")
 
        select(id)
-
-    }else if("Export" == id.toString()){
-      
-      $("#switchscreen").load("export");
-
-      select(id)
       
     }else if ("Charging Stations" == id.toString()){
 

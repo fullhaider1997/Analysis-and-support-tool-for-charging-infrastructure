@@ -31,14 +31,17 @@ async function fetchAsync (url) {
 
 
       var index = 2;
+
+var tracker = 0
 $("#add-charger").click(function (index){
 
     console.log("I am clicking add charger 1")
     
   
-    var array = ["Location","Intercity Shopping Centre, Thunder Bay","Lakehead University","Thunder Bay Regional Health Sciences Centre","Confederation College","Westfort/Brown Street"];
-    var array2 = ["Swap","Fast", "slow"]
+    var array = ["Location","Intercity Shopping Centre","Lakehead University","Thunder Bay Regional Health Sciences Centre","Confederation College","Westfort/Brown Street"];
+    var array2 = ["Type","Swap","Fast", "slow"]
     var buttonEl = document.getElementById("append");
+    var div = document.createElement("div");
 	var location_selector = document.createElement("select");
     var type_selector = document.createElement("select");
     var remove = document.createElement("img");
@@ -62,23 +65,33 @@ $("#add-charger").click(function (index){
 
     
     location_selector.style="float:left; width:115px;"
-    type_selector.style="float:left; width:115px;"
+    type_selector.style="float:left; width:115px; margin:1px;"
     
     
     remove.src= "https://img.icons8.com/color/48/000000/minus.png";
     remove.style="float:left; height:20px;"
-    
+
+    var br = document.createElement("br")
     
     location_selector.classList.add("location_id");
+    remove.classList.add("remove_id")
+    remove.setAttribute("id","remove-"+tracker)
+    
+   
+
+
+    console.log("tracker " +tracker)
+    tracker = tracker + 1
 
     console.log("I am clicking add charger 4")
     console.log("Name of class" +location_selector.className)
 	buttonEl.appendChild(location_selector);
     buttonEl.appendChild(type_selector);
-
     buttonEl.appendChild(remove);
+    buttonEl.appendChild(br)
 	document.getElementById(elementId).appendChild("append");
     index= index + 1;
+    
     
 
 });
@@ -101,6 +114,7 @@ $(document).on("click", ".location_id", function() {
         var num = $('#num_id').find(":selected").text()
         var button = document.getElementById("dropdown_button_charger")
         var id = $(this).attr("value");
+        console.log("The selected location: " + location)
        
       //  console.log(id)
      //   button.innerHTML = id;
@@ -110,6 +124,7 @@ $(document).on("click", ".location_id", function() {
        //data = fetch(url).then(data=>{return data.json()})
         data = fetchAsync(url)
         data.then(function(results){
+            console.log(results)
             coordinates = results["results"][0]["geometry"]["location"]
             console.log(coordinates["lat"] + " " +coordinates["lng"])
 
@@ -119,7 +134,7 @@ $(document).on("click", ".location_id", function() {
            
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(coordinates["lat"],coordinates["lng"]),
-                title:"City hall",
+                title: location.value,
                 icon: image
             });
             
@@ -173,4 +188,11 @@ function init_default_charging_locations(){
 }
 
 
+$(document).on("click", ".remove_id", function(e) {
+
+    console.log("Clicking remove")
+    var remove = document.getElementsByClassName("remove_id")
+    var id = $(this).attr("id");
+    console.log("id of remove click is " + id)
+});
 
