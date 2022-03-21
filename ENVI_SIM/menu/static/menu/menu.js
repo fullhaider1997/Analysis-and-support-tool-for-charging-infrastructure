@@ -26,7 +26,7 @@ function openMenu(){
     document.getElementById("Environmental_Impact_Study_title").innerHTML = "Environmental Impact Study"
     document.getElementById("Financial_Impact_Study_title").innerHTML = "Financial Impact Study";
     document.getElementById("Charging_Stations_title").innerHTML = "Charging Stations"
-    document.getElementById("Scheduling_title").innerHTML = "Scheduling"
+    document.getElementById("configuration_setting_title").innerHTML = "Configuration Setting"
     document.getElementById("Export_title").innerHTML = "Export"
 
     
@@ -42,7 +42,7 @@ function closeMenu(){
   document.getElementById("Routes_title").innerHTML = "";
   document.getElementById("Financial_Impact_Study_title").innerHTML = "";
   document.getElementById("Charging_Stations_title").innerHTML = ""
-  document.getElementById("Scheduling_title").innerHTML = ""
+  document.getElementById("configuration_setting_title").innerHTML = ""
   document.getElementById("Export_title").innerHTML = ""
   
   // document.getElementById("Bus_Dashboard_title").innerHTML = ""
@@ -114,7 +114,7 @@ $("#sidebar a").click(function() {
        console.log("I am clicking Routes")      
        $("#switchscreen").load("routes");
        //window.location.pathname = "routes"; 
-      //select(id)
+       select(id)
 
 
     }else if("Bus_Dashboard" == id.toString()){
@@ -128,9 +128,9 @@ $("#sidebar a").click(function() {
    
 
 
-    } else if("Scheduling" == id.toString()){
+    } else if("Configuration Setting" == id.toString()){
      
-      console.log("I am clicking Scheduling ")
+      console.log("I am clicking Configuration Setting ")
      // $("#switchscreen").html(optimization_config);
       $("#switchscreen").load("scheduling");
 

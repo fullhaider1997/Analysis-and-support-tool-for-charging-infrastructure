@@ -3,9 +3,172 @@
 
   <div id="dash_board">
      
-      <div id="dash_board_title"> Scheduling and optimization study</div>
-      
      
+      <div id="cost_title">Cost paramters</div>
+      <div class="leftpane">
+
+
+        <ul id="Charging_configuration">
+          <li class="cost_paramters_fields">
+              <label id="title_input-r">OFF PEAK</label>
+              <label >$</label>
+              <input class = "my_input-r" type="text" value="20">
+              <label id="unit_label">/KWH</label>
+          </li>
+          <li  class="cost_paramters_fields">
+            <label id="title_input-r">MID PEAK</label>
+            <label >$</label>
+            <input class = "my_input-r" type="text" value="240" >
+            <label id="unit_label">/KWH</label>
+        </li>
+        <li  class="cost_paramters_fields">
+          <label id="title_input-r">ON PEAK</label>
+          <label >$</label>
+          <input class = "my_input-r" type="text" value="15">
+          <label id="unit_label">/KWH</label>
+      </li>
+      <li  class="cost_paramters_fields">
+        <label id="title_input-r">FUEL COST</label>
+        <label >$</label>
+        <input class = "my_input-r" type="text" value="15">
+        <label id="unit_label">/LITRE</label>
+    </li>
+         </ul>
+
+
+
+      </div>
+
+      <div id="travel_title">Bus Setting</div>
+      <div class="middlepane">
+
+        <ul id="bus_Charging_configuration">
+          <li class="cost_paramters_fields">
+
+
+              <div class="select"> 
+                <label class="title_input-b">DRIVING BEHAVIOR</label>
+                <select id="behavior_id">
+                  <option value="0" selected="selected"><a >Type</a></option>
+                  <option value="Slow"><a>Slow</a></option>
+                  <option value="Normal"><a>Normal</a></option>
+                  <option value="Aggressive"><a>Aggressive</a></option>
+                </select>
+              </div>
+
+
+              <div class="select"> 
+                <label class="title_input-b">ROAD CONDITION</label>
+                <select id="behavior_id">
+                  <option value="0" selected="selected"><a >Type</a></option>
+                  <option value="Good"><a> Good(dry)</a></option>
+                  <option value="Fair"><a> Fair(wet)</a></option>
+                  <option value="Poor"><a> Poor(slushy)</a></option>
+                </select>
+              </div>
+
+              
+              <div class="select"> 
+                <label class="title_input-b">PEOPLE DENSITY</label>
+                <select id="behavior_id">
+                  <option value="0" selected="selected"><a >Type</a></option>
+                  <option value="Full"><a>Full</a></option>
+                  <option value="Half-full"><a> Half-full</a></option>
+                  <option value="Regular"><a> Swap</a></option>
+                  <option value="Scarce"><a> Swap</a></option>
+                </select>
+              </div>
+
+              <div class="select"> 
+                <label class="title_input-b">SEASONS</label>
+                <select id="behavior_id">
+                  <option value="0" selected="selected"><a >Type</a></option>
+                  <option value="spring"><a>Spring</a></option>
+                  <option value="summer"><a >Summer</a></option>
+                  <option value="fall"><a >Fall</a></option>
+                  <option value="winter"><a >Winter</a></option>
+                </select>
+              </div>
+
+
+
+
+
+
+          </li>
+
+
+
+
+
+
+        </ul>
+      
+       
+
+
+
+
+
+
+      </div>
+
+      <div id="bus_title">Travel Conditions</div>
+      <div class="rightpane">
+
+        <ul id="bus_Charging_configuration">
+          <li class="cost_paramters_fields">
+              <label class="title_input-C">SOC UPPER LIMIT </label>
+              <label style="visibility: hidden;">$</label>
+              <input class = "my_input-r" type="text" value="20">
+              <label id="unit_label">%</label>
+              
+          </li>
+          <li class="cost_paramters_fields">
+            <label class="title_input-C">BYD K9</label>
+            <label style="visibility: hidden;">$</label>
+            <input id="BYD_K9_input" class = "my_input-r" type="number" min="0", max="35" value="0">
+         </li>
+
+         <li class="cost_paramters_fields">
+            <label class="title_input-C">Proterra ZX5</label>
+            <label style="visibility: hidden;">$</label>
+            <input id="Proterra_ZX5_input" class = "my_input-r" type="number" min="0", max="35" value="0">
+        </li>
+        <li class="cost_paramters_fields">
+          <label class="title_input-C">Volvo 7900</label>
+          <label style="visibility: hidden;">$</label>
+          <input id="Volvo_7900_input" class = "my_input-r" type="number" min="0", max="35" value="0">
+        </li>
+        <li class="cost_paramters_fields">
+          <label class="title_input-C">DISEL BUS</label>
+          <label style="visibility: hidden;">$</label>
+          <output id="disel_buses_output"  type="number" max="35"> 0 </output>
+        </li>
+        <li class="cost_paramters_fields">
+          <label class="title_input-C">MAINTENACE COST </label>
+          <label >$</label>
+          <input class = "my_input-r" type="text" value="0.525">
+          <label id="unit_label">/KM</label>
+          
+      </li>
+
+      <li class="cost_paramters_fields">
+        <label class="title_input-C">OPERATIONAL COST </label>
+        <label >$</label>
+        <input class = "my_input-r" type="text" value="85">
+        <label id="unit_label">/hr</label>
+        
+    </li>
+
+
+
+       
+         </ul>
+
+      </div>
+
+      </div>
 
 
       </div>
@@ -19,6 +182,7 @@
 
 
       <link rel="stylesheet" type="text/css" href="{% static 'scheduling/scheduling_styling.css' %}">
+      <script type="text/javascript" src="{% static 'scheduling/travel_conditions.js' %}"></script>
 </div>
 
 

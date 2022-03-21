@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django_google_maps',
     'home_page',
     'account',
-    "fleet_report",
     "google_map",
     "menu",
     "BusDashBoard",

@@ -23,7 +23,7 @@ function plotTrips(ts_trips){
   tsv_list_new = []
   ev_list_new = []
   console.log("Plotting in envi..")
-  //console.log(ts_trips)
+  console.log(ts_trips)
 
 
 
@@ -48,6 +48,8 @@ function plotTrips(ts_trips){
     console.log(ev_list_new)
 
     trip_name = []
+
+
   for (var i in tsv_list_new){
 
     console.log("envi..")

@@ -2,7 +2,7 @@
 
 #CO2 emission for electric vehicles. 
 #Reference: https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references
-ELECTIC_BUS_CO2_EMISSION =  0.2  #kg/kWh.
+ELECTIC_BUS_CO2_EMISSION =  0.707  #kg/kWh.
 
 #CO2 emission for disel buses
 #Reference:https://www.carbonindependent.org/20.html [National Express data quoted by CG, 10]

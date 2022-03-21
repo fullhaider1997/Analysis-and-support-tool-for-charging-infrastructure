@@ -26,3 +26,30 @@
   }
 
  
+  li {
+    float: left;
+  }
+  
+  .item {
+    display: block;
+    padding: 1em;
+    border-radius: 5px;
+    width: 46.99%;
+    background-color: #ffffff;
+    font-family: verdana;
+  }
+
+  
+  .item-active {
+    display: block;
+    padding: 1em;
+    
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    font-family: verdana;
+    width: 46.8%;
+   
+   
+    background-color: #91E0DF;
+  }

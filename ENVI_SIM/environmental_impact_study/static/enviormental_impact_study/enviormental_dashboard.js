@@ -1,4 +1,6 @@
 
+
+path = "C:/Users/fullh/Desktop/"
 //Initalizating the map
 
 //Plotly.newPlot('Enviormental_map', data=[] , layout = {height: 400,}) ;
@@ -30,7 +32,7 @@ function show_list() {
 
     if(id == "Mainline 1"){
       console.log("Clicking on Maineline 2")
-      ts1_0 = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/Fall/TS_1_0.csv")
+      ts1_0 = retrieveCO2EmissionData(path +"charg-infra-project/ENVI_SIM/data/Fall/TS_1_0.csv")
       ts1_1 = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/Fall/TS_1_1.csv")
       ts1_2 = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/Fall/TS_1_2.csv")
       ts1_3 = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/Fall/TS_1_3.csv")

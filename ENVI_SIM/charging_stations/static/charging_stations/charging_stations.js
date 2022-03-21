@@ -35,14 +35,12 @@ $("#add-charger").click(function (index){
 
     console.log("I am clicking add charger 1")
     
-
-    var array = ["Other locations",];
+  
+    var array = ["Location","Intercity Shopping Centre, Thunder Bay","Lakehead University","Thunder Bay Regional Health Sciences Centre","Confederation College","Westfort/Brown Street"];
     var array2 = ["Swap","Fast", "slow"]
     var buttonEl = document.getElementById("append");
 	var location_selector = document.createElement("select");
     var type_selector = document.createElement("select");
-    var num_chargers = document.createElement("input");
-    var rating_charger = document.createElement("input");
     var remove = document.createElement("img");
 
     console.log("I am clicking add charger 2")
@@ -65,25 +63,19 @@ $("#add-charger").click(function (index){
     
     location_selector.style="float:left; width:115px;"
     type_selector.style="float:left; width:115px;"
-    num_chargers.style="float:left; width:50px;"
-    rating_charger.style="float:left; width:50px;"
+    
     
     remove.src= "https://img.icons8.com/color/48/000000/minus.png";
     remove.style="float:left; height:20px;"
     
     
     location_selector.classList.add("location_id");
-    num_chargers.classList.add("num");
-    rating_charger.classList.add("num");
-    num_chargers.type="number"
-    num_chargers.readOnly=true
+
     console.log("I am clicking add charger 4")
     console.log("Name of class" +location_selector.className)
 	buttonEl.appendChild(location_selector);
     buttonEl.appendChild(type_selector);
-    buttonEl.appendChild(num_chargers);
-    buttonEl.appendChild(num_chargers);
-    buttonEl.appendChild(rating_charger);
+
     buttonEl.appendChild(remove);
 	document.getElementById(elementId).appendChild("append");
     index= index + 1;

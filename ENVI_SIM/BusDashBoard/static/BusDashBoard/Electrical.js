@@ -1,5 +1,8 @@
 
 
+eletrical_init_menu()
+
+
 var bus_info = {
   
     "BYD K9":{
@@ -54,7 +57,7 @@ $("#buses_id li").click(function() {
       input[4].value = "2-3 hrs"
 
       
-      document.getElementById("Bus-icon").src = "C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIMBusDashBoard/static/BusDashBoard/byd-k9.png"
+      document.getElementById("Bus-icon").src = "https://www.electrive.com/wp-content/uploads/2018/08/byd-k9-electric-bus-elektrobus-usa-canada.png"
 
     } else if(id.toString() == "Volvo 7900")
     {
@@ -64,7 +67,7 @@ $("#buses_id li").click(function() {
       input[3].value = "41, 887.83 Ibs"
       input[4].value = "2-3 hrs"
 
-      document.getElementById("Bus-icon").src = "C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/BusDashBoard/static/BusDashBoard/Volvo-7900-Electric.jpg"
+      document.getElementById("Bus-icon").src = "https://electriccarsreport.com/wp-content/uploads/2015/09/Volvo-7900-Electric.jpg"
 
 
     } else if(id.toString() == "Proterra ZX5"){
@@ -89,3 +92,16 @@ $("#buses_id li").click(function() {
  });
 
 
+function eletrical_init_menu(){
+  var button = document.getElementById("dropdown_button")
+
+  button.innerHTML = "BYD K9";
+ 
+  var input = document.getElementsByClassName('my_input-d')
+ 
+  input[0].value = "324 Kwh"
+  input[1].value = "37"
+  input[2].value = "100.84 km/h"
+  input[3].value = " 43,431 Ibs"
+  input[4].value = "2-3 hrs"
+}

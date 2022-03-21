@@ -157,3 +157,39 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   overflow:hidden;
   
 }
+
+#title_input-r{
+
+  width: 150px;
+  display: inline;
+  font-size:15px;
+  float: left;
+
+}
+input.my_input-r{
+  padding: 0px;
+  margin: 1px;
+  height: 20px;
+  width: 80px;
+  border-radius: 10px;
+  background-color: #a9d5f8;
+  border-style:solid;
+  text-align: center; 
+}
+
+#Charging_configuration{
+
+position: absolute;
+top:250px;
+left: -31px;
+}
+
+
+#unit_label{
+  font-size:15px;
+  
+}
+
+ul {
+  list-style-type: none;
+}

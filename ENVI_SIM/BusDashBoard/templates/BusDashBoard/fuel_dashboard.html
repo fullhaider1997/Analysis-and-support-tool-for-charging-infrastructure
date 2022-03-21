@@ -2,34 +2,51 @@
 <div>
 
   
-  
-  <div class="split left">
-  
-  <ul id="liquid-fuel-input">
+  <div>
+    
+    <div id="dropdown_list">
+        <button id="dropdown_button" 
+            onclick="show_list_bus()">
+            Select disel bus
+        </button>
+
+    </div>
+
+
+    <div class="split left">
+      
+    <ul>
     <li>
-        <label id="title_input">Model Name </label>
-        <input class = "my_input" type="text" value="Orion Bus 07.501">
-      </li>
-  <li>
-    <label id="title_input">Manufacturer</label>
-    <input class = "my_input" type="text">
-  </li>
-  <li>
-    <label id="title_input">Max Passengers Capacity</label>
-    <input class = "my_input" type="text" value="">
-  </li>
-  </ul>
+        <label id="title_input">Model name</label>
+        <input class = "my_input-d" type="text" readonly>
+    </li>
+     <li>
+        <label id="title_input">Manufacturer</label>
+        <input class = "my_input-d" type="text" readonly>
+    </li>
+     <li>
+        <label id="title_input">Passenger max capacity</label>
+        <input class = "my_input-d" type="text" readonly>
+    </li>
+    
+   </ul>
+
+    </div>
+
   
-  
-  
+
   </div>
-  </div>
-  
-  <div class="split right" style="padding-left:200px;">
-  <img id="Fuel-Bus-icon" src="https://www.thunderbay.ca/en/city-hall/resources/Images/History-Heritage-and-Records/Web-Exhibits/NewBus2013b.jpg" >
-  
-  </div>
+
+ 
+
+  <div class="split right">
+    <img id="Bus-icon"  style="width:300px;height:250px;" src= "{% static 'BusDashBoard/tb.jpg' %} " >
+    
+    </div>
   </div> 
+
+
+
   
   
   <script type="text/javascript" src="{% static 'BusDashBoard/fuel.js'%}"></script> 

@@ -1,4 +1,29 @@
 
+ #back_ground{
+  background-color: #91E0DF;
+  position: relative;
+  height: 570px;
+  width: 2000px;
+  margin: 0%;
+  padding: 0%;
+ 
+}
+
+
+#dash_board{
+
+  background-color: #ffffff;
+  position: relative;
+  height: 530px;
+  width: 1100px;
+  top: 5%;
+  left: 40%;
+  
+  
+  
+  border-radius: 10px;
+
+}
 .title_button-e{
 
     font-style: sans-serif;;
@@ -73,3 +98,83 @@
     }
     
     
+
+    
+/*The stylying for drop down bus style*/
+
+
+#dropdown_list{
+ 
+  padding-top: 50px;
+  padding-left: 140px;
+}
+
+#dropdown_button {
+  padding-top: 100px;
+  border-radius: 10px;
+  background-color: #0979ad;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  font-family: montserrat;
+  border: 1px solid #ffffff;
+}
+
+.buses {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.buses li {
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+  list-style: none;
+  background-color: rgb(47, 47, 47);
+  font-family: montserrat;
+  border: 1px solid white;
+}
+
+.buses li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+}
+
+
+li {
+  float: left;
+}
+
+.item {
+  display: block;
+  padding: 1em;
+  border-radius: 5px;
+  width: 46.99%;
+  background-color: #ffffff;
+  font-family: verdana;
+}
+
+
+.item-active {
+  display: block;
+  padding: 1em;
+  
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  font-family: verdana;
+  width: 46.8%;
+ 
+ 
+  background-color: #91E0DF;
+}
