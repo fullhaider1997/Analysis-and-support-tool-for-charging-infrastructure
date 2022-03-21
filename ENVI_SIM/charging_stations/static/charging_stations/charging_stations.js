@@ -41,7 +41,7 @@ $("#add-charger").click(function (index){
     var array = ["Location","Intercity Shopping Centre","Lakehead University","Thunder Bay Regional Health Sciences Centre","Confederation College","Westfort/Brown Street"];
     var array2 = ["Type","Swap","Fast", "slow"]
     var buttonEl = document.getElementById("append");
-    var div = document.createElement("div");
+    
 	var location_selector = document.createElement("select");
     var type_selector = document.createElement("select");
     var remove = document.createElement("img");
@@ -64,9 +64,9 @@ $("#add-charger").click(function (index){
     console.log("I am clicking add charger 3")
 
     
-    location_selector.style="float:left; width:115px;"
+    location_selector.style="float:left; width:115px; margin:1px;"
     type_selector.style="float:left; width:115px; margin:1px;"
-    
+
     
     remove.src= "https://img.icons8.com/color/48/000000/minus.png";
     remove.style="float:left; height:20px;"
@@ -74,10 +74,18 @@ $("#add-charger").click(function (index){
     var br = document.createElement("br")
     
     location_selector.classList.add("location_id");
-    remove.classList.add("remove_id")
-    remove.setAttribute("id","remove-"+tracker)
+    remove.classList.add("id","remove:"+tracker)
+    location_selector.classList.add("id",tracker)
+    type_selector.classList.add("id","type:"+tracker)
+    br.classList.add("id","br:"+tracker)
     
-   
+
+    type_selector.setAttribute("onclick",`remove(${tracker},${0})`);
+    location_selector.setAttribute("onclick",`remove(${tracker},${0})`);
+    remove.setAttribute("onclick",`remove(${tracker},${1})`);
+    br.setAttribute("onclick",`remove(${tracker},${0})`);
+    
+    
 
 
     console.log("tracker " +tracker)
@@ -195,4 +203,50 @@ $(document).on("click", ".remove_id", function(e) {
     var id = $(this).attr("id");
     console.log("id of remove click is " + id)
 });
+
+
+
+function remove(div,click) {
+
+    console.log("click value is " + click)
+    console.log("clicking remove..." )
+    var d = document.getElementById("append");
+    console.log(d)
+    var olddiv = document.getElementsByClassName(div);
+    var type = document.getElementsByClassName("type:"+div);
+    var br = document.getElementsByClassName("br:"+div);
+    var remove = document.getElementsByClassName("remove:"+div);
+     console.log("type---")
+     console.log(type)
+   // console.log("location---")
+   // console.log(location)
+    console.log("remove---")
+    console.log(remove)
+    
+   // var olddiv = document.getElementsByClassName("tracker"+ div);
+
+  if(click ==1 ){
+
+   for (var j = 0; j < olddiv.length ; j++) {
+    
+      console.log(olddiv[j].parentNode.removeChild(olddiv[j]));    
+  } 
+  
+      
+    for (var j = 0; j < type.length ; j++) {
+    
+       console.log(type[j].parentNode.removeChild(type[j]));    
+     }    
+    
+    
+        console.log(remove[0].parentNode.removeChild(remove[0]));    
+        console.log(br[0].parentNode.removeChild(br[0]));
+    }else{
+        console.log("You either clicking type,location..")
+    }
+    
+     
+   
+}
+
 

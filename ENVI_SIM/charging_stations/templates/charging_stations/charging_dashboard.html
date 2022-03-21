@@ -7,8 +7,7 @@
     <div id="dash_board">
      <li id="Energy graph" class="item"><a class="title-c">Charging Stations </a></li>
    
-  
- 
+
      
      <div class="split-c left-c">
 
@@ -64,37 +63,28 @@
 
     </div>
        
-     
+    
       <div class="select"  id="append"style="float:left"  ;></div>
      
      
       <ul id="Charging_configuration">
         <li>
             <label id="title_input-r">Charge Rate (Slow)</label>
-            <input class = "my_input-r" type="text" value="20">
+            <input class = "my_input-r" type="text" value="20" readonly>
             <label id="unit_label">KW</label>
         </li>
         <li>
           <label id="title_input-r">Charge Rate (Fast)</label>
-          <input class = "my_input-r" type="text" value="240" >
+          <input class = "my_input-r" type="text" value="240" readonly>
           <label id="unit_label">KW</label>
       </li>
       <li>
         <label id="title_input-r">Charge Rate (Swap)</label>
-        <input class = "my_input-r" type="text" value="15">
+        <input class = "my_input-r" type="text" value="15"readonly>
         <label id="unit_label">Min</label>
     </li>
        </ul>
-       
-
-
-
-
-
-
-
       
-
       
     
      </div>
@@ -106,19 +96,21 @@
 
     <div class="split-c right-c">
         <div class="right-screen">
+         
           <div id='charging-station-map'></div> 
 
 
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7CIJd0Sk2ysCH_30GQnEHn9s2Jyu5rio&callback=initMap"></script>
-
-          
+          <input type="submit" id="submit_charging_stations_paramter" value="Submit">
         
           </div>
         </div>
+        
       </div>
      
      
          
+      
    
     
     

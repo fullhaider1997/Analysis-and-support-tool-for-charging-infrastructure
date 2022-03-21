@@ -184,11 +184,11 @@ display: inline-block;
 
     position: relative;
     background-color: #91E0DF;;
-    top:10px;
+    top:0.625px;
     text-align: center;
-    left: 500px;
+    left: 31.25em;
     cursor: pointer;
-    padding: 15px 32px;
+    padding: 10px 10px;
     border-radius: 6px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;

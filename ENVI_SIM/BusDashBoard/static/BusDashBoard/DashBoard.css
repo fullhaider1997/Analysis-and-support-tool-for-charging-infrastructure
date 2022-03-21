@@ -5,8 +5,8 @@
  #back_ground{
     background-color: #91E0DF;
     position: relative;
-    height: 570px;
-    width: 2000px;
+    height: 35.625em;
+    width: 125em;
     margin: 0%;
     padding: 0%;
    
@@ -17,8 +17,8 @@
 
     background-color: #ffffff;
     position: relative;
-    height: 530px;
-    width: 1100px;
+    height: 33.125em;
+    width: 68.75em;
     top: 5%;
     left: 40%;
     

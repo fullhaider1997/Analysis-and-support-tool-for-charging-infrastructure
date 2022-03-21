@@ -193,3 +193,21 @@ left: -31px;
 ul {
   list-style-type: none;
 }
+
+
+#submit_charging_stations_paramter{
+
+ 
+  position: relative;
+  background-color: #91E0DF;;
+  top:0.9375em;
+  text-align: center;
+  left: 24.375em;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 6px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  border: none;
+  display: inline-block;
+}
