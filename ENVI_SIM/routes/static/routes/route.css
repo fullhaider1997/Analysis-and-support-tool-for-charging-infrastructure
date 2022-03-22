@@ -1,22 +1,25 @@
-
 @media (min-width:640px){.container{max-width:640px}}
 @media (min-width:768px){.container{max-width:768px}}
 @media (min-width:1024px){.container{max-width:1024px}}
 @media (min-width:1280px){.container{max-width:1280px}}
 @media (min-width:1536px){.container{max-width:1536px}}
 
-.mx-4{margin-left:1rem;margin-right:1rem;position: relative;
-  overflow-x: hidden; max-height:30em}
-
+.mx-4{margin-left:1rem;margin-right:1rem;position: relative; 
+  overflow-x: scroll ; max-height:33em}
+.relative_c{position: relative;}
 .h-screen{height:100vh}
 .items-stretch{align-items:stretch}
 .mx-auto{margin-left:auto;margin-right:auto}
 .w-full{width:100%}
 .h-full{height:100%;}
 .ml-4{margin-left:1rem}
-
+.flex{display:flex}
+.my-1{margin-top:.25rem;margin-bottom:.25rem}
 .flex-none{flex:none; max-width: 12em;}
-
+.wraprow{ display: flex;
+  flex-wrap: wrap;
+ }
+.flex-row{flex-direction: row;}
 @media (min-width: 768px){}
 .md\:overflow-y-scroll {
     overflow-y: scroll;
@@ -68,10 +71,12 @@
     padding: 0 8px;
   }
 
-
+  .items-stretch{align-items:stretch}
   .leading-none{line-height:1}
 
-  
+  ul, li {
+    display:inline
+}
 
 /* Map Styles */
 
@@ -109,6 +114,24 @@
 }
 
 .map {
-    min-height: 540px;
+    min-height: 460px;
     overflow: hidden
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  table-layout: auto;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+.fixed {
+  table-layout: fixed;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
 }
