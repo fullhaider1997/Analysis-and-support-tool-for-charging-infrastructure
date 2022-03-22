@@ -4,4 +4,4 @@ The user is given two options to sign up and sign in.
 
 To run this program use -> username - admin; password - admin.
 
-There are certain changes needed to be made in certain places in order to get the best results. For example, the price of electricity and diesel needs to be changed as and when required. Also, we need to make changes to the path file in "file name " in order to load the files and get the graphs from the local computer / server.
+Simulate and analyze the effect of introducing electric buses into a diesel only transit system. This program uses contraints to reduce bus trip assignments into a balanced assignment problem and then utilizes the linear sum assignment algorithm to produce the least cost bus trip assignment for each trip set.
