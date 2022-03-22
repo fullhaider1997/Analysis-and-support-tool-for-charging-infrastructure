@@ -1,4 +1,14 @@
 
+ 
+ #financial_title{
+  position: absolute;
+  top:0.3125em;
+  left: 21.625em;  
+  font-size: 20px;
+  line-height: 55px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;   
+}
+/*
  #back_ground{
     background-color: #91E0DF;
     position: relative;
@@ -25,31 +35,139 @@
 
   }
 
+ */
  
-  li {
-    float: left;
-  }
   
-  .item {
-    display: block;
-    padding: 1em;
-    border-radius: 5px;
-    width: 46.99%;
-    background-color: #ffffff;
-    font-family: verdana;
-  }
 
   
-  .item-active {
-    display: block;
-    padding: 1em;
-    
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    font-family: verdana;
-    width: 46.8%;
-   
-   
-    background-color: #91E0DF;
+.middlepane {
+  position: absolute;
+  margin: 90px 10px 10px 10px;
+  width: 50.0%;
+  height: 350px;
+  left:280px;
+  background-color: rgb(168, 184, 233);
+  border-collapse: collapse;
+}
+
+
+
+#title_input-r{
+  margin-top: 0.3125em;
+  width: 20.95em;
+  display: inline;
+  font-size:15px;
+  float: left;
+
+}
+input.my_input-r{
+  padding: 0px;
+  margin: 1px;
+  height: 1.25em;
+  width: 5em;
+  border-radius: 10px;
+  background-color: #a9d5f8;
+  border-style:solid;
+  text-align: center; 
+}
+
+#Charging_configuration{
+
+position: absolute;
+top:7.5em;
+left: -1px;
+}
+
+
+#unit_label{
+  font-size:15px;
+  
+}
+
+ul {
+  list-style-type: none;
+}
+
+.cost_paramters_fields{
+ 
+  margin: 15px;
+}
+
+.title_input-C{
+  margin-top: 0.3125em;
+  width: 20.95em;
+  display: inline;
+  font-size:15px;
+  float: left;
+}
+
+#bus_Charging_configuration{
+
+  position: absolute;
+  top:1.4em;
+  left: -1px;
   }
+  
+
+
+
+label.title_input_b{
+
+display: inline-block;
+
+}
+
+.title_input-b{
+
+  
+  width: 13.25em;
+  display: inline;
+  font-size:15px;
+  float: left;
+
+}
+
+
+.select select {
+  background-color: #a9d5f8;
+  border: none;
+  width: 70px;
+  
+  font-size: 13px;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  margin-bottom: 20px;
+  
+ 
+}
+
+#disel_buses_output{
+  padding: 0.15em 3em 0.15em 0.15em;
+  height: 1.25em;
+  width: 10em;
+  text-align: center;
+  background-color: #a9d5f8;
+  border-radius: 0.625em;
+  text-align: center; 
+}
+
+/*
+#submit_paramter{
+
+  position: relative;
+  background-color: #91E0DF;;
+  top:0.625px;
+  text-align: center;
+  left: 31.25em;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 6px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  border: none;
+  display: inline-block;
+
+}
+*/
+

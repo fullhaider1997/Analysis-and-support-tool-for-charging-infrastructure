@@ -2,21 +2,61 @@
     {% load static %}
 
     <div id="dash_board">
-     <li id="Energy graph" class="item"><a class="title_button-e">Financial Impact Study </a></li>
+
+     <div id="financial_title">Financial Impact Study </div>
    
-    
 
     <div id="switchscreenbus">  
     
-    <div id="Content_switch_screen"> 
+      
+      <div class="middlepane">
 
-       
-    </div>
+        <ul id="bus_Charging_configuration">
+          <li class="cost_paramters_fields">
+              <label class="title_input-C">Total Maintenace Cost (diesel only) </label>
+              <label style="visibility: hidden;">$</label>
+              <input class = "my_input-r" type="text" value="0"readonly>
+              <label id="unit_label">$</label>
+              
+          </li>
+          <li class="cost_paramters_fields">
+            <label class="title_input-C">Total Operation Cost (diesel only)</label>
+            <label style="visibility: hidden;">$</label>
+            <input class = "my_input-r" type="text" value="0"readonly>
+            <label id="unit_label">$</label>
+         </li>
+
+         <li class="cost_paramters_fields">
+            <label class="title_input-C">Total cost (electricity + diesel)</label>
+            <label style="visibility: hidden;">$</label>
+            <input class = "my_input-r" type="text" value="0"readonly>
+            <label id="unit_label">$</label>
+        </li>
+        <li class="cost_paramters_fields">
+          <label class="title_input-C">Total emission </label>
+          <label style="visibility: hidden;">$</label>
+          <input class = "my_input-r" type="text" value="0"readonly>
+          <label id="unit_label">kg</label>
+        </li>
+        <li class="cost_paramters_fields">
+          <label class="title_input-C">Total fuel consumed</label>
+          <label style="visibility: hidden;">$</label>
+          <input class = "my_input-r" type="text" value="0"readonly>
+          <label id="unit_label">litres</label>
+        </li>
+        <li class="cost_paramters_fields">
+          <label class="title_input-C">Total energy consumed</label>
+          <label >$</label>
+          <input class = "my_input-r" type="text" value="0"readonly>
+          <label id="unit_label">kWh</label>
+          
+      </li>
+  
   
    </div>
 
-   <link rel="stylesheet" type="text/css" href="{% static 'schedule_impact_study/schedule_dashboard.css' %}">
-   <script type="text/javascript" src="{% static 'schedule_impact_study/schedule_board.js'%}"></script>
+   <link rel="stylesheet" type="text/css" href="{% static 'financial_impact_study/financial_styling.css' %}">
+   <script type="text/javascript" src="{% static 'financial_impact_study/financial_board.js'%}"></script>
  </div>
 
 
