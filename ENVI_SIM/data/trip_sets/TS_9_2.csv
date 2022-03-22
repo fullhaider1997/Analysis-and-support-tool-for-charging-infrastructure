@@ -1,0 +1,17 @@
+route_id,trip_id,trip_headsign,origin,destination,start_time,end_time,delay,total_distance,total_time,avg_speed,avg_acceleration,shape_id,road_grade,stop_density,has_station,dist_to_station,time_at_station
+9,135689:303607,JUNOT to Intercity,Waterfront Terminal,Intercity Shopping Centre,07:00:00,07:34:00,0 min,14.313,34.0,19.84617687074831,599.0089640427598,3260,-2.448,2.934395304967512,-,0.0,-
+9,135629:299453,JUNOT to Waterfront,Intercity Shopping Centre,Waterfront Terminal,07:55:00,08:29:00,21.0 min,14.185,34.0,19.03828571428573,498.56965079365233,3261,-2.492,2.960874162848079,Waterfront Terminal,14.185,08:29:00
+9,135716:303342,JUNOT to Intercity,Waterfront Terminal,Intercity Shopping Centre,08:30:00,09:04:00,1.0 min,14.313,34.0,19.84617687074829,599.0089640427633,3260,-2.448,2.934395304967512,-,0.0,-
+9,135635:299944,JUNOT to Waterfront,Intercity Shopping Centre,Waterfront Terminal,09:25:00,09:59:00,21.0 min,14.185,34.0,19.038285714285724,498.5696507936527,3261,-2.492,2.960874162848079,Waterfront Terminal,14.185,09:59:00
+9,135132:302983,JUNOT to Intercity,Waterfront Terminal,Intercity Shopping Centre,10:00:00,10:34:00,1.0 min,14.313,34.0,19.84617687074829,599.0089640427633,3260,-2.448,2.934395304967512,-,0.0,-
+9,135117:301194,JUNOT to Waterfront,Intercity Shopping Centre,Waterfront Terminal,10:55:00,11:29:00,21.0 min,14.185,34.0,19.038285714285724,498.5696507936527,3261,-2.492,2.960874162848079,Waterfront Terminal,14.185,11:29:00
+9,135135:303537,JUNOT to Intercity,Waterfront Terminal,Intercity Shopping Centre,11:30:00,12:04:00,1.0 min,14.313,34.0,19.84617687074829,599.0089640427633,3260,-2.448,2.934395304967512,-,0.0,-
+9,135120:299255,JUNOT to Waterfront,Intercity Shopping Centre,Waterfront Terminal,12:25:00,12:59:00,21.0 min,14.185,34.0,19.038285714285724,498.5696507936527,3261,-2.492,2.960874162848079,Waterfront Terminal,14.185,12:59:00
+9,135138:300593,JUNOT to Intercity,Waterfront Terminal,Intercity Shopping Centre,13:00:00,13:43:00,1.0 min,14.313,43.0,16.02627664399093,370.44696166720666,3260,-2.448,2.934395304967512,-,0.0,-
+9,135123:304199,JUNOT to Waterfront,Intercity Shopping Centre,Waterfront Terminal,13:45:00,14:29:00,2.0 min,14.185,44.0,15.836925170068046,304.89785552316204,3261,-2.492,2.960874162848079,Waterfront Terminal,14.185,14:29:00
+9,135141:299782,JUNOT to Intercity,Waterfront Terminal,Intercity Shopping Centre,14:30:00,15:13:00,1.0 min,14.313,43.0,16.02627664399093,370.44696166720666,3260,-2.448,2.934395304967512,-,0.0,-
+9,135126:304365,JUNOT to Waterfront,Intercity Shopping Centre,Waterfront Terminal,15:15:00,15:59:00,2.0 min,14.185,44.0,15.836925170068046,304.89785552316204,3261,-2.492,2.960874162848079,Waterfront Terminal,14.185,15:59:00
+9,135144:301254,JUNOT to Intercity,Waterfront Terminal,Intercity Shopping Centre,16:00:00,16:43:00,1.0 min,14.313,43.0,16.026276643990894,370.4469616672088,3260,-2.448,2.934395304967512,-,0.0,-
+9,135129:303999,JUNOT to Waterfront,Intercity Shopping Centre,Waterfront Terminal,16:45:00,17:29:00,2.0 min,14.185,44.0,15.836925170067923,304.89785552315806,3261,-2.492,2.960874162848079,Waterfront Terminal,14.185,17:29:00
+9,135147:303086,JUNOT to Intercity,Waterfront Terminal,Intercity Shopping Centre,17:30:00,18:03:00,1.0 min,14.313,33.0,19.77189115646259,509.41767152575096,3260,-2.448,2.934395304967512,-,0.0,-
+9,135109:299675,JUNOT to Waterfront,Intercity Shopping Centre,Waterfront Terminal,18:03:00,18:40:00,0.0 min,14.185,37.0,19.07527767470622,527.6615778136487,3261,-2.492,2.960874162848079,Waterfront Terminal,14.185,18:40:00

@@ -1,0 +1,2 @@
+route_id,trip_id,trip_headsign,origin,destination,start_time,end_time,delay,total_distance,total_time,avg_speed,avg_acceleration,shape_id,road_grade,stop_density,has_station,dist_to_station,time_at_station
+4,134733:302883,NEEBING,City Hall Terminal,Frederica & Brown,11:30:00,12:27:00,0 min,31.503,57.0,24.36076633444076,632.870805674209,3224,-3.184,2.7298987398025583,-,0.0,-
