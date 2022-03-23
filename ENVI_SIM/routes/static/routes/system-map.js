@@ -283,9 +283,11 @@ function createSystemMap(id, geojson) {
           console.log(s_Type);
           var fileName= id+s_Type;
           console.log(fileName);
+
           var pathName= "C:/Users/maike/Desktop/degreeproj-haider/Analysis-and-support-tool-for-charging-infrastructure/ENVI_SIM/data/sched/" +fileName+".csv";
           data= routeTable(pathName);
           //console.log(data);
+          
           Promise.all([data]).then(function(results){
         
             makeTable(results[0]);
