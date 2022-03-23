@@ -104,7 +104,7 @@ def get_speed_profile_data(trip_set, all_trips):
     trip_ids = list(trip_set['trip_id'])
     speed_data = all_trips.loc[all_trips['trip_id'].isin(trip_ids), ['arrival_time', 'speed']]
     speed_data = speed_data.sort_values(['arrival_time'], ascending=True)
-    speed_data = speed_data.iloc[::2, :]
+    speed_data = speed_data.iloc[::4, :]
     return speed_data
 
 # return dataframe containing trip_id and energy_consumed from trip_set

@@ -21,7 +21,7 @@ input['stations'] = {}
 input['stations']['default'] = ['Fast', 20, 240, 15] # default_charger, charge_rate(Slow), charge_rate(Fast), op_time(Swap)
 input['stations']['terminals'] = ['Waterfront Terminal','Swap','City Hall Terminal', 'Fast'] # charging_stations, type
 input['cost'] = [0.08, 0.12, 0.17, 2] # off_peak, mid_peak, on_peak, fuel_cost
-input['travel_conditions'] = [2, 3, 3, 'winter'] # driving_behaviour(normal), road_condition(slushy), people_density(regular), season('spring')
+input['travel_conditions'] = [2, 3, 3, 'Winter'] # driving_behaviour(normal), road_condition(slushy), people_density(regular), season('spring')
 input['bus'] = [90,100,2,2,1,30, 0.525, 85] # soc_upper_limit, starting_soc, BYD K9, Proterra ZX5, Volvo 7900, NOVA, maintenace_cost, operation_cost
 done = print_time_cost(done) # print time
 print('Initializing classes...') # checkpoint

@@ -12,25 +12,25 @@
           <li class="cost_paramters_fields">
               <label id="title_input-r">OFF PEAK</label>
               <label >$</label>
-              <input class = "my_input-r" type="text" value="0.082">
+              <input id="off_peak"class = "my_input-r" type="text" value="0.082">
               <label id="unit_label">/KWH</label>
           </li>
           <li  class="cost_paramters_fields">
             <label id="title_input-r">MID PEAK</label>
             <label >$</label>
-            <input class = "my_input-r" type="text" value="0.113" >
+            <input id="mid_peak"class = "my_input-r" type="text" value="0.113" >
             <label id="unit_label">/KWH</label>
         </li>
         <li  class="cost_paramters_fields">
           <label id="title_input-r">ON PEAK</label>
           <label >$</label>
-          <input class = "my_input-r" type="text" value="0.17">
+          <input id="on_peak"class = "my_input-r" type="text" value="0.17">
           <label id="unit_label">/KWH</label>
       </li>
       <li  class="cost_paramters_fields">
         <label id="title_input-r">FUEL COST</label>
         <label >$</label>
-        <input class = "my_input-r" type="text" value="1.6">
+        <input id="fuel_cost" class = "my_input-r" type="text" value="1.6">
         <label id="unit_label">/LITRE</label>
     </li>
          </ul>
@@ -49,8 +49,7 @@
               <div class="select"> 
                 <label class="title_input-b">DRIVING BEHAVIOR</label>
                 <select id="behavior_id">
-                  <option value="0" selected="selected"><a >Type</a></option>
-                  <option value="Slow"><a>Slow</a></option>
+                  <option value="Slow" selected="selected"><a>Slow</a></option>
                   <option value="Normal"><a>Normal</a></option>
                   <option value="Aggressive"><a>Aggressive</a></option>
                 </select>
@@ -59,34 +58,31 @@
 
               <div class="select"> 
                 <label class="title_input-b">ROAD CONDITION</label>
-                <select id="behavior_id">
-                  <option value="0" selected="selected"><a >Type</a></option>
-                  <option value="Good"><a> Good(dry)</a></option>
-                  <option value="Fair"><a> Fair(wet)</a></option>
-                  <option value="Poor"><a> Poor(slushy)</a></option>
+                <select id="road_condition_id">
+                  <option value="Good(dry)" selected="selected"><a>Good(dry)</a></option>
+                  <option value="Fair(wet)"><a>Fair(wet)</a></option>
+                  <option value="Poor(slushy)"><a>Poor(slushy)</a></option>
                 </select>
               </div>
 
               
               <div class="select"> 
                 <label class="title_input-b">PEOPLE DENSITY</label>
-                <select id="behavior_id">
-                  <option value="0" selected="selected"><a >Type</a></option>
-                  <option value="Full"><a>Full</a></option>
-                  <option value="Half-full"><a> Half-full</a></option>
-                  <option value="Regular"><a> Swap</a></option>
-                  <option value="Scarce"><a> Swap</a></option>
+                <select id="people_density_id">
+                  <option value="Full" selected="selected"><a>Full</a></option>
+                  <option value="Half-full"><a>Half-full</a></option>
+                  <option value="Regular"><a>Regular</a></option>
+                  <option value="Scarce"><a>Scarce</a></option>
                 </select>
               </div>
 
               <div class="select"> 
                 <label class="title_input-b">SEASONS</label>
-                <select id="behavior_id">
-                  <option value="0" selected="selected"><a >Type</a></option>
-                  <option value="spring"><a>Spring</a></option>
-                  <option value="summer"><a >Summer</a></option>
-                  <option value="fall"><a >Fall</a></option>
-                  <option value="winter"><a >Winter</a></option>
+                <select id="season_id">
+                  <option value="Spring" selected="selected"><a>Spring</a></option>
+                  <option value="Summer"><a >Summer</a></option>
+                  <option value="Fall"><a >Fall</a></option>
+                  <option value="Winter"><a >Winter</a></option>
                 </select>
               </div>
 
@@ -120,14 +116,14 @@
           <li class="cost_paramters_fields">
               <label class="title_input-C">SOC UPPER LIMIT </label>
               <label style="visibility: hidden;">$</label>
-              <input class = "my_input-r" type="text" value="0" min="60" max="100">
+              <input id="soc_upper_limit"class = "my_input-r" type="number" value="100" min="70" max="100">
               <label id="unit_label">%</label>
               
           </li>
           <li class="cost_paramters_fields">
             <label class="title_input-C">STARTING SOC</label>
             <label style="visibility: hidden;">$</label>
-            <input class = "my_input-r" type="text" value="0" min="60" max="max">
+            <input id="soc_lower_limit"class = "my_input-r" type="number" value="90" min="70" max="100">
             <label id="unit_label">%</label>
             
         </li>
@@ -149,14 +145,14 @@
           <input id="Volvo_7900_input" class = "my_input-r" type="number" min="0", max="35" value="0">
         </li>
         <li class="cost_paramters_fields">
-          <label class="title_input-C">Nova Bus </label>
+          <label class="title_input-C">NOVA Bus </label>
           <label style="visibility: hidden;">$</label>
           <output id="disel_buses_output"  type="number" min="0"> 35 </output>
         </li>
         <li class="cost_paramters_fields">
           <label class="title_input-C">MAINTENACE COST </label>
           <label >$</label>
-          <input class = "my_input-r" type="text" value="0.525">
+          <input id="maintenace_id"class = "my_input-r" type="text" value="0.525">
           <label id="unit_label">/KM</label>
           
       </li>
@@ -164,7 +160,7 @@
       <li class="cost_paramters_fields">
         <label class="title_input-C">OPERATIONAL COST </label>
         <label >$</label>
-        <input class = "my_input-r" type="text" value="85">
+        <input id="operational_id"class = "my_input-r" type="text" value="85">
         <label id="unit_label">/hr</label>
         
     </li>
@@ -173,7 +169,7 @@
 
       </div>
       
-      <input type="submit" id="submit_paramter"value="Submit">
+      <input type="submit" id="submit_paramter"value="Run Optimizer">
 
       </div>
 

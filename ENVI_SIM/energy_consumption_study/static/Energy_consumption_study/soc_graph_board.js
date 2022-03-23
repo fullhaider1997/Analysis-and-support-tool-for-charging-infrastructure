@@ -61,7 +61,7 @@ $("#routes_id li").click(function() {
   button.innerHTML = id;
   console.log(id)
   console.log()
-
+/*
   if(id == "Mainline 1"){
     console.log("Clicking on Maineline 2")
     data = retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_1_0.csv")
@@ -235,6 +235,9 @@ $("#routes_id li").click(function() {
       plotEnergy(results)
     });
   }
+
+
+  */
 
 });
 

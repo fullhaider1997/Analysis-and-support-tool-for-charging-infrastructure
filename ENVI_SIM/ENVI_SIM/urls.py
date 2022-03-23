@@ -24,7 +24,7 @@ from google_map.views import google_map_view
 from menu.views import menu
 from energy_consumption_study.energy_api import retrieveEnergyData,retrieveSpeedData,retrieveTripID
 from environmental_impact_study.enviormental_api import retrieveCO2EmissionData
-
+from scheduling.scheduling_api import sendUserSimulationParamters
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home_page_view ,name="home"),
@@ -37,8 +37,8 @@ urlpatterns = [
     path("retrieveEnergyData/",retrieveEnergyData,name="retrieveEnergyData"),
     path("retrieveSpeedData/",retrieveSpeedData,name="retrieveSpeedData"),
     path("retrieveTripID/",retrieveTripID, name="retrieveTripID"),
-    path("routeTable/",routeTable, name="routeTable")
-    
+    path("routeTable/",routeTable, name="routeTable"),
+    path("sendUserSimulationParamters/",sendUserSimulationParamters, name="sendUserSimulationParamters")
     
 ]
 

@@ -1,0 +1,1 @@
+trip_id,service_id,trip_headsign,route_id,shape_id,origin,destination,start_time,end_time,road_grade,total_time,total_distance,avg_speed,avg_acceleration,stop_density,has_station,dist_to_station,time_at_station

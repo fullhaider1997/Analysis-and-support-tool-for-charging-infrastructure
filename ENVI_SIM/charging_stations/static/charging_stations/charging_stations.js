@@ -39,7 +39,7 @@ $("#add-charger").click(function (index){
     
   
     var array = ["Location","Intercity Shopping Centre","Lakehead University","Thunder Bay Regional Health Sciences Centre","Confederation College","Westfort/Brown Street"];
-    var array2 = ["Type","Swap","Fast", "slow"]
+    var array2 = ["Swap","Fast", "Slow"]
     var buttonEl = document.getElementById("append");
     
 	var location_selector = document.createElement("select");
@@ -76,6 +76,8 @@ $("#add-charger").click(function (index){
     location_selector.classList.add("location_id");
     remove.classList.add("id","remove:"+tracker)
     location_selector.classList.add("id",tracker)
+    location_selector.id = "id"+tracker
+    type_selector.id = "type"+tracker
     type_selector.classList.add("id","type:"+tracker)
     br.classList.add("id","br:"+tracker)
     
@@ -249,4 +251,59 @@ function remove(div,click) {
    
 }
 
+
+
+$("#submit_parameter").click(function(){
+
+
+    console.log("Charging stations submit...")
+
+    //Default waterfront charger parameter
+    var waterfront = "Waterfront Terminal"
+    var waterfront_type = $('#type_id').find(":selected").text()
+
+    //Default cityhall charger parameter
+    var cityhall = "City Hall Terminal"
+    var cityhall_type = $('#type_id_2').find(":selected").text()
+ 
+    console.log(waterfront)
+    console.log(waterfront_type)
+
+    console.log(cityhall)
+    console.log(cityhall_type)
+
+    var name1 = $("#id0").find(":selected").text()
+    var name2 = $("#id1").find(":selected").text()
+    
+
+    var type1 = $("#type0").find(":selected").text()
+    var type2 = $("#type1").find(":selected").text()
+   
+    console.log(type1)
+    console.log(type2)
+                   
+    localStorage.setItem("location-1",waterfront)
+    localStorage.setItem("location-2",cityhall)
+    localStorage.setItem("location-3",name1)
+    localStorage.setItem("location-4",name2)
+    
+    console.log("Created by the users......")
+
+    console.log(name1)
+    console.log(name2)
+
+    localStorage.setItem("type-1",waterfront_type)
+    localStorage.setItem("type-2",cityhall_type)
+    localStorage.setItem("type-3",type1)
+    localStorage.setItem("type-4",type2)
+
+    console.log(type1)
+    console.log(type2)
+
+
+
+
+
+ 
+});
 
