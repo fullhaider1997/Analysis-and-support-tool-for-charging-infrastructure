@@ -34,7 +34,7 @@ function retrieveSpeedData(path){
 }
 
 function retrieveTripID(path){
-    return fetch('//', {  headers: {'Content-Type': 'application/json'}, method: 'POST', body: JSON.stringify({"name": path})
+    return fetch('/retrieveTripID/', {  headers: {'Content-Type': 'application/json'}, method: 'POST', body: JSON.stringify({"name": path})
 
 }).then(function (response) { // At this point, Flask has printed our JSON
   return response.text();
