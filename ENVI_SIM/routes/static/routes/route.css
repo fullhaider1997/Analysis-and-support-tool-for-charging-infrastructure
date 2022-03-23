@@ -120,6 +120,8 @@ table {
   width: 100%;
   margin: 20px auto;
   table-layout: auto;
+  border-collapse: collapse;
+  border: 1px solid black;
 }
 tr:nth-child(even) {background-color: #f2f2f2;}
 
@@ -132,4 +134,5 @@ table,
 td,
 th {
   border-collapse: collapse;
+  border: 1px solid black;
 }

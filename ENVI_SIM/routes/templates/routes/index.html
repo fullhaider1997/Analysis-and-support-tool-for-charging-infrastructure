@@ -96,13 +96,27 @@
     
     
       
-    <div class="flex my-1">
+    <div class="mt-1 ">
+      <hr>
+      <label style="font-size: large;" for="sched_opt">Choose schedule:</label>
+
+      <select name="sched_opt" id="sched_box">
+        <option value="_r">Weekday</option>
+        <option value="_sat">Saturday</option>
+        <option value="_sun">Sunday</option>
+      </select>
       
       
     </div>
     
-    <div class="text-gray-600"></div></a>
+    <div class="text-gray-600">
+      
+    </div></a>
   
+    <div>
+
+    </div>
+    
   </div>
     
     <div class="map ml-4 h-full w-full" id="system_map"></div>
@@ -110,15 +124,7 @@
 
     
     <div style="bottom: 0px;">
-      <input type="file" id="fileUpload" />
-      <input type="button" id="upload" value="Upload" onclick="Upload()" />
-      <label for="sched_opt">Choose schedule:</label>
-
-      <select name="sched_opt" id="sched_box">
-        <option value="_r">Weekday</option>
-        <option value="_sat">Saturday</option>
-        <option value="_sun">Sunday</option>
-      </select>
+      
       
       <hr />
        
