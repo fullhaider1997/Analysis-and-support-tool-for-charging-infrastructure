@@ -1,4 +1,6 @@
-
+.unset * {
+  all: initial;
+}
  
  #financial_title{
   position: absolute;
@@ -43,7 +45,7 @@
 .middlepane {
   position: absolute;
   margin: 90px 10px 10px 10px;
-  width: 50.0%;
+  width: 45.0%;
   height: 350px;
   left:280px;
   background-color: rgb(168, 184, 233);
@@ -54,7 +56,7 @@
 
 #title_input-r{
   margin-top: 0.3125em;
-  width: 20.95em;
+  width: 15.95em;
   display: inline;
   font-size:15px;
   float: left;
