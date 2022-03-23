@@ -1,0 +1,7 @@
+route_id,trip_id,trip_headsign,origin,destination,start_time,end_time,delay,total_distance,total_time,avg_speed,avg_acceleration,shape_id,road_grade,stop_density,has_station,dist_to_station,time_at_station
+4,134728:303921,NEEBING,City Hall Terminal,Frederica & Brown,06:30:00,07:23:00,0 min,29.391,53.0,24.58473368606702,690.0410125136469,3221,-3.184,2.7559456976625496,-,0.0,-
+4,134729:303431,NEEBING,Frederica & Brown,Frederica & Brown,08:05:00,08:47:00,42.0 min,26.528,42.0,26.6039887955182,721.4399274376415,3218,0.0,2.563329312424608,-,0.0,-
+4,134730:303492,NEEBING,Frederica & Brown,Frederica & Brown,09:28:00,10:10:00,41.0 min,26.528,42.0,26.6039887955182,721.4399274376374,3218,0.0,2.563329312424608,-,0.0,-
+4,134734:303347,NEEBING,Frederica & Brown,Frederica & Brown,13:10:00,13:52:00,180.0 min,26.528,42.0,26.60398879551819,721.439927437646,3218,0.0,2.563329312424608,-,0.0,-
+4,134731:303706,NEEBING,Frederica & Brown,Frederica & Brown,15:45:00,16:27:00,113.0 min,26.528,42.0,26.60398879551816,721.4399274376416,3218,0.0,2.563329312424608,-,0.0,-
+4,134732:303522,NEEBING,Frederica & Brown,Frederica & Brown,17:10:00,17:52:00,43.0 min,26.528,42.0,26.60398879551825,721.4399274376401,3218,0.0,2.563329312424608,-,0.0,-
