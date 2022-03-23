@@ -267,35 +267,40 @@ function createSystemMap(id, geojson) {
 
   
 
-    //switch routes
+    //switch routes and tables
     $(() => {
       $('.overview-list a').click(function() {
    
         
         var id = $(this).attr("id");
-        console.log(id)
+        console.log(id);
         if ("b_allroutes" == id.toString()){
-          //window.location.pathname = "routeOne";
           $("#switchscreen").load("routes");
         }
-        $("#system_map").load(id);
-        Upload();
 
-        //call make csv
+        else{
+          var s_Type = $("#sched_box").find(":selected").val();
+          console.log(s_Type);
+          var fileName= id+s_Type;
+          console.log(fileName);
+          var pathName= "C:/Users/maike/Desktop/degreeproj-haider/Analysis-and-support-tool-for-charging-infrastructure/ENVI_SIM/data/sched/" +fileName+".csv";
+          data= routeTable(pathName);
+          
+          Promise.all([data]).then(function(results){
+            console.log(results[0]);
+            makeTable(results);
+            
+          });
+  
+  
+          
+          //switch map to zoomed in version
+          $("#system_map").load(id);
+  
+          //Upload();
 
-        
-        // if ("r2" == id.toString()){
-        //   //window.location.pathname = "routeOne";
-        //   $("#system_map").load("routeTwo");
-        // }
-        // if ("r3c" == id.toString()){
-        //   //window.location.pathname = "routeOne";
-        //   $("#system_map").load("route3c");
-        // }
-        // if ("r3m" == id.toString()){
-        //   //window.location.pathname = "routeOne";
-        //   $("#system_map").load("route3m");
-        // }
+        }
+       
     });
     });
   });
@@ -546,41 +551,43 @@ function Upload() {
   }
 }
 
-
-
-/* $("select").change(function(){
-  $.ajax({
-   url:"ENVI_SIM/routes/sched/1_sun.csv",
-   dataType:"text",
-   success:function(data)
-   {
-    var employee_data = data.split(/\r?\n|\r/);
-    var table_data = '<table class="table table-bordered table-striped">';
-    for(var count = 0; count<employee_data.length; count++)
-    {
-     var cell_data = employee_data[count].split(",");
-     table_data += '<tr>';
-     for(var cell_count=0; cell_count<cell_data.length; cell_count++)
-     {
-      if(count === 0)
-      {
-       table_data += '<th>'+cell_data[cell_count]+'</th>';
+function makeTable(data)
+{
+  var col = [];
+  for (var i = 0; i < data.length; i++) {
+      for (var key in data[i]) {
+          if (col.indexOf(key) === -1) {
+              col.push(key);
+          }
       }
-      else
-      {
-       table_data += '<td>'+cell_data[cell_count]+'</td>';
+  }
+  var table = document.createElement("table");
+  // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+  var tr = table.insertRow(-1);                   // TABLE ROW.
+
+  for (var i = 0; i < col.length; i++) {
+      var th = document.createElement("th");      // TABLE HEADER.
+      th.innerHTML = col[i];
+      tr.appendChild(th);
+  }
+
+  // ADD JSON DATA TO THE TABLE AS ROWS.
+  for (var i = 0; i < data.length; i++) {
+
+      tr = table.insertRow(-1);
+
+      for (var j = 0; j < col.length; j++) {
+          var tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = data[i][col[j]];
       }
-     }
-     table_data += '</tr>';
-    }
-    table_data += '</table>';
-    $('#employee_table').html(table_data);
-   }
-  });
- }); */
+  }
+
+  // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+  var divContainer = document.getElementById("dvCSV");
+  divContainer.innerHTML = "";
+  divContainer.appendChild(table);
 
 
- $("#sched_box").change(function () {
-  console.log("drop");
-});
+}
  

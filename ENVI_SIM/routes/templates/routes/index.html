@@ -3,7 +3,7 @@
   <head>
     <title></title>
     <!-- <meta charset="utf-8"> -->
-    <!-- {% load static %} -->
+    {% load static %}
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/route.css' %}"> -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" crossorigin="anonymous"> -->
     <!-- <meta name="viewport" content="initial-scale=1.0, width=device-width">
@@ -16,6 +16,7 @@
 <!-- <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet"> -->
 
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script type="text/javascript" src="{% static 'routes\routes_utilities.js'%}"></script>
 
 </head>
 <body>
@@ -114,47 +115,16 @@
       <label for="sched_opt">Choose schedule:</label>
 
       <select name="sched_opt" id="sched_box">
-        <option value="w">Weekday</option>
-        <option value="sat">Saturday</option>
-        <option value="sun">Sunday</option>
+        <option value="_r">Weekday</option>
+        <option value="_sat">Saturday</option>
+        <option value="_sun">Sunday</option>
       </select>
-      <script>
-        $("#sched_box").change(function () {
-        console.log("drop");$.ajax({
-   url:"1_sun.csv",
-   dataType:"text",
-   success:function(data)
-   {
-    var employee_data = data.split(/\r?\n|\r/);
-    var table_data = '<table class="table table-bordered table-striped">';
-    for(var count = 0; count<employee_data.length; count++)
-    {
-     var cell_data = employee_data[count].split(",");
-     table_data += '<tr>';
-     for(var cell_count=0; cell_count<cell_data.length; cell_count++)
-     {
-      if(count === 0)
-      {
-       table_data += '<th>'+cell_data[cell_count]+'</th>';
-      }
-      else
-      {
-       table_data += '<td>'+cell_data[cell_count]+'</td>';
-      }
-     }
-     table_data += '</tr>';
-    }
-    table_data += '</table>';
-    $('#dvCSV').html(table_data);
-   }
-  });
-        });
- 
-      </script>
+      
       <hr />
        
         
        
+      
         <div id="dvCSV"></div>
 
     </div>
