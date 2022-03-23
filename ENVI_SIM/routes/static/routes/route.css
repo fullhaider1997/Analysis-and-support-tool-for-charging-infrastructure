@@ -74,9 +74,7 @@
   .items-stretch{align-items:stretch}
   .leading-none{line-height:1}
 
-  ul, li {
-    display:inline
-}
+ 
 
 /* Map Styles */
 

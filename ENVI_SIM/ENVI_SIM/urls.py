@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from routes.routes_api import routeTable
 
 
 from account.views import login_user,register_user
@@ -36,6 +37,7 @@ urlpatterns = [
     path("retrieveEnergyData/",retrieveEnergyData,name="retrieveEnergyData"),
     path("retrieveSpeedData/",retrieveSpeedData,name="retrieveSpeedData"),
     path("retrieveTripID/",retrieveTripID, name="retrieveTripID"),
+    path("routeTable/",routeTable, name="routeTable")
     
     
 ]
