@@ -1,6 +1,6 @@
 trip_id,service_id,trip_headsign,route_id,shape_id,origin,destination,start_time,end_time,road_grade,total_time,total_distance,avg_speed,avg_acceleration,stop_density,has_station,dist_to_station,time_at_station
-134167:300604,300604,MAINLINE to Westfort,1,3132,Waterfront Terminal,Mary & Neebing,06:00:00,06:40:00,-1.063,40.0,15.084,16.659085714285702,402.4388281179137,3.977724741447892,Intercity Shopping Centre,4.592,06:10:00
-134108:304812,304812,MAINLINE to Current River,1,3234,City Hall Terminal,Cowan & Hodder,06:20:00,07:00:00,-0.974,40.0,14.397,17.192819407008077,512.42909819022,3.681322497742585,Intercity Shopping Centre,2.864,06:30:00
+134167:300604,300604,MAINLINE to Westfort,1,3132,Waterfront Terminal,Mary & Neebing,06:00:00,06:40:00,-1.063,40.0,15.084,16.659085714285702,402.4388281179137,3.977724741447892,City Hall Terminal,7.832,06:20:00
+134108:304812,304812,MAINLINE to Current River,1,3234,City Hall Terminal,Cowan & Hodder,06:20:00,07:00:00,-0.974,40.0,14.397,17.192819407008077,512.42909819022,3.681322497742585,Waterfront Terminal,7.391,06:40:00
 134109:302920,302920,MAINLINE to Westfort,1,3130,Cowan & Hodder,Mary & Neebing,06:20:00,07:20:00,-0.681,60.0,23.021,16.752252631578948,403.421321303257,4.12666695625733,Waterfront Terminal,7.937,06:40:00
 134138:305639,305639,MAINLINE to Current River,1,3274,Mary & Neebing,Cowan & Hodder,06:40:00,07:40:00,-0.676,60.0,21.149,16.568699159663872,504.5724965186078,4.0191025580405695,City Hall Terminal,6.752,07:00:00
 134110:303673,303673,MAINLINE to Westfort,1,3130,Cowan & Hodder,Mary & Neebing,07:00:00,08:00:00,-0.681,60.0,23.021,16.752252631578955,403.4213213032568,4.12666695625733,Waterfront Terminal,7.937,07:20:00
