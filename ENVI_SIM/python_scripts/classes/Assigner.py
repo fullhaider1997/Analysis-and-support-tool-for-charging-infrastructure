@@ -38,17 +38,19 @@ class Assigner:
             soc_profile = get_soc_plot_data(schedule)
             energy_consumption = get_energy_consumption_plot_data(schedule)
             emission_profile = get_emission_plot_data(schedule)
+            route_index = self.bus_trip[bus_trip]['trip_set_id'].split('_')
+            file_name = route_index[1] + '_' + route_index[2] 
             if directory == None:
-                save_df_to_directory(schedule, bus_trip, schedule_path)
-                save_df_to_directory(speed_profile, bus_trip,speed_profiles_path)
-                save_df_to_directory(soc_profile, bus_trip, soc_profiles_path)
-                save_df_to_directory(energy_consumption, bus_trip, energy_consumption_profiles_path)
-                save_df_to_directory(emission_profile, bus_trip, emission_profiles_path)
+                save_df_to_directory(schedule, file_name, schedule_path)
+                save_df_to_directory(speed_profile, file_name,speed_profiles_path)
+                save_df_to_directory(soc_profile, file_name, soc_profiles_path)
+                save_df_to_directory(energy_consumption, file_name, energy_consumption_profiles_path)
+                save_df_to_directory(emission_profile, file_name, emission_profiles_path)
                 save_df_to_directory(total_data, 'cost_related_data', mixed_fleet_assignments_path)
             else:
-                save_df_to_directory(schedule, bus_trip, directory + 'schedules\\')
-                save_df_to_directory(speed_profile, bus_trip, directory + 'speed_profiles\\')
-                save_df_to_directory(emission_profile, bus_trip, directory + 'emission_profiles\\')
+                save_df_to_directory(schedule, file_name, directory + 'schedules\\')
+                save_df_to_directory(speed_profile, file_name, directory + 'speed_profiles\\')
+                save_df_to_directory(emission_profile, file_name, directory + 'emission_profiles\\')
                 save_df_to_directory(total_data, 'cost_related_data', directory)
 
     def add_bus_trip_set(self, BUS_IDENTIFIER, TRIP_SET_IDENTIFIER, schedule_series):

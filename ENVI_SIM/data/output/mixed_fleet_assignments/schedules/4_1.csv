@@ -1,0 +1,2 @@
+route_id,trip_id,trip_headsign,origin,destination,start_time,end_time,fuel_consumed,co2_emission,fuel_cost,total_time,total_distance,maintenance_cost,operation_cost,trip_type,energy_rate,energy_consumed,initial_soc,soc_before_charge,final_soc,charge_time,energy_charged,energy_cost
+4,134733:302883,NEEBING,City Hall Terminal,Frederica & Brown,11:30:00,12:27:00,5.319999999999999,12.491359999999998,10.639999999999999,57.0,31.503,16.539075,80.75,service,0,0,0,0,0,0,0,0
