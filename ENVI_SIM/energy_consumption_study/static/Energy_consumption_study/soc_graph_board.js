@@ -3,47 +3,15 @@ console.log("Energy consumption is started")
 
 var energy_consumption_s =[]
 var time_s = []
-function show_list() {
-  var courses = document.getElementById("routes_id");
-
-  
-  if (courses.style.display == "block") {
-      courses.style.display = "none";
-  } else {
-      courses.style.display = "block";
-  }
-}
-
-window.onclick = function (event) {
-  if (!event.target.matches('#dropdown_button_routes')) {
-      document.getElementById('routes_id').style.display = "none";
-
-  } else if(!event.target.matches('#dropdown_button_seasons')){
-    document.getElementById('seasons_id').style.display = "none";
-  }
-}  
-
-
-
-function show_list_seasons() {
-  var courses = document.getElementById("seasons_id");
-
-  if (courses.style.display == "block") {
-      courses.style.display = "none";
-  } else {
-      courses.style.display = "block";
-  }
-}
 
 
 
 
+$("#tripset_id li").click(function() {
 
-$("#seasons_id li").click(function() {
-
-  console.log("Clicking on selection of routes:seasons")
+  console.log("Clicking on selection of routes:tripset")
       
-  var button = document.getElementById("dropdown_button_seasons")
+  var button = document.getElementById("dropdown_button_tripset")
   var id = $(this).attr("id");
   button.innerHTML = id;
   console.log(id)

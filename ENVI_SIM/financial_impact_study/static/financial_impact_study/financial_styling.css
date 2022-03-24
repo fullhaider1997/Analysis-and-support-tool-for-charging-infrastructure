@@ -72,14 +72,13 @@
   float: left;
 
 }
-input.my_input-r{
+output.my_input-r{
   padding: 0px;
   margin: 1px;
   height: 1.25em;
   width: 5em;
-  border-radius: 10px;
+  font-size: 12px;
   background-color: #a9d5f8;
-  border-style:solid;
   text-align: center; 
 }
 

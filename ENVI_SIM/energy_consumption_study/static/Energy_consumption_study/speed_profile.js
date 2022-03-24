@@ -4,6 +4,8 @@ console.log("I am connected speed dashboard.js")
 
 
 
+/
+
 $("#routes_id li").click(function() {
 
     console.log("Clicking on selection of routes:speed")
@@ -13,15 +15,15 @@ $("#routes_id li").click(function() {
     button.innerHTML = id;
     console.log(id)
 
+   // speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/")
+   // speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/")
 
     if(id == "Mainline 1"){
 
         console.log("Clicking on Maineline 2")
       
-        speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/NOVA_TS_1_0.csv")
-        trip_data_electrical =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/BYD K9_0_TS_3C_0.csv")
-      
-
+        speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/")
+    
         Promise.all([speed_data_disel,trip_data_electrical]).then(function(data){
           plotSpeed(data)
           
@@ -36,23 +38,6 @@ $("#routes_id li").click(function() {
 
 
 });
-
-function show_list() {
-    var courses = document.getElementById("routes_id");
-  
-    
-    if (courses.style.display == "block") {
-        courses.style.display = "none";
-    } else {
-        courses.style.display = "block";
-    }
-  }
-  
-  window.onclick = function (event) {
-    if (!event.target.matches('#dropdown_button')) {
-        document.getElementById('routes_id').style.display = "none";
-    }
-  }  
 
   
   
@@ -101,7 +86,7 @@ function show_list() {
    console.log("------------")
 
  
-    
+      
         var trace1 = {
     
           x:  time_disel,
@@ -168,21 +153,6 @@ function show_list() {
 
   }
 
-  function show_list() {
-    var courses = document.getElementById("routes_id");
   
-    
-    if (courses.style.display == "block") {
-        courses.style.display = "none";
-    } else {
-        courses.style.display = "block";
-    }
-  }
-  
-  window.onclick = function (event) {
-    if (!event.target.matches('#dropdown_button')) {
-        document.getElementById('routes_id').style.display = "none";
-    }
-  }  
 
 

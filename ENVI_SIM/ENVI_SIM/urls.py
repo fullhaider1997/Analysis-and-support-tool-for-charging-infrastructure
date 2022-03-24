@@ -25,6 +25,7 @@ from menu.views import menu
 from energy_consumption_study.energy_api import retrieveEnergyData,retrieveSpeedData,retrieveTripID
 from environmental_impact_study.enviormental_api import retrieveCO2EmissionData
 from scheduling.scheduling_api import sendUserSimulationParamters
+from financial_impact_study.financial_api import retrieveCostData
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home_page_view ,name="home"),
@@ -38,7 +39,8 @@ urlpatterns = [
     path("retrieveSpeedData/",retrieveSpeedData,name="retrieveSpeedData"),
     path("retrieveTripID/",retrieveTripID, name="retrieveTripID"),
     path("routeTable/",routeTable, name="routeTable"),
-    path("sendUserSimulationParamters/",sendUserSimulationParamters, name="sendUserSimulationParamters")
+    path("sendUserSimulationParamters/",sendUserSimulationParamters, name="sendUserSimulationParamters"),
+    path("retrieveCostData/",retrieveCostData, name="retrieveCostData")
     
 ]
 

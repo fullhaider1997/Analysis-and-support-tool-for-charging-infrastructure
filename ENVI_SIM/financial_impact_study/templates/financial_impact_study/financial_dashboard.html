@@ -15,42 +15,47 @@
           <li class="cost_paramters_fields">
               <label class="title_input-C">Total Maintenace Cost (diesel only) </label>
               <label style="visibility: hidden;">$</label>
-              <input class = "my_input-r" type="text" value="0"readonly>
+              <output id="total_maintenace_cost_disel" class = "my_input-r" type="text" value="0"readonly></output>
               <label id="unit_label">$</label>
               
           </li>
           <li class="cost_paramters_fields">
             <label class="title_input-C">Total Operation Cost (diesel only)</label>
             <label style="visibility: hidden;">$</label>
-            <input class = "my_input-r" type="text" value="0"readonly>
+            <output  id="total_operation_cost_disel"class = "my_input-r" type="text" value="0"readonly></output>
             <label id="unit_label">$</label>
          </li>
 
          <li class="cost_paramters_fields">
             <label class="title_input-C">Total cost (electricity + diesel)</label>
             <label style="visibility: hidden;">$</label>
-            <input class = "my_input-r" type="text" value="0"readonly>
+            <output id="total_elec_disel"class = "my_input-r" type="text" value="0"readonly></output>
             <label id="unit_label">$</label>
         </li>
         <li class="cost_paramters_fields">
           <label class="title_input-C">Total emission </label>
           <label style="visibility: hidden;">$</label>
-          <input class = "my_input-r" type="text" value="0"readonly>
+          <output id="total_emission"class = "my_input-r" type="text" value="0"readonly></output>
           <label id="unit_label">kg</label>
         </li>
         <li class="cost_paramters_fields">
           <label class="title_input-C">Total fuel consumed</label>
           <label style="visibility: hidden;">$</label>
-          <input class = "my_input-r" type="text" value="0"readonly>
+          <output id="total_fuel_comsumed"class = "my_input-r" type="text" value="0"readonly></output>
           <label id="unit_label">litres</label>
         </li>
         <li class="cost_paramters_fields">
           <label class="title_input-C">Total energy consumed</label>
           <label >$</label>
-          <input class = "my_input-r" type="text" value="0"readonly>
+          <output id="total_energy_consumed"class = "my_input-r" type="text" value="0"readonly></output>
           <label id="unit_label">kWh</label>
-          
       </li>
+      <li class="cost_paramters_fields">
+        <label class="title_input-C">Total procurement costs</label>
+        <label >$</label>
+        <output id="total_procurement_cost"class = "my_input-r" type="text" value="0"readonly></output>
+        <label id="unit_label">$</label>
+    </li>
   
   
    </div>
@@ -67,49 +72,55 @@
           <li class="cost_paramters_fields">
               <label class="title_input-C">Total Maintenace Cost (diesel only) </label>
               <label style="visibility: hidden;">$</label>
-              <input class = "my_input-r" type="text" value="0"readonly>
+              <output id="total_maintenace_cost_disel_opt"class = "my_input-r" type="text" value="0"readonly></output>
               <label id="unit_label">$</label>
               
           </li>
           <li class="cost_paramters_fields">
             <label class="title_input-C">Total Operation Cost (diesel only)</label>
             <label style="visibility: hidden;">$</label>
-            <input class = "my_input-r" type="text" value="0"readonly>
+            <output id="total_operation_cost_disel_opt" class = "my_input-r" type="text" value="0"readonly></output>
             <label id="unit_label">$</label>
          </li>
 
          <li class="cost_paramters_fields">
             <label class="title_input-C">Total cost (electricity + diesel)</label>
             <label style="visibility: hidden;">$</label>
-            <input class = "my_input-r" type="text" value="0"readonly>
+            <output id="total_elec_disel_opt"class = "my_input-r" type="text" value="0"readonly></output>
             <label id="unit_label">$</label>
         </li>
         <li class="cost_paramters_fields">
           <label class="title_input-C">Total emission </label>
           <label style="visibility: hidden;">$</label>
-          <input class = "my_input-r" type="text" value="0"readonly>
+          <output id="total_emission_opt"class = "my_input-r" type="text" value="0"readonly></output>
           <label id="unit_label">kg</label>
         </li>
         <li class="cost_paramters_fields">
           <label class="title_input-C">Total fuel consumed</label>
           <label style="visibility: hidden;">$</label>
-          <input class = "my_input-r" type="text" value="0"readonly>
+          <output id="total_fuel_comsumed_opt" class = "my_input-r" type="text" value="0"readonly></output>
           <label id="unit_label">litres</label>
         </li>
         <li class="cost_paramters_fields">
           <label class="title_input-C">Total energy consumed</label>
           <label >$</label>
-          <input class = "my_input-r" type="text" value="0"readonly>
+          <output id="total_energy_consumed_opt"class = "my_input-r" type="text" value="0"readonly></output>
           <label id="unit_label">kWh</label>
           
       </li>
+      <li class="cost_paramters_fields">
+        <label class="title_input-C">Total procurement costs</label>
+        <label >$</label>
+        <output id="total_procurement_cost_opt"class = "my_input-r" type="text" value="0"readonly></output>
+        <label id="unit_label">$</label>
+    </li>
   
   
    </div>
 
    <link rel="stylesheet" type="text/css" href="{% static 'financial_impact_study/financial_styling.css' %}">
    <script type="text/javascript" src="{% static 'financial_impact_study/financial_board.js'%}"></script>
-   
+   <script type="text/javascript" src="{% static 'financial_impact_study/financial_utilties.js'%}"></script>
   <link rel="stylesheet" type="text/css" href="{% static 'routes\route.css' %}" disabled =true>
  </div>
 

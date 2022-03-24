@@ -18,7 +18,7 @@ def routeTable(request):
         print(url)
         df = pd.read_csv(url,encoding= 'unicode_escape', on_bad_lines='skip', header=None)
 
-
-        df = df.to_json()
         print(df)
+        df = df.to_json(orient = 'index')
+       
         return HttpResponse(df)

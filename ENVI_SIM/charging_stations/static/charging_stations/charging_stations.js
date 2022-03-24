@@ -3,6 +3,8 @@ console.log("Is charging stations.js connected to map")
 
 
 let map;
+let  dync_marker;
+let markers_list;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("charging-station-map"), {
@@ -33,7 +35,7 @@ async function fetchAsync (url) {
       var index = 2;
 
 var tracker = 0
-$("#add-charger").click(function (index){
+$("#add-charger").click(function (index,marker){
 
     console.log("I am clicking add charger 1")
     
@@ -82,10 +84,10 @@ $("#add-charger").click(function (index){
     br.classList.add("id","br:"+tracker)
     
 
-    type_selector.setAttribute("onclick",`remove(${tracker},${0})`);
-    location_selector.setAttribute("onclick",`remove(${tracker},${0})`);
-    remove.setAttribute("onclick",`remove(${tracker},${1})`);
-    br.setAttribute("onclick",`remove(${tracker},${0})`);
+    type_selector.setAttribute("onclick",`remove(${tracker},${0}},${dync_marker})`);
+    location_selector.setAttribute("onclick",`remove(${tracker},${0},${dync_marker})`);
+    remove.setAttribute("onclick",`remove(${tracker},${1},${dync_marker})`);
+    br.setAttribute("onclick",`remove(${tracker},${0},${dync_marker})`);
     
     
 
@@ -142,21 +144,23 @@ $(document).on("click", ".location_id", function() {
             "https://img.icons8.com/color/50/000000/car-charger.png";
         
            
-            var marker = new google.maps.Marker({
+             dync_marker = new google.maps.Marker({
                 position: new google.maps.LatLng(coordinates["lat"],coordinates["lng"]),
                 title: location.value,
                 icon: image
             });
             
             
-            marker.setMap(map);
+            dync_marker.setMap(map);
 
             map.setCenter(new google.maps.LatLng(coordinates["lat"],coordinates["lng"]));
+            
+
 
 
             })
         
-       
+       markers_list.push(dync_marker)
 
 });
 
@@ -208,8 +212,12 @@ $(document).on("click", ".remove_id", function(e) {
 
 
 
-function remove(div,click) {
+function remove(div,click,marker) {
 
+    
+    console.log("marker value is " + marker)
+
+   // marker.setMap(null)
     console.log("click value is " + click)
     console.log("clicking remove..." )
     var d = document.getElementById("append");
@@ -218,8 +226,8 @@ function remove(div,click) {
     var type = document.getElementsByClassName("type:"+div);
     var br = document.getElementsByClassName("br:"+div);
     var remove = document.getElementsByClassName("remove:"+div);
-     console.log("type---")
-     console.log(type)
+    console.log("type---")
+    console.log(type)
    // console.log("location---")
    // console.log(location)
     console.log("remove---")
@@ -230,16 +238,12 @@ function remove(div,click) {
   if(click ==1 ){
 
    for (var j = 0; j < olddiv.length ; j++) {
-    
-      console.log(olddiv[j].parentNode.removeChild(olddiv[j]));    
-  } 
+         console.log(olddiv[j].parentNode.removeChild(olddiv[j]));    
+    } 
   
-      
-    for (var j = 0; j < type.length ; j++) {
-    
-       console.log(type[j].parentNode.removeChild(type[j]));    
+    for (var j = 0; j < type.length ; j++) { 
+        console.log(type[j].parentNode.removeChild(type[j]));    
      }    
-    
     
         console.log(remove[0].parentNode.removeChild(remove[0]));    
         console.log(br[0].parentNode.removeChild(br[0]));

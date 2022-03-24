@@ -83,3 +83,54 @@ $(".energy_study_menu a").click(function() {
   
 
 });
+
+
+function show_list() {
+  var courses = document.getElementById("routes_id");
+
+
+  
+  if (courses.style.display == "block") {
+      courses.style.display = "none";
+  } else {
+      courses.style.display = "block";
+  }
+
+
+
+}
+
+function show_list_tripset() {
+
+  
+  var trip = document.getElementById("tripset_id");
+  console.log(trip)
+
+
+  if (trip.style.display == "block") {
+      trip.style.display = "none";
+} else {
+     trip.style.display = "block";
+}
+}
+
+
+
+
+
+
+window.onclick = function (event) {
+  if (!event.target.matches('#dropdown_button_routes')) {
+      
+      document.getElementById('routes_id').style.display = "none";
+
+  }
+}  
+
+window.onclick = function (event) {
+
+  if(!event.target.matches('#dropdown_button_tripset')){
+     document.getElementById('tripset_id').style.display = "none";
+  }
+
+}
