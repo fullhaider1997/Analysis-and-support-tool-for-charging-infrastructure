@@ -97,21 +97,24 @@
     
       
     <div class="mt-1 ">
-      <hr>
-      <label style="font-size: large;" for="sched_opt">Choose schedule:</label>
+      <h4>Current (Diesel) Stop to Stop</h4>
+      <label style="font-size: medium;" for="sched_opt">Choose schedule:</label>
 
       <select name="sched_opt" id="sched_box">
         <option value="_r">Weekday</option>
         <option value="_sat">Saturday</option>
         <option value="_sun">Sunday</option>
       </select>
-      
+     
       
     </div>
     
-    <div class="text-gray-600">
-      
-    </div></a>
+    <div class="mt-1 ">
+      <h4>Compare Diesel and Mixed Schedule:</h4>
+      <br>
+      <input type="button" id="compare" value="Compare" onclick="Compare()" />
+
+    </div>
   
     <div>
 
@@ -132,6 +135,8 @@
        
       
         <div id="dvCSV"></div>
+        <div id="dvCSV1"></div>
+        <div id="dvCSV2"></div>
 
     </div>
   

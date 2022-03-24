@@ -1,2 +1,6 @@
 route_id,trip_id,trip_headsign,origin,destination,start_time,end_time,fuel_consumed,co2_emission,fuel_cost,total_time,total_distance,maintenance_cost,operation_cost,trip_type,energy_rate,energy_consumed,initial_soc,soc_before_charge,final_soc,charge_time,energy_charged,energy_cost
+<<<<<<< HEAD:ENVI_SIM/data/output/diesel_only_assignments/schedules/2_2.csv
 2,139270:304303,CROSSTOWN to Waterfront,Confederation College,Waterfront Terminal,18:10:00,18:39:00,2.7066666666666666,6.355253333333333,4.330666666666667,29.0,10.35,5.43375,41.083333333333336,service,0,0,0,0,0,0,0,0
+=======
+2,139270:304303,CROSSTOWN to Waterfront,Confederation College,Waterfront Terminal,18:10:00,18:39:00,2.7066666666666666,6.355253333333333,5.413333333333333,29.0,10.35,5.43375,41.083333333333336,service,0,0,0,0,0,0,0,0
+>>>>>>> 1b7b35a45e32c7a22ed685a8448b4116db180c9d:ENVI_SIM/data/output/diesel_only_assignments/schedules/NOVA_TS_2_2.csv

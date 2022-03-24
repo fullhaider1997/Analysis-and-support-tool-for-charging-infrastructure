@@ -1,4 +1,5 @@
 route_id,trip_id,trip_headsign,origin,destination,start_time,end_time,fuel_consumed,co2_emission,fuel_cost,total_time,total_distance,maintenance_cost,operation_cost,trip_type,energy_rate,energy_consumed,initial_soc,soc_before_charge,final_soc,charge_time,energy_charged,energy_cost
+<<<<<<< HEAD:ENVI_SIM/data/output/diesel_only_assignments/schedules/1_3.csv
 1,135554:303930,MAINLINE to Current River,City Hall Terminal,Cowan & Hodder,06:25:00,07:05:00,3.733333333333333,8.765866666666666,5.973333333333333,40.0,14.397,7.558425000000001,56.666666666666664,service,0,0,0,0,0,0,0,0
 1,135607:301606,MAINLINE to Westfort,Cowan & Hodder,Mary & Neebing,07:07:00,08:22:00,7.0,16.436,11.200000000000001,75.0,23.021,12.086025000000001,106.25,service,0,0,0,0,0,0,0,0
 1,135651:303160,MAINLINE to Current River,Mary & Neebing,Cowan & Hodder,08:22:00,09:37:00,7.0,16.436,11.200000000000001,75.0,21.149,11.103225,106.25,service,0,0,0,0,0,0,0,0
@@ -10,3 +11,16 @@ route_id,trip_id,trip_headsign,origin,destination,start_time,end_time,fuel_consu
 1,135085:302944,MAINLINE to Current River,Mary & Neebing,Cowan & Hodder,15:52:00,17:07:00,7.0,16.436,11.200000000000001,75.0,21.149,11.103225,106.25,service,0,0,0,0,0,0,0,0
 1,135072:303314,MAINLINE to Westfort,Cowan & Hodder,Mary & Neebing,17:07:00,18:10:00,5.88,13.806239999999999,9.408,63.0,23.021,12.086025000000001,89.25,service,0,0,0,0,0,0,0,0
 1,135050:303732,MAINLINE to Current River,Mary & Neebing,Cowan & Hodder,18:48:00,19:55:00,6.253333333333333,14.682826666666665,10.005333333333333,67.0,21.149,11.103225,94.91666666666667,service,0,0,0,0,0,0,0,0
+=======
+1,135554:303930,MAINLINE to Current River,City Hall Terminal,Cowan & Hodder,06:25:00,07:05:00,3.733333333333333,8.765866666666666,7.466666666666666,40.0,14.397,7.558425000000001,56.666666666666664,service,0,0,0,0,0,0,0,0
+1,135607:301606,MAINLINE to Westfort,Cowan & Hodder,Mary & Neebing,07:07:00,08:22:00,7.0,16.436,14.0,75.0,23.021,12.086025000000001,106.25,service,0,0,0,0,0,0,0,0
+1,135651:303160,MAINLINE to Current River,Mary & Neebing,Cowan & Hodder,08:22:00,09:37:00,7.0,16.436,14.0,75.0,21.149,11.103225,106.25,service,0,0,0,0,0,0,0,0
+1,135612:299930,MAINLINE to Westfort,Cowan & Hodder,Mary & Neebing,09:37:00,10:52:00,7.0,16.436,14.0,75.0,23.021,12.086025000000001,106.25,service,0,0,0,0,0,0,0,0
+1,135075:303061,MAINLINE to Current River,Mary & Neebing,Cowan & Hodder,10:52:00,12:07:00,7.0,16.436,14.0,75.0,21.149,11.103225,106.25,service,0,0,0,0,0,0,0,0
+1,135062:300043,MAINLINE to Westfort,Cowan & Hodder,Mary & Neebing,12:07:00,13:22:00,7.0,16.436,14.0,75.0,23.021,12.086025000000001,106.25,service,0,0,0,0,0,0,0,0
+1,135080:302923,MAINLINE to Current River,Mary & Neebing,Cowan & Hodder,13:22:00,14:37:00,7.0,16.436,14.0,75.0,21.149,11.103225,106.25,service,0,0,0,0,0,0,0,0
+1,135067:301714,MAINLINE to Westfort,Cowan & Hodder,Mary & Neebing,14:37:00,15:52:00,7.0,16.436,14.0,75.0,23.021,12.086025000000001,106.25,service,0,0,0,0,0,0,0,0
+1,135085:302944,MAINLINE to Current River,Mary & Neebing,Cowan & Hodder,15:52:00,17:07:00,7.0,16.436,14.0,75.0,21.149,11.103225,106.25,service,0,0,0,0,0,0,0,0
+1,135072:303314,MAINLINE to Westfort,Cowan & Hodder,Mary & Neebing,17:07:00,18:10:00,5.88,13.806239999999999,11.76,63.0,23.021,12.086025000000001,89.25,service,0,0,0,0,0,0,0,0
+1,135050:303732,MAINLINE to Current River,Mary & Neebing,Cowan & Hodder,18:48:00,19:55:00,6.253333333333333,14.682826666666665,12.506666666666666,67.0,21.149,11.103225,94.91666666666667,service,0,0,0,0,0,0,0,0
+>>>>>>> 1b7b35a45e32c7a22ed685a8448b4116db180c9d:ENVI_SIM/data/output/diesel_only_assignments/schedules/NOVA_TS_1_3.csv

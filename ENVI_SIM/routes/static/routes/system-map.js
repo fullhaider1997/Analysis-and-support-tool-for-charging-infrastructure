@@ -1,7 +1,10 @@
 /* global window, document, _, $, mapboxgl */
 /* eslint no-var: "off", prefer-arrow-callback: "off", no-unused-vars: "off" */
+//use this path
+let path= "C:/Users/fullh/Desktop/charg-infra-project/"
 
 const maps = {};
+let table_route_id=null;
 
 function formatRoute(route) {
   const html = route.route_url
@@ -18,7 +21,7 @@ function formatRoute(route) {
   }
 
   $('<span>')
-    .text(`${route.route_short_name} ${route.route_long_name}`)
+    .text(`${route.route_short_name} `) //${route.route_long_name} for full name
     .appendTo(html);
 
   return html.prop('outerHTML');
@@ -274,17 +277,19 @@ function createSystemMap(id, geojson) {
         
         var id = $(this).attr("id");
         console.log(id);
+        
         if ("b_allroutes" == id.toString()){
           $("#switchscreen").load("routes");
         }
 
         else{
+          table_route_id=id;
           var s_Type = $("#sched_box").find(":selected").val();
           console.log(s_Type);
           var fileName= id+s_Type;
           console.log(fileName);
 
-          var pathName= "C:/Users/maike/Desktop/degreeproj-haider/Analysis-and-support-tool-for-charging-infrastructure/ENVI_SIM/data/sched/" +fileName+".csv";
+          var pathName= path+"/ENVI_SIM/data/sched/" +fileName+".csv";
           data= routeTable(pathName);
           //console.log(data);
           
@@ -590,3 +595,248 @@ function makeTable(data)
 
 }
  
+
+
+////Diesel vs Mixed
+///Fleet Comparison in Table
+////
+function Compare(){
+  var myID = table_route_id;
+  switch(myID) {
+    case "route1":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/1_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/1_1.csv")
+      data2 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/1_2.csv")
+      data3 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/1_3.csv")
+      data4 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/1_4.csv")
+
+      Promise.all([data0,data1,data2,data3,data4]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/1_0.csv")
+      data01=routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/1_2.csv")
+      data02 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/1_1.csv")
+      data03 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/1_3.csv")
+      data04 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/1_4.csv")
+      Promise.all([data00,data01,data02,data03,data04]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+
+      break;
+    case "route2":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/2_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/2_1.csv")
+      data2 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/2_2.csv")      
+      Promise.all([data0,data1,data2]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/2_0.csv")
+      data01=routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/2_1.csv")
+      data02 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/2_2.csv")
+      
+      Promise.all([data00,data01,data02]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route3c":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/3C_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/3C_1.csv")
+      
+      Promise.all([data0,data1]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/3C_0.csv")
+      Promise.all([data00]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route3j":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/3J_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/3J_1.csv")
+      
+      Promise.all([data0,data1]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/3J_0.csv")
+      data01=routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/3J_1.csv")
+      Promise.all([data00,data01]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route3m":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/3M_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/3M_1.csv")
+      data2 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/3M_2.csv")
+      data3 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/3M_3.csv")
+
+      Promise.all([data0,data1,data2,data3]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/3M_0.csv")
+      data01 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/3M_1.csv")
+      data02=routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/3M_2.csv")
+      data03 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/3M_3.csv")
+      Promise.all([data00,data01,data02]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route4":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/4_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/4_1.csv")
+
+      Promise.all([data0,data1]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/4_0.csv")
+      data01=routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/4_1.csv")
+      Promise.all([data00,data01]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route5":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/5_0.csv")
+
+      Promise.all([data0]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/5_0.csv")
+      Promise.all([data00]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route6":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/6_0.csv")
+      
+      Promise.all([data0]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/6_0.csv")
+      Promise.all([data00]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route7":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/7_0.csv")
+
+      Promise.all([data0]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/7_0.csv")
+      
+      Promise.all([data00]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route8":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/8_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/8_1.csv")
+      data2 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/8_2.csv")      
+      Promise.all([data0,data1,data2]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/8_0.csv")
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/8_1.csv")
+      data01=routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/8_2.csv")
+      
+      Promise.all([data00,data01]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route9":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/9_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/9_1.csv")
+      data2 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/9_2.csv")      
+      Promise.all([data0,data1,data2]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/9_0.csv")
+      data01=routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/9_1.csv")
+      data02 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/9_2.csv")
+      
+      Promise.all([data00,data01,data02]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route10":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/10_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/10_1.csv")    
+      Promise.all([data0,data1]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/10_0.csv")
+      
+      Promise.all([data00]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route11":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/11_0.csv")
+        
+      Promise.all([data0]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/11_0.csv")
+      
+      
+      Promise.all([data00]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route12":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/12_0.csv")
+        
+      Promise.all([data0]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/12_0.csv")
+      
+      
+      Promise.all([data00]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route13":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/13_0.csv")
+        
+      Promise.all([data0]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/13_0.csv")
+      
+      
+      Promise.all([data00]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route14":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/14_0.csv")
+      data1 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/14_1.csv")
+
+      Promise.all([data0,data1]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/14_0.csv")
+      data01=routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/14_1.csv")
+      Promise.all([data00,data01]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+    case "route16":
+      data0 = routeTable(path+"ENVI_SIM/data/output/diesel_only_assignments/schedules/16_0.csv")
+        
+      Promise.all([data0]).then(function(results){
+        combineTable(results,"dvCSV1");
+      });
+      data00 =routeTable(path+"ENVI_SIM/data/output/mixed_fleet_assignments/schedules/16_0.csv")
+      
+      
+      Promise.all([data00]).then(function(results){
+        combineTable(results,"dvCSV2");
+      });
+      break;
+
+      
+    default:
+      console.log("I am null...");
+  }
+}

@@ -4,7 +4,7 @@ console.log("I am connected speed dashboard.js")
 
 
 
-/
+
 
 $("#routes_id li").click(function() {
 
@@ -15,234 +15,60 @@ $("#routes_id li").click(function() {
     button.innerHTML = id;
     console.log(id)
 
-    //speed_data_disel =  retrieveDataSet("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/")
-   // speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/")
-
-    if(id == "Mainline 1"){
-
-          
-      list_tripset = ["Service 1","Service 2","Service 3","Service 4"]
-      
-      var dyn_trip_set1 = document.createElement("li");
-      var dyn_trip_set2 = document.createElement("li");
-      var dyn_trip_set3 = document.createElement("li");
-      var dyn_trip_set4 = document.createElement("li");  
-      dyn_trip_set1.classList.add("tripset");
-      dyn_trip_set2.classList.add("tripset");
-      dyn_trip_set3.classList.add("tripset");
-      dyn_trip_set4.classList.add("tripset");
-      dyn_trip_set1.innerHTML = "Service 1"
-      dyn_trip_set2.innerHTML = "Service 2"
-      dyn_trip_set3.innerHTML = `<li id="Mainline 2"><a>Mainline 2</a></li>`
-      dyn_trip_set4.innerHTML = `<li id="Mainline 1"><a>Mainline 1</a></li>`
-      document.getElementById("tripset_id").appendChild(dyn_trip_set1)
-      document.getElementById("tripset_id").appendChild(dyn_trip_set2)
-      document.getElementById("tripset_id").appendChild(dyn_trip_set3)
-      document.getElementById("tripset_id").appendChild(dyn_trip_set4)
     
 
+});
+
+$("#tripset_id li").click(function(){
+
+  console.log("Clicking on the tripset:speed")
+  var button = document.getElementById("dropdown_button_tripset")
+  var id = $(this).attr("id");
+  button.innerHTML = id;
+  console.log(id)
+        
+  var service = document.getElementById("dropdown_button_tripset").innerHTML
+  var route_id = document.getElementById("dropdown_button").innerHTML
+  
+ 
 
 
-      }else if(id == "2 Line"){
+  //speed_data_disel =  retrieveDataSet("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/")
+  //speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/")
 
-        list_tripset = ["Service 1","Service 2","Service 3"]
+  if(route_id== "Mainline 1" && service=="Service 1" ){
+   
+    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/1_0.csv")
+    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/1_0.csv")
+ 
+    Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
+         
+      plotSpeed(overalldata)
+     
+     
+    });
+
+
+
+   }else if(route_id== "Mainline 1" && service=="Service 2"){
+
+    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/1_1.csv")
+    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/1_1.csv")
+ 
+    Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
+         
+      plotSpeed(overalldata)
+     
+     
+    });
        
-  
-        for(var trip in list_tripset){
-          var dyn_trip_set = document.createElement("li");
-          dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
+     
 
-      } else if(id == "3C Line"){
-
-        list_tripset = ["Service 1","Service 2","Service 3","Service 4"]
-        
-  
-        for(var trip in list_tripset){
-            var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-      }else if(id == "3M Line"){
-
-        list_tripset = ["Service 1","Service 2","Service 3","Service 4"]
-        dyn_trip_set.classList.add("tripset");
-  
-        for(var trip in list_tripset){
-            var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-
-
-      }else if(id == "4 Line"){
-        list_tripset = ["Service 1","Service 2","Service 3","Service 4","Service 5"]
-        dyn_trip_set.classList.add("tripset");
-  
-        for(var trip in list_tripset){
-            var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-
-      }else if(id == "5 Line"){
-        list_tripset = ["Service 1"]
-        dyn_trip_set.classList.add("tripset");
-  
-        for(var trip in list_tripset){
-            var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-      } else if(id == "6 Line"){
-
-        list_tripset = ["Service 1"]
-        dyn_trip_set.classList.add("tripset");
-  
-        for(var trip in list_tripset){
-            var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-
-      } else if (id =="7 Line"){
-        list_tripset = ["Service 1"]
-       
-  
-        for(var trip in list_tripset){
-           var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-      } else if (id == "8 Line"){
-
-        list_tripset =  ["Service 1","Service 2","Service 3"]
-        
-  
-        for(var trip in list_tripset){
-          var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-
-      } else if (id =="9 Line"){
-
-        list_tripset =  ["Service 1","Service 2","Service 3"]
-        
-  
-        for(var trip in list_tripset){
-          
-           var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-
-      } else if (id == "10 Line"){
-
-        list_tripset =  ["Service 1","Service 2"]
-        
-  
-        for(var trip in list_tripset){
-            var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-
-      }else if (id == "11 Line"){
-
-        list_tripset =  ["Service 1"]
-        
-  
-        for(var trip in list_tripset){
-           var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-
-      }else if (id == "12 Line"){
-
-        list_tripset =  ["Service 1"]
-        
-  
-        for(var trip in list_tripset){
-           var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-      }else if (id == "13 Line"){
-
-        list_tripset =  ["Service 1"]
-       
-  
-        for(var trip in list_tripset){
-            var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-      }else if (id == "14 Line"){
-
-        list_tripset =  ["Service 1","Service 2"]
-        dyn_trip_set.classList.add("tripset");
-  
-        for(var trip in list_tripset){
-          
-           var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-      }else if (id == "17 Line"){
-
-        list_tripset =  ["Service 1"]
-       
-  
-        for(var trip in list_tripset){
-            var dyn_trip_set = document.createElement("li");
-            dyn_trip_set.classList.add("tripset");
-            dyn_trip_set.innerHTML = list_tripset[trip]
-            document.getElementById("tripset_id").appendChild(dyn_trip_set)
-        }
-
-
-
-
-    }
-
-
-
-
-
+   }
 
 
 
 });
-
-  
   
  
 
@@ -304,7 +130,7 @@ $("#routes_id li").click(function() {
         
         };
      
-         /*
+       
       var trace2 = {
     
           x:  time_mixfleet,
@@ -318,8 +144,8 @@ $("#routes_id li").click(function() {
         
         };
      
-      */
-        var data  = [trace1]
+      
+        var data  = [trace1,trace2]
 
    
        
