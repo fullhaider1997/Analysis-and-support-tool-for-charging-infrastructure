@@ -7,215 +7,259 @@ var time_s = []
 
 
 
+
+$("#routes_id li").click(function() {
+
+  console.log("Clicking on selection of routes:ssoc")
+      
+  var button = document.getElementById("dropdown_button")
+  var id = $(this).attr("id");
+  button.innerHTML = id;
+  console.log(id)
+
+  
+
+});
+
 $("#tripset_id li").click(function() {
 
-  console.log("Clicking on selection of routes:tripset")
+  console.log("Clicking on selection of routes:soc")
       
+  
   var button = document.getElementById("dropdown_button_tripset")
   var id = $(this).attr("id");
   button.innerHTML = id;
   console.log(id)
+        
+  var service = document.getElementById("dropdown_button_tripset").innerHTML
+  var route_id = document.getElementById("dropdown_button").innerHTML
 
-});
 
 
-$("#routes_id li").click(function() {
-
-  console.log("Clicking on selection of routes:energy")
-      
-  var button = document.getElementById("dropdown_button_routes")
-  var button_seasons = document.getElementById("dropdown_button_seasons")
-  var id = $(this).attr("id");
-  button.innerHTML = id;
-  console.log(id)
-  console.log()
-/*
-  if(id == "Mainline 1"){
-    console.log("Clicking on Maineline 2")
-    data = retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_1_0.csv")
-    data1 = retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_1_1.csv")
-    data2 = retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_1_2.csv")
-    data3 = retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_1_3.csv")
-    Promise.all([data,data1,data2,data3]).then(function(results){
-      plotEnergy(results)
-      
-      
+  if(route_id== "Mainline 1" && service=="Service 1" ){
+   
+   
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/1_0.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+      plotSOC(overalldata)
+     
+     
     });
+
+
+
+   }else if(route_id== "Mainline 1" && service =="Service 2"){
+
+    console.log("Clicking mainline 1 and Service 2")
+
     
-
-  } else if(id == "Line 2"){
-    console.log("Clicking on line 2")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_2_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_2_1.csv")
-    data2= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_2_2.csv")
-    Promise.all([data,data1,data2]).then(function(results){
-      plotEnergy(results)
-      
-    });
-    
-
-  } else if(id == "3M Line"){
-
-    console.log("Clicking on 3M")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_3M_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_3M_1.csv")
-    data2= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_3M_2.csv")
-    data3= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_3M_3.csv")
-    Promise.all([data,data1,data2,data3]).then(function(results){
-      plotEnergy(results)
-      
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/1_1.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
+     
+     
     });
 
-  }else if(id == "3C Line"){
+  }else if(route_id== "Line 2" && service =="Service 1"){
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/2_0.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
 
-    console.log("Clicking on 3C")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_3C_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_3C_1.csv")
-    Promise.all([data,data1]).then(function(results){
-      plotEnergy(results)
-      
     });
 
-  }
-  else if(id == "3J Line"){
+  }else if(route_id== "Line 2" && service =="Service 2"){
 
-    console.log("Clicking on 3J")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_3J_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_3J_1.csv")
-    Promise.all([data,data1]).then(function(results){
-      plotEnergy(results)
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/2_1.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
+
     });
 
-  } else if(id == "4 Line"){
 
-    console.log("Clicking on 4")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_4_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_4_1.csv")
-    Promise.all([data,data1]).then(function(results){
-      plotEnergy(results)
+  }else if(route_id== "3C Line" && service =="Service 1"){
+  
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3C_0.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
+
     });
 
-  }
-  else if(id == "5 Line"){
+  }else if(route_id== "3C Line" && service =="Service 2"){
 
-    console.log("Clicking on 5")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_5_0.csv")
-    data1 = retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_5_0.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3C_1.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
+
     });
-  }
 
-  else if(id == "6 Line"){
+  }else if(route_id== "3J Line" && service == "Service 1"){
 
-    console.log("Clicking on 6")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_6_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_6_0.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3J_0.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
+
     });
-  }
-
-  else if(id == "7 Line"){
-
-    console.log("Clicking on 7")
-    data = retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_7_0.csv")
-    data1 = retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_7_0.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
-    });
-  }
-
-  else if(id == "8 Line"){
-
-    console.log("Clicking on 8")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_8_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_8_0.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
-    });
-  }
 
   
-  else if(id == "9 Line"){
+  }else if(route_id== "3J Line" && service =="Service 2"){
 
-    console.log("Clicking on 9")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_9_1.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_9_2.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3J_1.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
+
     });
-  }
-  
-  else if(id == "10 Line"){
 
-    console.log("Clicking on 10")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_10_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_10_1.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
+  }else if(route_id== "3M Line" && service =="Service 1"){
+
+
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3M_0.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
+
     });
-  }
 
-  else if(id == "11 Line"){
 
-    console.log("Clicking on 11")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_11_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_11_0.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
+  }else if(route_id== "3M Line" && service == "Service 2"){
+
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3M_1.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
+
     });
-  }
-  else if(id == "12 Line"){
 
-    console.log("Clicking on 12")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_12_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_12_0.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
+  }else if(route_id== "8 Line" && service == "Service 1"){
+
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/8_0.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
+
     });
-  }
 
-  else if(id == "13 Line"){
+  }else if(route_id== "8 Line" && service == "Service 2"){
+    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/8_1.csv")
+ 
+    Promise.all([soc_mixfleet]).then(function(overalldata){
+         
+     plotSOC(overalldata)
 
-    console.log("Clicking on 13")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_13_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_13_0.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
     });
-  }
-  else if(id == "14 Line"){
 
-    console.log("Clicking on 14")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_14_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_14_1.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
-    });
-  }
-  else if(id == "16 Line"){
-
-    console.log("Clicking on 16")
-    data= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_16_0.csv")
-    data1= retrieveEnergyData("C:/Users/fullh/Desktop/consumped/Fall/TS_16_0.csv")
-    Promise.all([data, data1]).then(function(results){
-      plotEnergy(results)
-    });
   }
 
 
-  */
+
 
 });
 
 
 
 
+function retrieveSOC(path){
+  return fetch('/retrieveSOC/', {  headers: {'Content-Type': 'application/json'}, method: 'POST', body: JSON.stringify({"name": path})
+
+}).then(function (response) { // At this point, Flask has printed our JSON
+return response.text();
+  }).then(function (text) {
+
+ return JSON.parse(text)
+
+ 
+ }).then(data =>{
+return data})
+}
+
+
+
   
 
 
 
 
+function plotSOC(data){
 
+  console.log(data)
+
+  soc = []
+  time = []
+
+  
+       for(var i in data[0]["time"]){
+            time.push(data[0]["time"][i])
+       }
+       for(var i in data[0]["soc"]){
+             soc.push(data[0]["soc"][i])
+        }
+        
+        
+
+        var trace1 = {
+    
+          x:  time,
+        
+          y: soc,
+          name: 'Disel fleet' ,
+
+          mode: 'lines',
+          
+        
+        
+        
+        };
+     
+     
+     
+      
+        var data  = [trace1]
+
+   
+       
+     var layout = {
+     
+    height: 300,
+    
+     yaxis: {
+    
+      title: {
+    
+        text: 'SOC(%)',
+    
+      },
+      xaxis: {
+          title: { 
+              text:'Time(hrs)',
+              
+
+
+      }}
+    
+    }};
+    
+   
+      Plotly.newPlot('soc_plot', data,layout);
+  
+  
+
+}
 
