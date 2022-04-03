@@ -11,10 +11,7 @@ const overlay = document.getElementById("overlay")
 let menuOpen = false;
 function openMenu(){
 
-   
-  
-  menuOpen = true
-  
+
   
     sidebar.style.width="300px"
     sidebar.style.borderStyle="solid";
