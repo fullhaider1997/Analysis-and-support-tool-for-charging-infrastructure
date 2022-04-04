@@ -1,6 +1,6 @@
 console.log("Energy consumption is started")
 
-
+path = "C:/Users/fullh/Desktop/charg-infra-project"
 var energy_consumption_s =[]
 var time_s = []
 
@@ -39,7 +39,7 @@ $("#tripset_id li").click(function() {
   if(route_id== "Mainline 1" && service=="Service 1" ){
    
    
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/1_0.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/1_0.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -55,7 +55,7 @@ $("#tripset_id li").click(function() {
     console.log("Clicking mainline 1 and Service 2")
 
     
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/1_1.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/1_1.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -65,7 +65,7 @@ $("#tripset_id li").click(function() {
     });
 
   }else if(route_id== "Line 2" && service =="Service 1"){
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/2_0.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/2_0.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -75,7 +75,7 @@ $("#tripset_id li").click(function() {
 
   }else if(route_id== "Line 2" && service =="Service 2"){
 
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/2_1.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/2_1.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -86,7 +86,7 @@ $("#tripset_id li").click(function() {
 
   }else if(route_id== "3C Line" && service =="Service 1"){
   
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3C_0.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3C_0.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -96,7 +96,7 @@ $("#tripset_id li").click(function() {
 
   }else if(route_id== "3C Line" && service =="Service 2"){
 
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3C_1.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3C_1.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -106,7 +106,7 @@ $("#tripset_id li").click(function() {
 
   }else if(route_id== "3J Line" && service == "Service 1"){
 
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3J_0.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3J_0.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -117,7 +117,7 @@ $("#tripset_id li").click(function() {
   
   }else if(route_id== "3J Line" && service =="Service 2"){
 
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3J_1.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3J_1.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -128,7 +128,7 @@ $("#tripset_id li").click(function() {
   }else if(route_id== "3M Line" && service =="Service 1"){
 
 
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3M_0.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3M_0.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -139,7 +139,7 @@ $("#tripset_id li").click(function() {
 
   }else if(route_id== "3M Line" && service == "Service 2"){
 
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3M_1.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/3M_1.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -149,7 +149,7 @@ $("#tripset_id li").click(function() {
 
   }else if(route_id== "8 Line" && service == "Service 1"){
 
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/8_0.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/8_0.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          
@@ -158,7 +158,7 @@ $("#tripset_id li").click(function() {
     });
 
   }else if(route_id== "8 Line" && service == "Service 2"){
-    soc_mixfleet = retrieveSOC("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/8_1.csv")
+    soc_mixfleet = retrieveSOC(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/soc_profiles/8_1.csv")
  
     Promise.all([soc_mixfleet]).then(function(overalldata){
          

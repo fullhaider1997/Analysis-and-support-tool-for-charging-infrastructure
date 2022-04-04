@@ -1,3 +1,6 @@
+//Change pace to your system dir
+
+path = "C:/Users/fullh/Desktop/charg-infra-project/"
 console.log("Connecting to time_study.js")
 
 
@@ -31,7 +34,7 @@ $("#tripset_id li").click(function() {
     if(route_id== "Mainline 1" && service=="Service 1" ){
    
    
-        soc_mixfleet = retrieveEnergyData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/energy_consumption_profiles/1_0.csv")
+        soc_mixfleet = retrieveEnergyData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/energy_consumption_profiles/1_0.csv")
      
         Promise.all([soc_mixfleet]).then(function(overalldata){
              
@@ -44,7 +47,7 @@ $("#tripset_id li").click(function() {
     
        }else if(route_id== "Mainline 1" && service =="Service 2"){
     
-        soc_mixfleet = retrieveEnergyData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/energy_consumption_profiles/1_1.csv")
+        soc_mixfleet = retrieveEnergyData(path +"/ENVI_SIM/data/output/mixed_fleet_assignments/energy_consumption_profiles/1_1.csv")
      
         Promise.all([soc_mixfleet]).then(function(overalldata){
              
@@ -88,7 +91,7 @@ $("#tripset_id li").click(function() {
        
       }else if(route_id== "8 Line" && service == "Service 1"){
     
-        soc_mixfleet = retrieveEnergyData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/energy_consumption_profiles/8_0.csv")
+        soc_mixfleet = retrieveEnergyData(path +"/ENVI_SIM/data/output/mixed_fleet_assignments/energy_consumption_profiles/8_0.csv")
      
         Promise.all([soc_mixfleet]).then(function(overalldata){
              
@@ -99,7 +102,7 @@ $("#tripset_id li").click(function() {
     
       }else if(route_id== "8 Line" && service == "Service 2"){
       
-        soc_mixfleet = retrieveEnergyData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/energy_consumption_profiles/8_1.csv")
+        soc_mixfleet = retrieveEnergyData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/energy_consumption_profiles/8_1.csv")
      
         Promise.all([soc_mixfleet]).then(function(overalldata){
              

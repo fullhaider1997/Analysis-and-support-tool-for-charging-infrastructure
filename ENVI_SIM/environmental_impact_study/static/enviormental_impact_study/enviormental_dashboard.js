@@ -1,6 +1,6 @@
 
 
-path = "C:/Users/fullh/Desktop/"
+path = "C:/Users/fullh/Desktop/charg-infra-project"
 //Initalizating the map
 
 //Plotly.newPlot('Enviormental_map', data=[] , layout = {height: 400,}) ;
@@ -71,8 +71,8 @@ function show_list() {
 
   if(route_id== "Mainline 1" && service=="Service 1" ){
    
-    co2_disel =  retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/emission_profiles/1_0.csv")
-    co2_mixfleet = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/emission_profiles/1_0.csv")
+    co2_disel =  retrieveCO2EmissionData(path + "/ENVI_SIM/data/output/diesel_only_assignments/emission_profiles/1_0.csv")
+    co2_mixfleet = retrieveCO2EmissionData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/emission_profiles/1_0.csv")
  
     Promise.all([co2_disel,co2_mixfleet]).then(function(overalldata){
          
@@ -83,8 +83,8 @@ function show_list() {
 
   }if(route_id== "Mainline 1" && service=="Service 2" ){
    
-    co2_disel =  retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/emission_profiles/1_1.csv")
-    co2_mixfleet = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/emission_profiles/1_1.csv")
+    co2_disel =  retrieveCO2EmissionData(path + "/ENVI_SIM/data/output/diesel_only_assignments/emission_profiles/1_1.csv")
+    co2_mixfleet = retrieveCO2EmissionData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/emission_profiles/1_1.csv")
  
     Promise.all([co2_disel,co2_mixfleet]).then(function(overalldata){
          
@@ -95,8 +95,8 @@ function show_list() {
 
   }if(route_id== "8 Line" && service=="Service 1" ){
    
-    co2_disel =  retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/emission_profiles/8_0.csv")
-    co2_mixfleet = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/emission_profiles/8_0.csv")
+    co2_disel =  retrieveCO2EmissionData(path + "/ENVI_SIM/data/output/diesel_only_assignments/emission_profiles/8_0.csv")
+    co2_mixfleet = retrieveCO2EmissionData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/emission_profiles/8_0.csv")
  
     Promise.all([co2_disel,co2_mixfleet]).then(function(overalldata){
          
@@ -107,8 +107,8 @@ function show_list() {
 
   }if(route_id== "8 Line" && service=="Service 2" ){
    
-    co2_disel =  retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/emission_profiles/8_2.csv")
-    co2_mixfleet = retrieveCO2EmissionData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/emission_profiles/8_2.csv")
+    co2_disel =  retrieveCO2EmissionData(path + "/ENVI_SIM/data/output/diesel_only_assignments/emission_profiles/8_2.csv")
+    co2_mixfleet = retrieveCO2EmissionData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/emission_profiles/8_2.csv")
  
     Promise.all([co2_disel,co2_mixfleet]).then(function(overalldata){
          

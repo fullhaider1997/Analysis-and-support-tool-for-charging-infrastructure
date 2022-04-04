@@ -3,6 +3,7 @@
 console.log("I am connected speed dashboard.js")
 
 
+path = "C:/Users/fullh/Desktop/charg-infra-project"
 
 
 
@@ -38,8 +39,8 @@ $("#tripset_id li").click(function(){
 
   if(route_id== "Mainline 1" && service=="Service 1" ){
    
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/1_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/1_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/1_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/1_0.csv")
  
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
          
@@ -54,8 +55,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking mainline 1 and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/1_1.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/1_1.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/1_1.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/1_1.csv")
  
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
          
@@ -69,8 +70,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 2 Line and Service 1")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/2_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/2_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/2_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/2_0.csv")
  
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
          
@@ -84,8 +85,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 2 Line and Service 2")
 
-     speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/2_1.csv")
-     speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/2_1.csv")
+     speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/2_1.csv")
+     speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/2_1.csv")
  
      Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
          
@@ -97,8 +98,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 2 Line and Service 2")
 
-     speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3C_0.csv")
-     speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3C_0.csv")
+     speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3C_0.csv")
+     speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3C_0.csv")
  
      Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
          
@@ -110,8 +111,8 @@ $("#tripset_id li").click(function(){
 
        console.log("Clicking 2 Line and Service 2")
   
-       speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3C_1.csv")
-       speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3C_1.csv")
+       speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3C_1.csv")
+       speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3C_1.csv")
    
        Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
            
@@ -123,8 +124,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3J Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3J_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3J_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3J_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path +"/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3J_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -138,8 +139,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3J Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3J_1.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3J_1.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3J_1.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3J_1.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -153,8 +154,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3M_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3M_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3M_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3M_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -168,8 +169,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3M_1.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3M_1.csv")
+    speed_data_disel =  retrieveSpeedData(path +"/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/3M_1.csv")
+    speed_data_mixfleet = retrieveSpeedData(path +"/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/3M_1.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -183,8 +184,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/4_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/4_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/4_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/4_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -198,8 +199,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/4_1.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/4_1.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/4_1.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/4_1.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -211,8 +212,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/5_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/5_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/5_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/5_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -224,8 +225,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/6_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/6_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/6_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/6_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -237,8 +238,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/7_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/7_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/7_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/7_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -250,8 +251,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/8_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/8_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/8_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/8_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -263,8 +264,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/8_1.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/8_1.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/8_1.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/8_1.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -276,8 +277,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/9_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/9_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/9_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/9_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -289,8 +290,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/9_1.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/9_1.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/9_1.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/9_1.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -302,8 +303,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/10_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/10_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/10_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/10_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -315,8 +316,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/10_1.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/10_1.csv")
+    speed_data_disel =  retrieveSpeedData(path +"/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/10_1.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/10_1.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -328,8 +329,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/11_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/11_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/11_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/11_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -342,8 +343,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/11_1.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/11_1.csv")
+    speed_data_disel =  retrieveSpeedData(path +"/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/11_1.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/11_1.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -355,8 +356,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 1")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/12_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/12_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/12_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/12_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -368,8 +369,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/12_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/12_0.csv")
+    speed_data_disel =  retrieveSpeedData(path +"/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/12_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/12_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -381,8 +382,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/10_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/10_0.csv")
+    speed_data_disel =  retrieveSpeedData(path +"/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/10_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/10_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -394,8 +395,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/14_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/14_0.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/14_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/14_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -407,8 +408,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/14_1.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/14_1.csv")
+    speed_data_disel =  retrieveSpeedData(path + "/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/14_1.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/14_1.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         
@@ -420,8 +421,8 @@ $("#tripset_id li").click(function(){
 
     console.log("Clicking 3M Line and Service 2")
 
-    speed_data_disel =  retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/16_0.csv")
-    speed_data_mixfleet = retrieveSpeedData("C:/Users/fullh/Desktop/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/16_0.csv")
+    speed_data_disel =  retrieveSpeedData(path +"/ENVI_SIM/data/output/diesel_only_assignments/speed_profiles/16_0.csv")
+    speed_data_mixfleet = retrieveSpeedData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/speed_profiles/16_0.csv")
 
     Promise.all([speed_data_disel,speed_data_mixfleet]).then(function(overalldata){
         

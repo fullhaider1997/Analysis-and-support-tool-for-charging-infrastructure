@@ -1,9 +1,9 @@
 console.log("connecting financial board.js")
-System_path = "C:/Users/fullh/Desktop"
+path = "C:/Users/fullh/Desktop/charg-infra-project"
 
 
-mixfleet_data = retrieveCostData(System_path + "/charg-infra-project/ENVI_SIM/data/output/mixed_fleet_assignments/cost_related_data.csv" )
-disel_data = retrieveCostData(System_path + "/charg-infra-project/ENVI_SIM/data/output/diesel_only_assignments/cost_related_data.csv" )
+mixfleet_data = retrieveCostData(path + "/ENVI_SIM/data/output/mixed_fleet_assignments/cost_related_data.csv" )
+disel_data = retrieveCostData(path + "/ENVI_SIM/data/output/diesel_only_assignments/cost_related_data.csv" )
 
 console.log("Didn't reach the end of the line..")
     //console.log(data)
