@@ -11,13 +11,13 @@ class EnergyEstimator:
         self.rc = 1 # road condition in levels (3 levels) Editable
         self.p_den = 8 # people density in bus in levels (4 levels) Editable
         self.hvac = 3.7 # energy consumed due to aux in kW
-        self.season = 'Winter' # editable
+        self.season = 'winter' # editable
         self.temp_spring = 2.3
         self.temp_summer = 16.7
         self.temp_fall = 5
         self.temp_winter = -11.7
         self.soc_upper_limit = 90 # editable
-        self.soc_lower_limit = 20 # editable? I don't think sooo
+        self.soc_lower_limit = 30 # editable? I don't think sooo
         self.const = -0.782 # bias
         self.w_rg = 0.380 # weight for road grade
         self.w_soc = 0.0124 # weight for soc
@@ -73,13 +73,13 @@ class EnergyEstimator:
         # we also assume a busy(ness) of level 2 (scaling factor of 1/2 of total passenger capacity)
         t = 0
         season = self.season
-        if season == 'Winter':
+        if season == 'winter':
             t = self.temp_winter
-        elif season == 'Summer':
+        elif season == 'summer':
             t = self.temp_summer
-        elif season == 'Fall':
+        elif season == 'fall':
             t = self.temp_fall
-        elif season == 'Spring':
+        elif season == 'spring':
             t = self.temp_spring
         duration = total_time/60 # convert from min to hr
         HVAC = (abs(20 - t) * 0.6 * duration) + self.hvac # kW

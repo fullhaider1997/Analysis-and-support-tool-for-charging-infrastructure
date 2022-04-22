@@ -83,13 +83,13 @@ class BUS:
         for key, value in dict.items():
             if key == 'BYD K9':
                 for i in range(value):
-                    self.add_ev_bus(key, 80, 310, starting_soc, 750000)
+                    self.add_ev_bus(key, 80, 100, starting_soc, 750000)
             elif key == 'Proterra ZX5':
                 for i in range(value):
-                    self.add_ev_bus(key, 29, 220, starting_soc, 775000)
+                    self.add_ev_bus(key, 29, 80, starting_soc, 775000)
             elif key == 'Volvo 7900':
                 for i in range(value):
-                    self.add_ev_bus(key, 95, 396, starting_soc, 1270000)
+                    self.add_ev_bus(key, 95, 96, starting_soc, 1270000)
             else:
                 for i in range(no_diesel_bus):
                     self.add_diesel_bus(key, 41, 0) # not considering the procurement of diesel buses
